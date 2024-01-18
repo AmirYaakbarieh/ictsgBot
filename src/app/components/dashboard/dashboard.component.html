@@ -1,0 +1,807 @@
+
+<div class="flex h-full">
+
+    
+    <div class="flex min-w-0 flex-1 flex-col overflow-hidden">
+        <div class="lg:hidden">
+            <div class="flex items-center justify-between border-b border-gray-200 bg-gray-50 px-4 py-1.5">
+               
+                <div>
+                    <button type="button"
+                        class="-mr-3 inline-flex h-12 w-12 items-center justify-center rounded-md text-gray-500 hover:text-gray-900">
+                        <span class="sr-only">Open sidebar</span>
+                       
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="relative z-0 flex flex-1 overflow-hidden">
+            <main class="relative z-0 flex-1 overflow-y-auto focus:outline-none">
+             
+                <div class="absolute inset-0 py-6 px-4 sm:px-6 lg:px-8">
+                    <div class="h-full rounded-lg  border-gray-200">
+
+                        <div class="lg:grid lg:grid-cols-12 lg:gap-x-5">
+                            <aside class="py-6 px-2 sm:px-6 lg:col-span-3 lg:py-0 lg:px-0">
+                                
+                            </aside>
+                        
+                            <div class="space-y-6 sm:px-6 lg:col-span-9 lg:px-0 mb-3">
+
+                                <!-- *********************************************************************************************************** -->
+                                <div class="bg-white shadow sm:rounded-lg">
+                                    <div class="px-4 py-5 sm:p-6">
+                                        <h1 class="text-lg font-medium leading-6 text-gray-900">{{userName}}({{emailOfUser}})</h1>
+                                        <div class="mt-2 sm:flex sm:items-start sm:justify-between">
+                                            <div class="max-w-xl text-sm text-gray-500">
+
+                                                <div *ngIf="profilePicURL">
+                                                    <span class="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100">
+                                                        <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                                
+                                                            <image [attr.href]="profilePicURL" width="100%" height="100%" />
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div *ngIf="!profilePicURL">
+                                                    <span class="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100">
+                                                        <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                                
+                                                            
+                                                            <path *ngIf="!selectedImage"
+                                                                d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                
+                                
+                                                <!-- <span class="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100">
+                                                    <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                
+                                                        <image *ngIf="selectedImage" [attr.href]="selectedImage" width="100%" height="100%" />
+                                                        <path *ngIf="!selectedImage"
+                                                            d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                                                    </svg>
+                                                </span> -->
+                                                <div *ngIf="profilePicURL">
+                                                    <label i18n for="fileInput" class="custom-button">Change Photo</label>
+                                                </div>
+
+                                                <div *ngIf="!profilePicURL">
+                                                    <label i18n for="fileInput" class="custom-button">Select Photo</label>
+                                                </div>   
+                                                <input id="fileInput" type="file" (change)="onFileSelected($event)" class="hidden-input" />
+                                            </div>
+                                            <div class="mt-5 sm:mt-0 sm:ml-6 sm:flex sm:flex-shrink-0 sm:items-center">
+                                                <button type="button"  (click)="setPhoto()"
+                                                class="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-sm"><span i18n>Record changes</span></button>
+                                            </div>
+                                        </div>
+                                        <div class="mt-3 "  *ngIf="showPhoto">
+                                            <img [src]="this.selectedImage" alt="" style="width: 15%; height: auto">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- *********************************************************************************************************** -->
+                                <div class="bg-white shadow sm:rounded-lg">
+                                    <div class="px-4 py-5 sm:p-6">
+                                        <h1 class="text-lg font-medium leading-6 text-gray-900"><span i18n >email of :</span> {{userName}}</h1>
+                                        <form [formGroup]="reactiveForm">
+                                            <div class="mt-2 sm:flex sm:items-start sm:justify-between" formGroupName="personalDetails">
+                                                <div class="max-w-xl text-sm text-gray-500">
+                                                    <div class="col-span-6 sm:col-span-3">
+                                                        
+                                                        <input type="email" name="email" id="email" autocomplete="given-name"  placeholder="{{emailOfUser}}"  formControlName="userEmail"  
+                                                            [(ngModel)]="emailValue"
+                                                            class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm " 
+                                                            style="direction: ltr; width: 20rem;" >
+                                                            <div *ngIf="reactiveForm.get('personalDetails.userEmail').touched">
+                                                                <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.userEmail').hasError('required')">Email
+                                                                    is required field if you want to change your email</small>
+                                                                <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.userEmail').hasError('email')">The
+                                                                    email is not a valid
+                                                                    email</small>
+                                                                <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.userEmail').hasError('emailFormat')">Email
+                                                                    must be completely
+                                                                    formed with a
+                                                                    period in the domain part</small >
+                                                            </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="mt-5 sm:mt-0 sm:ml-6 sm:flex sm:flex-shrink-0 sm:items-center">
+                                                    <button type="button"  (click)="setEmail()" [disabled]="
+                                                        ( reactiveForm.get('personalDetails.userEmail').hasError('required')) ||
+                                                        ( reactiveForm.get('personalDetails.userEmail').hasError('email')) || 
+                                                        ( reactiveForm.get('personalDetails.userEmail').hasError('emailFormat')) "
+                                                        class="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-sm"><span i18n>Record changes</span></button>
+                                                
+                                                    <!-- <button type="button" (click)="setEmail()" [disabled]="!reactiveForm.get('personalDetails.userEmail').valid"
+                                                        class="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-sm">
+                                                        <span i18n>Record changes</span>
+                                                    </button> -->
+
+                                                
+                                                    </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!-- *********************************************************************************************************** -->
+                                <div class="bg-white shadow sm:rounded-lg">
+                                    <div class="px-4 py-5 sm:p-6">
+                                        <h1 class="text-lg font-medium leading-6 text-gray-900"><span i18n>First
+                                        name</span></h1>
+                                        <form [formGroup]="reactiveForm">
+                                            <div class="mt-2 sm:flex sm:items-start sm:justify-between" formGroupName="personalDetails" >   
+                                                <div class="max-w-xl text-sm text-gray-500">
+                                                    <div class="col-span-6 sm:col-span-3">
+                                                        
+                                                        <input type="text" name="first-name" id="first-name" autocomplete="given-name" placeholder="{{userName}}" formControlName="nameOfUser"  [(ngModel)]="nameValue"
+                                                            
+                                                            class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm " style=" width: 20rem;">
+                                                        <div *ngIf="reactiveForm.get('personalDetails.nameOfUser').touched">
+                                                            <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.nameOfUser').hasError('nameFormat')">Name
+                                                                field
+                                                                is required in Persian language if you want to change your email</small>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="mt-5 sm:mt-0 sm:ml-6 sm:flex sm:flex-shrink-0 sm:items-center">
+                                                    <button type="submit"  (click)="setName()"  [disabled]="
+                                                        ( reactiveForm.get('personalDetails.nameOfUser').hasError('required')) ||
+                                                        ( reactiveForm.get('personalDetails.nameOfUser').hasError('nameFormat')) "
+                                                        class="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-sm"><span i18n>Record changes</span></button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>  
+
+                                <!-- [disabled]="
+                                ( reactiveForm.get('personalDetails.nameOfUser').hasError('required')) ||
+                                ( reactiveForm.get('personalDetails.nameOfUser').hasError('nameFormat')) " -->
+                                
+
+                                <!-- *********************************************************************************************************** -->
+                                <div class="bg-white shadow sm:rounded-lg">
+                                    <div class="px-4 py-5 sm:p-6">
+                                        <h3 class="text-lg font-medium leading-6 text-gray-900"><span i18n>phone number </span></h3>
+                                        <form [formGroup]="reactiveForm">
+                                            <div class="mt-2 sm:flex sm:items-start sm:justify-between" formGroupName="personalDetails" >
+                                                <div class="max-w-xl text-sm text-gray-500">
+                                                    <div class="col-span-6 sm:col-span-3">
+                                                        <div *ngIf="phoneNumberOfUser">
+                                                            <input type="text" name="phone-nummber" id="phone-nummber" autocomplete="given-name" placeholder="{{phoneNumberOfUser}}"  formControlName="phoneNumber" 
+                                                                [(ngModel)]="phoneValue"
+                                                                
+                                                                
+                                                                class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm "
+                                                                style="direction: ltr; width: 20rem;">
+                                                        </div>
+
+                                                        <div *ngIf="!phoneNumberOfUser">
+                                                            <input type="text" name="phone-nummber" id="phone-nummber" autocomplete="given-name" placeholder="+989121113030"  formControlName="phoneNumber" 
+                                                                [(ngModel)]="phoneValue"
+                                                                
+                                                                
+                                                                class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm "
+                                                                style="direction: ltr; width: 20rem;">
+                                                        </div>
+
+                                                        
+
+                                                        <div *ngIf="reactiveForm.get('personalDetails.phoneNumber').touched">
+                                                            <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.phoneNumber').hasError('required')">
+                                                                Your Phone is required field if you would like to add phone number
+                                                            </small>
+                                                            <div *ngIf=" reactiveForm.get('personalDetails.phoneNumber').dirty">
+                                                        
+                                                                <small i18n class="text-red-600"
+                                                                    *ngIf="reactiveForm.get('personalDetails.phoneNumber').hasError('phoneNumberFormat') ">
+                                                                    Your phone number must only contain numbers and contain
+                                                                    eleven digits
+                                                                </small>
+                                                            </div>
+                                                        </div>    
+                                                    </div>
+                                    
+                                                </div>
+                                                <div class="mt-5 sm:mt-0 sm:ml-6 sm:flex sm:flex-shrink-0 sm:items-center">
+                                                    <button type="button"  (click)="setPhoneNumber()"  [disabled]="
+                                                        ( reactiveForm.get('personalDetails.phoneNumber').hasError('required')) ||
+                                                        ( reactiveForm.get('personalDetails.phoneNumber').hasError('phoneNumberFormat')) "
+                                                        class="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-sm"><span
+                                                            i18n>Record changes</span></button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                
+                                <!-- *********************************************************************************************************** -->
+                                    <div class="bg-white shadow sm:rounded-lg">
+                                        <div class="px-4 py-5 sm:p-6">
+                                            <h1 class="text-lg font-medium leading-6 text-gray-900"><span i18n>Personal Information</span></h1>
+                                            <form [formGroup]="reactiveForm">
+                                                <div class="shadow sm:overflow-hidden sm:rounded-md" formGroupName="personalDetails">
+                                                    <div class="space-y-6 bg-white py-6 px-4 sm:p-6">
+                                                        <div>
+                                                          
+                                                            <p i18n class="mt-1 text-sm text-gray-500">If you wish, you can edit your information.</p>
+                                                        </div>
+                                            
+                                                        <div class="grid grid-cols-6 gap-6">
+                                                            <div class="col-span-6 sm:col-span-3">
+                                                                <label for="first-name" class="block text-sm font-medium text-gray-700"><span i18n>complate
+                                                                        name</span></label>
+                                                                    <div *ngIf="!fullName">
+                                                                        <input type="text" name="first-name" id="first-name" autocomplete="given-name" placeholder="{{userName}}"
+                                                                            formControlName="complateName" [(ngModel)]="complateNameValue"
+                                                                            class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                                    </div>
+                                                                    <div *ngIf="fullName">
+                                                                        <input type="text" name="first-name" id="first-name" autocomplete="given-name" placeholder="{{fullName}}"
+                                                                            formControlName="complateName" [(ngModel)]="complateNameValue"
+                                                                            class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                                    </div>
+                                                                    <div *ngIf="reactiveForm.get('personalDetails.complateName').touched">
+                                                                        <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.complateName').hasError('nameFormat')">Name
+                                                                            field
+                                                                            is required in Persian language if you want to add your complate Name</small>
+                                                                    </div>
+                                                            </div>
+                                            
+                                                            <div class="col-span-6">
+                                                                <label for="street-address" class="block text-sm font-medium text-gray-700"><span i18n>Street
+                                                                        address</span></label>
+                                                                <input type="text" name="street-address" id="street-address" autocomplete="street-address"
+                                                                    formControlName="Address"    [(ngModel)]="addressValue"  placeholder="{{address}}"
+                                                                    class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                                    <div *ngIf="reactiveForm.get('personalDetails.Address').touched">
+                                                                        <small i18n class="text-red-600"
+                                                                            *ngIf="reactiveForm.get('personalDetails.Address').hasError('adressFormat')">Address field
+                                                                            is required in Persian language if you want to add your Address</small>
+                                                                    </div>
+                                                            </div>
+                                            
+                                                            <div class="col-span-6 sm:col-span-6 lg:col-span-2">
+                                                                <label for="city" class="block text-sm font-medium text-gray-700"><span i18n>City
+                                                                    </span></label>
+                                                                <input type="text" name="city" id="city" autocomplete="city" formControlName="city"  [(ngModel)]="cityValue" placeholder="{{city}}"
+                                                                    class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                                    <div *ngIf="reactiveForm.get('personalDetails.city').touched">
+                                                                        <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.city').hasError('nameFormat')">City field is required in Persian language if you want to add your City</small>
+                                                                    </div>
+                                                            </div>
+                                            
+                                                            <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                                                                <label for="region" class="block text-sm font-medium text-gray-700"><span i18n>Street
+                                                                    </span></label>
+                                                                <input type="text" name="region" id="region" autocomplete="street" formControlName="street"  [(ngModel)]="streetValue" placeholder="{{street}}"
+                                                                    class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                                    <div *ngIf="reactiveForm.get('personalDetails.street').touched">
+                                                                        <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.street').hasError('adressFormat')">Street field
+                                                                            is required in Persian language if you want to add Street name</small>
+                                                                    </div>
+                                                            </div>
+                                            
+                                                            <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                                                                <label for="postal-code" class="block text-sm font-medium text-gray-700"><span i18n>ZIP / Postal
+                                                                        code</span>
+                                                                </label>
+                                                                <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code"  placeholder="{{postCode}}"
+                                                                    formControlName="code"  [(ngModel)]="postalCodeValue"  
+                                                                    class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                                    <div *ngIf="reactiveForm.get('personalDetails.code').touched">
+                                                                        <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.code').hasError('postalCodeFormat')">Postal code field  must only contain numbers and contain
+                                                                            eleven digits if you want to add Postal code </small>
+                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
+                                                        <!-- <button type="submit"
+                                                            class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"><span
+                                                                i18n>Save</span> </button> -->
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="mt-2 sm:flex sm:items-start sm:justify-between">
+                                                <div >
+                                                    <div class="col-span-6 sm:col-span-3">
+                                    
+                                                        <!-- <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                                            class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm "
+                                                            style=" width: 20rem;"> -->
+                                                    </div>
+                                    
+                                                </div>
+                                                <div class="mt-5 sm:mt-0 sm:ml-6 sm:flex sm:flex-shrink-0 sm:items-center">
+                                                    <button type="submit"  (click)="setPersonalInformation()"  [disabled]="
+                                                        ( reactiveForm.get('personalDetails.complateName').hasError('required')) &&
+                                                        ( reactiveForm.get('personalDetails.complateName').hasError('nameFormat'))  &&
+                                                        ( reactiveForm.get('personalDetails.Address').hasError('required')) && 
+                                                        ( reactiveForm.get('personalDetails.Address').hasError('adressFormat')) &&
+                                                        ( reactiveForm.get('personalDetails.city').hasError('required')) && 
+                                                        ( reactiveForm.get('personalDetails.city').hasError('nameFormat')) &&
+                                                        ( reactiveForm.get('personalDetails.street').hasError('required')) && 
+                                                        ( reactiveForm.get('personalDetails.street').hasError('adressFormat')) &&
+                                                        ( reactiveForm.get('personalDetails.code').hasError('required')) && 
+                                                        ( reactiveForm.get('personalDetails.code').hasError('postalCodeFormat')) "
+                                                        class="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-sm"><span
+                                                            i18n>Record changes</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <!-- *********************************************************************************************************** -->
+                                    <div class="bg-white shadow sm:rounded-lg">
+                                        <div class="px-4 py-5 sm:p-6">
+                                            <h1 class="text-lg font-medium leading-6 text-gray-900"><span i18n>Organizational information</span></h1>
+                                            <form [formGroup]="reactiveForm">
+                                                <div class="shadow sm:overflow-hidden sm:rounded-md" formGroupName="personalDetails">
+                                                    <div class="space-y-6 bg-white py-6 px-4 sm:p-6">
+                                                        <div>
+                                                          
+                                                            <p i18n class="mt-1 text-sm text-gray-500">If you wish, you can edit your Organizational information.</p>
+                                                        </div>
+                                            
+                                                        <div class="grid grid-cols-6 gap-6">
+                                                            <div class="col-span-6 sm:col-span-3">
+                                                                <label for="organization-name" class="block text-sm font-medium text-gray-700"><span i18n>name of organization</span></label>
+                                                                <div *ngIf="nameOfOrg">
+                                                                    <input type="text" name="organization-name" id="organization-name" autocomplete="given-name" formControlName="organizationName" [(ngModel)]="organizationNameValue"  placeholder="{{nameOfOrg}}"
+                                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                                </div>
+                                                                <div *ngIf="!nameOfOrg">
+                                                                    <input type="text" name="organization-name" id="organization-name" autocomplete="given-name" formControlName="organizationName" [(ngModel)]="organizationNameValue"
+                                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                                </div>
+                                                                <div *ngIf="reactiveForm.get('personalDetails.organizationName').touched">
+                                                                    <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.organizationName').hasError('nameFormat')">Name of organization field is required in Persian language if you want to add your name of organization</small>
+                                                                </div>
+                                                            </div>
+                                            
+                                                            <div class="col-span-3">
+                                                                <label for="website-address" class="block text-sm font-medium text-gray-700"><span i18n>Organization website</span></label>
+                                                                <div *ngIf="orgWebsite">
+                                                                    <input type="text" name="website-address" id="website-address" autocomplete="website-address"
+                                                                        formControlName="organizationWebsite" placeholder="{{orgWebsite}}" [(ngModel)]="websiteNameValue"  
+                                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                                                        style="direction: ltr;">
+                                                                </div>
+                                                                <div *ngIf="!orgWebsite">
+                                                                    <input type="text" name="website-address" id="website-address" autocomplete="website-address"
+                                                                        formControlName="organizationWebsite" placeholder="www..." [(ngModel)]="websiteNameValue"
+                                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                                                        style="direction: ltr;">
+                                                                </div>
+                                                                <div *ngIf="reactiveForm.get('personalDetails.organizationWebsite').touched">
+                                                                    <small i18n class="text-red-600"
+                                                                        *ngIf="reactiveForm.get('personalDetails.organizationWebsite').hasError('webFormat')">Web site
+                                                                        field is required in website form if you want to add your organization Website</small>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="col-span-3">
+                                                                <label for="phone-nummber" class="block text-sm font-medium text-gray-700"><span i18n>phone of
+                                                                copmany</span></label>
+                                                                <div *ngIf="orgPhone">
+                                                                    <input type="text" name="phone-nummber" id="phone-nummber" autocomplete="phone-nummber"
+                                                                        formControlName="orgPhone" placeholder="{{orgPhone}}" [(ngModel)]="phoneOrgValue"
+                                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                                                        style="direction: ltr;">
+                                                                </div>
+                                                                <div *ngIf="!orgPhone">
+                                                                    <input type="text" name="phone-nummber" id="phone-nummber" autocomplete="phone-nummber"
+                                                                        formControlName="orgPhone" placeholder="+98211..." [(ngModel)]="phoneOrgValue"
+                                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                                                        style="direction: ltr;">
+                                                                </div>
+                                                               
+
+                                                                <div *ngIf="reactiveForm.get('personalDetails.orgPhone').touched">
+                                                                    <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.orgPhone').hasError('required')">
+                                                                        Your Phone is required field if you would like to add phone number
+                                                                    </small>
+                                                                    <div *ngIf=" reactiveForm.get('personalDetails.orgPhone').dirty">
+                                                                
+                                                                        <small i18n class="text-red-600"
+                                                                            *ngIf="reactiveForm.get('personalDetails.orgPhone').hasError('phoneNumberFormat') ">
+                                                                            Your phone number must only contain numbers and contain
+                                                                            eleven digits
+                                                                        </small>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+
+                                            
+                                                            <div class="col-span-3">
+                                                                <label for="organizationEmail" class="block text-sm font-medium text-gray-700"><span i18n>Organization email</span></label>
+                                                               <div *ngIf="orgEmail">
+                                                                <input type="email" name="organizationEmail" id="organizationEmail" autocomplete="organizationEmail"
+                                                                    placeholder="{{orgEmail}}" formControlName="organizationOfEmail" [(ngModel)]="organizationEmailValue"
+                                                                    class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                                                    style="direction: ltr;">
+                                                               </div>
+                                                               <div *ngIf="!orgEmail">
+                                                                <input type="email" name="organizationEmail" id="organizationEmail" autocomplete="organizationEmail"
+                                                                    placeholder="info@company.com" formControlName="organizationOfEmail" [(ngModel)]="organizationEmailValue"
+                                                                    class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                                                    style="direction: ltr;">
+                                                               </div>
+                                                                
+                                                                <div *ngIf="reactiveForm.get('personalDetails.organizationOfEmail').touched">
+                                                                    <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.organizationOfEmail').hasError('required')">Email
+                                                                        is required field if you want to add organization  Email</small>
+                                                                    <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.organizationOfEmail').hasError('email')">The
+                                                                        email is not a valid
+                                                                        email</small>
+                                                                    <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.organizationOfEmail').hasError('emailFormat')">Email
+                                                                        must be completely
+                                                                        formed with a
+                                                                        period in the domain part</small>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-span-3">
+                                                                <label for="orgMembers" class="block text-sm font-medium text-gray-700"><span i18n>Organization members </span></label>
+                                                                <div *ngIf="orgMembers">
+                                                                    <input type="number" name="orgMembers" id="orgMembers" autocomplete="orgMembers"
+                                                                        formControlName="organizationMemberCount" placeholder="{{orgMembers}}" [(ngModel)]="orgMembersValue" 
+                                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                                                        style="direction: ltr;">
+                                                                </div>
+                                                                <div *ngIf="!orgMembers">
+                                                                    <input type="number" name="orgMembers" id="orgMembers" autocomplete="orgMembers"
+                                                                        formControlName="organizationMemberCount" placeholder="0" [(ngModel)]="orgMembersValue"
+                                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                                                                        style="direction: ltr;">
+                                                                </div>
+                                                                <div *ngIf="reactiveForm.get('personalDetails.organizationMemberCount').touched">
+                                                                    <small i18n class="text-red-600"
+                                                                        *ngIf="reactiveForm.get('personalDetails.organizationMemberCount').hasError('MemberCount')">Your company
+                                                                        member count must only contain numbers</small>
+                                                                </div>
+                                                            
+                                                            </div>
+
+
+                                                            <div class="col-span-6">
+                                                                <label for="org-address" class="block text-sm font-medium text-gray-700"><span i18n>organization name</span></label>
+                                                                <div *ngIf="orgAddress">
+                                                                    <input type="text" name="org-address" id="org-address" autocomplete="org-address" formControlName="Address"
+                                                                        [(ngModel)]="addressValueOfORG" placeholder="{{orgAddress}}"
+                                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                                </div>
+                                                                <div *ngIf="!orgAddress">
+                                                                    <input type="text" name="org-address" id="org-address" autocomplete="org-address" formControlName="Address"
+                                                                        [(ngModel)]="addressValueOfORG" placeholder=""
+                                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                                </div>
+                                                                <div *ngIf="reactiveForm.get('personalDetails.Address').touched">
+                                                                    <small i18n class="text-red-600"
+                                                                        *ngIf="reactiveForm.get('personalDetails.Address').hasError('adressFormat')">Address field
+                                                                        is required in Persian language if you want to add your Address</small>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-span-3">
+                                                                <label i18n for="activity" class="block text-sm font-medium text-gray-700">Activity</label>
+                                                                <select id="activity" name="activity" autocomplete="activity" formControlName="activity"  [(ngModel)]="activitylValue"
+                                                                    class="block w-full max-w-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:max-w-xs sm:text-sm "
+                                                                    style="height: 2.5rem;">
+                                                                    <option i18n>educational</option>
+                                                                    <option i18n>commercial</option>
+                                                                    <option i18n>scientific</option>
+                                                                    <option i18n>legal</option>
+                                                                    <option i18n>service</option>
+                                                                    <option i18n>health</option>
+                                                                    <option i18n>non-profit</option>
+                                                                    <option i18n>others</option>
+                                                                </select>
+                                                            </div>
+
+                    
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
+                                                        <!-- <button type="submit"
+                                                            class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"><span
+                                                                i18n>Save</span> </button> -->
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <div class="mt-2 sm:flex sm:items-start sm:justify-between">
+                                                <div >
+                                                    <div class="col-span-6 sm:col-span-3">
+                                    
+                                                        <!-- <input type="text" name="first-name" id="first-name" autocomplete="given-name"
+                                                            class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm "
+                                                            style=" width: 20rem;"> -->
+                                                    </div>
+                                    
+                                                </div>
+                                                <div class="mt-5 sm:mt-0 sm:ml-6 sm:flex sm:flex-shrink-0 sm:items-center">
+                                                    <button type="submit"  (click)="setOrganizationalInformation()" [disabled]="
+                                                        ( reactiveForm.get('personalDetails.organizationName').hasError('required')) &&
+                                                        ( reactiveForm.get('personalDetails.organizationName').hasError('nameFormat'))  &&
+                                                        ( reactiveForm.get('personalDetails.organizationWebsite').hasError('required')) && 
+                                                        ( reactiveForm.get('personalDetails.organizationWebsite').hasError('webFormat')) &&
+                                                        ( reactiveForm.get('personalDetails.organizationOfEmail').hasError('required')) && 
+                                                        ( reactiveForm.get('personalDetails.organizationOfEmail').hasError('emailFormat')) &&
+                                                        ( reactiveForm.get('personalDetails.Address').hasError('required'))&&
+                                                        ( reactiveForm.get('personalDetails.Address').hasError('adressFormat')) &&
+                                                        ( reactiveForm.get('personalDetails.organizationMemberCount').hasError('required')) &&
+                                                        ( reactiveForm.get('personalDetails.organizationMemberCount').hasError('MemberCount')) &&
+                                                        ( reactiveForm.get('personalDetails.orgPhone').hasError('required')) &&
+                                                        ( reactiveForm.get('personalDetails.orgPhone').hasError('phoneNumberFormat'))"
+                                                        class="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-sm"><span
+                                                            i18n>Record changes</span></button>
+
+
+                                                            
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <!-- *********************************************************************************************************** -->
+                                <div class="bg-white shadow sm:rounded-lg">
+                                    <div class="px-4 py-5 sm:p-6">
+                                        <h1 class="text-lg font-medium leading-6 text-gray-900"><span i18n>Upload the logo of the organization</span></h1>
+                                        <div class="mt-2 sm:flex sm:items-start sm:justify-between">
+                                            <div class="max-w-xl text-sm text-gray-500">
+                                
+                                
+                                                <div *ngIf="logoPicURL">
+                                                    <span class="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100">
+                                                        <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                                
+                                                            <image [attr.href]="logoPicURL" width="100%" height="100%" />
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div *ngIf="!logoPicURL">
+                                                    <span class="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100">
+                                                        <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                                
+                                                
+                                                            <path *ngIf="!selectedLogo"
+                                                                d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <div *ngIf="logoPicURL">
+                                                    <label i18n for="fileInputLogo" class="custom-button">Change Photo of logo</label>
+                                                </div>
+                                                
+                                                <div *ngIf="!logoPicURL">
+                                                    <label i18n for="fileInputLogo" class="custom-button">Select Photo of logo</label>
+                                                </div>
+                                                <input id="fileInputLogo" type="file" (change)="onFileSelectedLogo($event)" class="hidden-input" />
+                                            </div>
+                                            <div class="mt-5 sm:mt-0 sm:ml-6 sm:flex sm:flex-shrink-0 sm:items-center">
+                                                <div class="mt-5 sm:mt-0 sm:ml-6 sm:flex sm:flex-shrink-0 sm:items-center">
+                                                    <button type="button" (click)="setLogo()"
+                                                        class="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-sm"><span
+                                                            i18n>Record changes</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-3 " *ngIf="showLogo">
+                                            <img [src]="this.selectedLogo" alt="" style="width: 15%; height: auto">
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+
+                                <!-- <div class="bg-white shadow sm:rounded-lg">
+                                    <div class="px-4 py-5 sm:p-6">
+                                        <h1 class="text-lg font-medium leading-6 text-gray-900">{{userName}}</h1>
+                                        <div class="mt-2 sm:flex sm:items-start sm:justify-between">
+                                            <div>
+                                               
+                                            
+                                                <p i18n class="mt-1 text-sm text-gray-500">If you wish, you can edit your information</p>
+                                            </div>
+                                            
+                                            <div class="grid grid-cols-3 gap-6">
+                                                <div class="col-span-3 sm:col-span-2">
+                                                    <label for="company-website" class="block text-sm font-medium text-gray-700"><span i18n>UserEmail</span></label>
+                                                    <div class="mt-2 flex rounded-md shadow-sm">
+                                                        <span
+                                                            class="inline-flex items-center ms-3 border border-  border-gray-700 bg-gray-50 px-3 text-gray-700 sm:text-lg"
+                                                            style="border-radius: 5px;">{{emailOfUser}}</span>
+                                                    </div>
+                                                </div>
+                                            
+                                            
+
+                                            <div class="col-span-3">
+                                                <label class="block text-sm font-medium text-gray-700"><span i18n>Photo</span></label>
+                                                <div class="mt-1 flex items-center">
+                                                    <span class="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100">
+                                                        <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                                          
+                                                            <image *ngIf="selectedImage" [attr.href]="selectedImage" width="100%" height="100%" />
+                                                            <path *ngIf="!selectedImage"
+                                                                d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                                                        </svg>
+                                                    </span>
+                                                    
+                                                    <label i18n for="fileInput" class="custom-button">Select Photo</label>
+                                                    <input id="fileInput" type="file" (change)="onFileSelected($event)" class="hidden-input"/>
+                                                </div>
+                                            </div>
+
+                                                <div class="col-span-3 mt-2">
+                                                    <img [src]="selectedImage" alt="" style="width: 30%; height: auto">
+                                                </div>
+                                            
+                                            </div>
+                                            <div class="mt-5 sm:mt-0 sm:ml-6 sm:flex sm:flex-shrink-0 sm:items-center">
+                                              
+                                            </div>
+                                        </div>
+                                        <div class="sm:mt-0 sm:ml-6 sm:flex sm:flex-shrink-0 sm:items-center">
+                                            <button type="button" 
+                                                class="inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 mt-2 font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:text-sm">Change
+                                                plan</button>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                
+                              <!-- *********************************************************************************************************** -->
+                                
+                               
+                                <!-- <form >
+                                    <div class="shadow sm:overflow-hidden sm:rounded-md">
+                                        <div class="space-y-6 bg-white py-6 px-4 sm:p-6">
+                                            <div>
+                                                <h1 class="text-lg font-medium leading-6 text-gray-900">{{userName}}</h1>
+                                                
+                                                <p i18n class="mt-1 text-sm text-gray-500">If you wish, you can edit your information</p>
+                                            </div>
+                        
+                                            <div class="grid grid-cols-3 gap-6">
+                                                <div class="col-span-3 sm:col-span-2">
+                                                    <label for="company-website"
+                                                        class="block text-sm font-medium text-gray-700"><span i18n>UserEmail</span></label>
+                                                    <div class="mt-2 flex rounded-md shadow-sm">
+                                                        <span
+                                                            class="inline-flex items-center ms-3 border border-  border-gray-700 bg-gray-50 px-3 text-gray-700 sm:text-lg" style="border-radius: 5px;">{{emailOfUser}}</span>
+                                                    </div>
+                                                </div>
+                        
+
+                                                <div class="col-span-3">
+                                                    <label class="block text-sm font-medium text-gray-700"><span i18n>Photo</span></label>
+                                                    <div class="mt-1 flex items-center">
+                                                        <span class="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100">
+                                                            <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                                             
+                                                                <image *ngIf="selectedImage" [attr.href]="selectedImage" width="100%" height="100%" />
+                                                                <path *ngIf="!selectedImage"
+                                                                    d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                                                            </svg>
+                                                        </span>
+                                                        <input type="file" (change)="onFileSelected($event)"  >
+                                                    </div>
+                                        
+                                                </div>
+
+                                                <div>
+                                                    <img [src]="this.selectedImage" alt="">
+                                                </div>
+                                        
+                                            </div>
+                                        </div>
+                                        <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
+                                            <button type="submit" (click)="onSubmit()"
+                                                class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"><span i18n>Save</span></button>
+                                        </div>
+                                    </div>
+                                </form> -->
+                        
+                               
+                                <!-- <form [formGroup]="reactiveForm" >
+                                    <div class="shadow sm:overflow-hidden sm:rounded-md" formGroupName="personalDetails">
+                                        <div class="space-y-6 bg-white py-6 px-4 sm:p-6">
+                                            <div >
+                                                <h3 class="text-lg font-medium leading-6 text-gray-900"><span i18n>Personal Information</span></h3>
+                                                <p i18n class="mt-1 text-sm text-gray-500">If you wish, you can edit your information.</p>
+                                            </div>
+                        
+                                            <div class="grid grid-cols-6 gap-6">
+                                                <div class="col-span-6 sm:col-span-3">
+                                                    <label for="first-name" class="block text-sm font-medium text-gray-700"><span i18n >First name</span></label>
+                                                    <input type="text" name="first-name" id="first-name" autocomplete="given-name"  formControlName="firstName"
+                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                </div>
+                        
+                                                <div class="col-span-6 sm:col-span-3">
+                                                    <label for="last-name" class="block text-sm font-medium text-gray-700"><span i18n>Last name</span></label>
+                                                    <input type="text" name="last-name" id="last-name" autocomplete="family-name" formControlName="lastName"
+                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                </div>
+                        
+                                                <div class="col-span-6 sm:col-span-4">
+                                                    <label for="phone-number" class="block text-sm font-medium text-gray-700"><span i18n>phone number </span></label>
+                                                    <input type="text" name="phone-number" id="phone-number" formControlName="phoneNumber"
+                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                </div>
+                        
+                                                <div class="col-span-6">
+                                                    <label for="street-address" class="block text-sm font-medium text-gray-700"><span i18n>Street
+                                                    address</span></label>
+                                                    <input type="text" name="street-address" id="street-address" autocomplete="street-address" formControlName="Address"
+                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                </div>
+                        
+                                                <div class="col-span-6 sm:col-span-6 lg:col-span-2">
+                                                    <label for="city" class="block text-sm font-medium text-gray-700"><span i18n>City
+                                                        </span></label>
+                                                    <input type="text" name="city" id="city" autocomplete="city"  formControlName="city"
+                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                </div>
+                        
+                                                <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                                                    <label for="region" class="block text-sm font-medium text-gray-700"><span i18n>Street
+                                                        </span></label>
+                                                    <input type="text" name="region" id="region" autocomplete="street" formControlName="street"
+                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                </div>
+                        
+                                                <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                                                    <label for="postal-code" class="block text-sm font-medium text-gray-700"><span i18n>ZIP / Postal code</span>
+                                                        </label>
+                                                    <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code"  formControlName="code"
+                                                        class="mt-1 block w-full rounded-md border border-gray-300 py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
+                                            <button type="submit"
+                                                class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"><span i18n>Save</span> </button>
+                                        </div>
+                                    </div>
+                                </form> -->
+                        
+                               
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+              
+            </main>
+            <aside
+                class="relative hidden w-96 flex-shrink-0 overflow-y-auto border-l border-gray-200 xl:flex xl:flex-col">
+               
+            </aside>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+

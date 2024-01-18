@@ -1,0 +1,65 @@
+.compose-container-main {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 10px;
+    
+    height: 60%;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 10px;
+    padding-left: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+}
+
+@media (max-width: 767px) {
+
+    /* Adjust styles for screens with a maximum width of 767px (typical mobile devices) */
+    .compose-container-main {
+        position: fixed;
+        bottom: 0;
+        left: 10px;
+        width: 90%;
+        left: 0;
+        right: 0;
+        border-radius: 10px;
+        margin: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+    /* Adjust styles for screens between 768px and 1023px (typical tablet devices) */
+    .compose-container-main {
+        width: 60%;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1023px) {
+
+    /* Adjust styles for screens between 768px and 1023px (typical tablet devices) */
+    .compose-container-main {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* Adjust styles for screens with a minimum width of 1024px (typical laptop devices) */
+    .compose-container-main {
+        width: 40%;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    /* Adjust the top position as needed */
+    left: 10px;
+    /* Adjust the left position as needed */
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+}

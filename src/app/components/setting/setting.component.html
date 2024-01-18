@@ -1,0 +1,82 @@
+<div class="bg-white "  >
+    <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+
+        <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24  shadow-2xl sm:rounded-3xl sm:px-16">
+
+            <div class="relative">
+                <div *ngIf="showPhotoInForm"
+                    class="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+                    <img class="h-full w-full object-cover" src="/assets/images/10.jpg" alt="">
+                    <button >Do Not shot Photo</button>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 926 676" aria-hidden="true"
+                        class="absolute left-24 -bottom-24 w-[57.875rem] transform-gpu blur-[118px]">
+                        <path fill="url(#60c3c621-93e0-4a09-a0e6-4c228a0116d8)" fill-opacity=".4"
+                            d="m254.325 516.708-90.89 158.331L0 436.427l254.325 80.281 163.691-285.15c1.048 131.759 36.144 345.144 168.149 144.613C751.171 125.508 707.17-93.823 826.603 41.15c95.546 107.978 104.766 294.048 97.432 373.585L685.481 297.694l16.974 360.474-448.13-141.46Z" />
+                        <defs>
+                            <linearGradient id="60c3c621-93e0-4a09-a0e6-4c228a0116d8" x1="926.392" x2="-109.635"
+                                y1=".176" y2="321.024" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#776FFF"></stop>
+                                <stop offset="1" stop-color="#FF4694"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="relative mx-auto max-w-7xl py-24 sm:py-32 lg:py-40 lg:px-8">
+                    <div class=" pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
+                        <h2 i18n class="mt-2 text-2xl font-bold tracking-tight text-indigo-400">Start Node</h2>
+
+                        <p class="mt-6 text-2xl leading-7 text-gray-300"></p>
+                        <div class="mt-8">
+                            <button i18n type="submit" 
+                                class=" m-3  inline-flex justify-center rounded-md border border-transparent bg-indigo-600 pt-3 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                ادامه
+
+                                <svg width="40px" height="40px" viewBox="0 0 20 28" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    style="margin-right: 5px;">
+                                    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                    <title>arrow-left</title>
+                                    <desc>Created with Sketch.</desc>
+                                    <defs>
+
+                                    </defs>
+                                    <g id="Vivid.JS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="Vivid-Icons" transform="translate(-437.000000, -651.000000)">
+                                            <g id="Icons" transform="translate(37.000000, 169.000000)">
+                                                <g id="arrow-left" transform="translate(390.000000, 468.000000)">
+                                                    <g transform="translate(10.000000, 14.000000)" id="Shape">
+                                                        <polygon fill="#FF6E6E"
+                                                            points="28 12 8 12 13 17 10 20 0 10 10 0 13 3 8 8 28 8">
+
+                                                        </polygon>
+                                                        <polygon fill="#0C0058" points="20 8 20 12 28 12 28 8">
+
+                                                        </polygon>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </button>
+                            <button (click)="photo()">Do Not shot Photo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
+                class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2" aria-hidden="true">
+                <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+                    fill-opacity="0.7" />
+                <defs>
+                    <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217" cx="0" cy="0" r="1"
+                        gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(512)">
+                        <stop stop-color="#7775D6"></stop>
+                        <stop offset="1" stop-color="#E935C1" stop-opacity="0"></stop>
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</div>

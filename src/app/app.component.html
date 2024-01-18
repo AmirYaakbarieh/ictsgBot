@@ -1,0 +1,24 @@
+<!-- <app-header></app-header>
+
+
+<router-outlet></router-outlet>
+
+<app-footer></app-footer> -->
+
+<ng-container *ngIf="showHeader">
+    <app-header></app-header>
+</ng-container>
+
+<ng-container *ngIf="showSecondMenu">
+    <app-usermenu></app-usermenu>
+</ng-container>
+
+<ng-container *ngIf="showThirdMenu">
+    <app-management-menu></app-management-menu>
+</ng-container>
+
+<router-outlet></router-outlet>
+
+<ng-container *ngIf="showFooter">
+    <app-footer></app-footer>
+</ng-container>

@@ -1,0 +1,18 @@
+h1 {
+    color: rgb(252, 1, 1);
+    margin: 12rem;
+    text-align: center;
+    font-size: xxx-large;
+}
+
+/* .shoppingCart {
+    width: 600px;
+    height: 40px;
+    background-color: white;
+} */
+
+
+
+.bg-gradient-to-t {
+    background-image: linear-gradient(to bottom, #1f2937, #240555)
+}

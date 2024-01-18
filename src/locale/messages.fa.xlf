@@ -1,0 +1,2243 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+
+     -------------------navbar component -----------------------
+
+      <trans-unit id="1737753151350322492" datatype="html">
+        <source><x id="PH" equiv-text="this.title"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6570363013146073520" datatype="html">
+        <source>Dashboard</source>
+        <target>داشبورد</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4296185699711157229" datatype="html">
+        <source>About Us </source>
+        <target>درباره چت بات</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">48,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6988320067511143326" datatype="html">
+        <source>Contact Us </source>
+        <target>تماس با ما</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">52,54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8118018003398584551" datatype="html">
+        <source>Boots </source>
+        <target>  طراحی بات </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3379406408923972770" datatype="html">
+        <source>LogIn</source>
+        <target>ورود به حساب کاربری </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7398078272872070860" datatype="html">
+        <source>Edit your profile</source>
+        <target>ویرایش حساب کاربری </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">107</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1884804869474995747" datatype="html">
+        <source>LogOut</source>
+        <target>خروج از حساب کاربری </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="197423074150198657" datatype="html">
+        <source> About Us </source>
+        <target>درباره ما</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">124,125</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9081389459800982992" datatype="html">
+        <source> Contact Us </source>
+        <target>تماس با ما</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">127,128</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3352607872293382237" datatype="html">
+        <source> Boots </source>
+        <target>بات های شما</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">130,132</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4953222922082058162" datatype="html">
+        <source>view </source>
+        <target> نمایش بات  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">60,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6928240501333319514" datatype="html">
+        <source>user panel </source>
+        <target> پنل کاربری </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">65,66</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="3120249865843921689" datatype="html">
+        <source> user panel </source>
+        <target> پنل کاربری </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/navbar/navbar.component.html</context>
+          <context context-type="linenumber">140,142</context>
+        </context-group>
+      </trans-unit>
+
+      -------------------home component -----------------------
+      <trans-unit id="8562949923597025857" datatype="html">
+        <source>Welcome to our Chatbot-Powered Design Hub!</source>
+        <target>    به دنیایی از ارتباطات نوین و طراحی شگفت‌انگیز خوش آمدید</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">1466</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7604884056063575629" datatype="html">
+        <source>JExperience seamless interaction and modern design at ICTSG. Our chatbots make navigating our site a breeze, ensuring a user-friendly and engaging journey. Dive in and let the conversation unfold!</source>
+        <target>تجربه ارتباط با طراحی مدرن را در شرکت آکام پرنیان تاوریژ تجربه کنید !!</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">1467,1468</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="5287078726107602082" datatype="html">
+        <source>Revolutionizing Interaction: Where Design Meets Intelligence.</source>
+         <target>  تعامل متحول کننده: جایی که طراحی با هوش روبرو می شود </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">1491</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8168331739067200769" datatype="html">
+        <source>The possibility of online bot design</source>
+        <target> امکان طراحی آنلاین بات  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">1490</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6729243795950827697" datatype="html">
+        <source>Click for advice</source>
+        <target>    جهت مشاوره کلیک کنید  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">1494</context>
+        </context-group>
+      </trans-unit>
+
+      -------------------about component -----------------------
+
+      
+      <trans-unit id="3900860620491359150" datatype="html">
+        <source>At <x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span style=&quot;color: cyan;&quot;&gt;"/>ICTSG<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/>, we utilize cutting-edge technology to provide seamless and personalized customer experiences. Our platform enables the creation of smart bots that intelligently engage with customers, leveraging state-of-the-art artificial intelligence for advanced capabilities. Our smart bots offer intelligent personalization by learning from customer interactions, delivering tailored responses to meet individual needs and preferences. They boast advanced Natural Language Understanding (NLU) to accurately interpret customer queries, providing a natural and human-like conversational experience. Moreover, our platform seamlessly integrates with existing systems, supporting various business processes such as e-commerce, customer support, and lead generation. With AI at their core, our smart bots continuously learn and refine their responses, ensuring they stay up-to-date with the latest trends and customer preferences. Empowering self-service, our bots offer instant support, reducing wait times, and freeing up your team to focus on more complex tasks. In situations requiring human assistance, our platform allows seamless integration with human agents to ensure the best possible customer support. Data security and privacy are prioritized, and our user-friendly interface makes customizing smart bots hassle-free, even without extensive technical expertise.</source>
+        <target>در ICTSG ما از فناوری پیشرفته برای ارائه تجربیات یکپارچه و شخصی به مشتری استفاده می کنیم. پلتفرم ما ایجاد ربات‌های
+                هوشمندی را امکان‌پذیر می‌سازد که به طور هوشمندانه با مشتریان ارتباط برقرار می‌کنند و از هوش مصنوعی پیشرفته برای
+                قابلیت‌های پیشرفته استفاده می‌کنند.
+                
+                ربات‌های هوشمند ما با یادگیری از تعاملات مشتری و ارائه پاسخ‌های متناسب با نیازها و ترجیحات فردی، شخصی‌سازی هوشمند را
+                ارائه می‌کنند. آنها به درک پیشرفته زبان طبیعی (NLU) برای تفسیر دقیق سؤالات مشتری می بالند و یک تجربه مکالمه طبیعی و شبیه
+                انسان را ارائه می دهند.
+                
+                علاوه بر این، پلت فرم ما به طور یکپارچه با سیستم های موجود ادغام می شود و از فرآیندهای تجاری مختلف مانند تجارت
+                الکترونیک، پشتیبانی مشتری و تولید سرنخ پشتیبانی می کند. با وجود هوش مصنوعی در هسته خود، ربات‌های هوشمند ما به طور مداوم
+                پاسخ‌های خود را یاد می‌گیرند و اصلاح می‌کنند و اطمینان حاصل می‌کنند که از آخرین روندها و ترجیحات مشتریان به‌روز
+                می‌مانند.
+                
+                ربات‌های ما با تقویت سلف سرویس، پشتیبانی فوری ارائه می‌کنند، زمان انتظار را کاهش می‌دهند، و تیم شما را برای تمرکز روی
+                کارهای پیچیده‌تر آزاد می‌کنند. در شرایطی که نیاز به کمک انسانی دارد، پلتفرم ما اجازه می دهد تا یکپارچه سازی یکپارچه با
+                عوامل انسانی را برای اطمینان از بهترین پشتیبانی مشتری ممکن انجام دهد. امنیت و حریم خصوصی داده ها در اولویت هستند، و رابط
+                کاربر پسند ما، سفارشی کردن ربات های هوشمند را بدون دردسر، حتی بدون تخصص فنی گسترده، می کند.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about-us/about-us.component.html</context>
+          <context context-type="linenumber">136,159</context>
+        </context-group>
+      </trans-unit>
+            <trans-unit id="8525213662266893834" datatype="html">
+        <source>Contact us</source>
+        <target>تماس با ما </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about-us/about-us.component.html</context>
+          <context context-type="linenumber">155</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7197870580140559288" datatype="html">
+        <source>Sales</source>
+        <target> فروش </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about-us/about-us.component.html</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4816170278199938451" datatype="html">
+        <source>At ICTSG, we are committed to delivering exceptional products and services to our valued customers. Our dedicated sales team is ready to assist you in finding the perfect solutions that meet your needs. Whether you&apos;re looking for cutting-edge technology or innovative products, we&apos;re here to guide you through the buying process. Our knowledgeable representatives will provide personalized recommendations and answer any questions you may have. Your satisfaction is our top priority, and we strive to ensure a smooth and pleasant purchasing experience. Contact our sales team today, and let us help you find the right solutions for your requirements.</source>
+        <target> در ICTSG، ما متعهد به ارائه محصولات و خدمات استثنایی به مشتریان گرامی خود هستیم. تیم فروش اختصاصی ما آماده است تا به شما در یافتن راه حل های عالی که نیازهای شما را برآورده می کند کمک کند.
+چه به دنبال فناوری پیشرفته یا محصولات نوآورانه باشید، ما اینجا هستیم تا شما را در فرآیند خرید راهنمایی کنیم. نمایندگان آگاه ما توصیه های شخصی را ارائه می دهند و به هر سؤالی که ممکن است داشته باشید پاسخ می دهند
+رضایت شما اولویت اصلی ما است و ما در تلاش هستیم تا تجربه خریدی روان و دلپذیر را تضمین کنیم. همین امروز با تیم فروش ما تماس بگیرید و به ما کمک کنید تا راه حل های مناسب برای نیازهای خود را پیدا کنید</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about-us/about-us.component.html</context>
+          <context context-type="linenumber">169,175</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4672631329798198551" datatype="html">
+        <source>About Bot</source>
+         <target>  درباره چت بات </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about-us/about-us.component.html</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2345975805175526868" datatype="html">
+        <source>Technical Support</source>
+        <target> پشتیبانی فنی </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about-us/about-us.component.html</context>
+          <context context-type="linenumber">194</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="314910670637134677" datatype="html">
+        <source>Our dedicated technical support team is here to assist you with any technical issues or inquiries you may have. Whether it&apos;s troubleshooting software problems, resolving hardware issues, or answering questions about our products, we are committed to providing prompt and reliable support. Our experts are available through various channels, including phone, email, and live chat, to ensure you receive timely assistance. We understand the importance of keeping your systems running smoothly, and our goal is to help you overcome any challenges you encounter.</source>
+        <target>  تیم پشتیبانی فنی اختصاصی ما اینجاست تا به شما در مورد مسائل فنی یا سوالاتی که ممکن است داشته باشید کمک کند. خواه عیب‌یابی مشکلات نرم‌افزاری، حل مشکلات سخت‌افزاری یا پاسخ‌گویی به سؤالات مربوط به محصولاتمان باشد، ما متعهد به ارائه پشتیبانی سریع و مطمئن هستیم.
+کارشناسان ما از طریق کانال های مختلف، از جمله تلفن، ایمیل، و چت زنده در دسترس هستند تا اطمینان حاصل کنند که به موقع کمک دریافت می کنید. ما اهمیت کارکرد روان سیستم های شما را درک می کنیم و هدف ما کمک به شما برای غلبه بر هر چالشی است که با آن مواجه می شوید.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about-us/about-us.component.html</context>
+          <context context-type="linenumber">195,200</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8623535279488946199" datatype="html">
+        <source>Media Inquiries</source>
+         <target>  پرسش های رسانه ای </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about-us/about-us.component.html</context>
+          <context context-type="linenumber">219</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8578330017831248545" datatype="html">
+        <source>We welcome all media inquiries and are happy to provide information, interviews, and resources to journalists, reporters, and media outlets. Our team is available to assist you in gathering accurate and up-to-date information about our organization, products, or services. For media-related requests, please get in touch with our dedicated media relations department, and we will promptly respond to your inquiries. We value the role of the media in sharing our stories and engaging with our audience</source>
+         <target>
+ما از تمام سوالات رسانه ها استقبال می کنیم و خوشحالیم که اطلاعات، مصاحبه ها و منابع را در اختیار روزنامه نگاران، خبرنگاران و رسانه ها قرار می دهیم. تیم ما برای کمک به شما در جمع آوری اطلاعات دقیق و به روز درباره سازمان، محصولات یا خدمات ما در دسترس است. برای درخواست های مرتبط با رسانه، لطفاً با بخش اختصاصی روابط رسانه ای ما تماس بگیرید و ما به سرعت به سوالات شما پاسخ خواهیم داد. ما به نقش رسانه ها در به اشتراک گذاری داستان های خود و تعامل با مخاطبان خود اهمیت می دهیم</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about-us/about-us.component.html</context>
+          <context context-type="linenumber">220,224</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9100136171003934649" datatype="html">
+        <source>Contact us<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span
+        aria-hidden=&quot;true&quot;&gt;"/> →<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target>  تماس با گروه ICTSG</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/about-us/about-us.component.html</context>
+          <context context-type="linenumber">227,228</context>
+        </context-group>
+      </trans-unit>
+      -------------------------------footer component--------------------------------
+
+       <trans-unit id="6854065343031117704" datatype="html">
+        <source>Boots</source>
+        <target> بات ها </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="7861389751355579174" datatype="html">
+        <source>Analytics</source>تجزیه و تحلیل
+        <target> تجزیه و تحلیل</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2288513108450439427" datatype="html">
+        <source>Support</source>
+        <target>  پشتیبانی </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5080775557941296581" datatype="html">
+        <source>Pricing</source>
+        <target>  قیمت گذاری </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4895326106573044490" datatype="html">
+        <source>Documentation</source>
+        <target>  مستندات  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1826215573205981970" datatype="html">
+        <source>Company</source>
+        <target>  شرکت ICTSG  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1726363342938046830" datatype="html">
+        <source>About</source>
+        <target>   درباره ICTSG  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7751010942038334793" datatype="html">
+        <source>Blog</source>
+        <target> وبلاگ  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7922989125096435449" datatype="html">
+        <source>Contact</source>
+        <target> تماس با شرکت  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8440128775129354214" datatype="html">
+        <source>Privacy</source>
+        <target>   حریم خصوصی  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3952251141025516031" datatype="html">
+        <source>Subscribe to our newsletter</source>
+        <target>    اشترک در خبرنامه   </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3152102138473808355" datatype="html">
+        <source>The latest news, articles, and resources, sent to your inbox weekly.</source>
+        <target>آخرین اخبار، مقالات و منابع، به صورت هفتگی به صندوق ورودی شما ارسال می شود.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">71,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1144407473317535723" datatype="html">
+        <source>Subscribe</source>
+         <target>اشتراک</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/footer/footer.component.html</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+      </trans-unit>
+      -------------------------------------not-found component--------------------------------
+
+      <trans-unit id="4081283799198049156" datatype="html">
+        <source>It looks like the page you’re looking for doesn&apos;t exist</source>
+        <target>به نظر می رسد صفحه ای که به دنبال آن هستید وجود ندارد</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/not-found/not-found.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6266867565509022026" datatype="html">
+        <source>Go back home</source>
+        <target>بازگشت به صفحه اصلی</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/not-found/not-found.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      -------------------------------------logIn-----------------------------------------------
+       <trans-unit id="8368872827766248541" datatype="html">
+        <source>Sign in to your account</source>
+        <target>  به حساب کاربری خود وارد شوید  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/log-in/log-in.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3967269098753656610" datatype="html">
+        <source>Email address</source>
+        <target>  آدرس ایمیل </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/log-in/log-in.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1431416938026210429" datatype="html">
+        <source>Password</source>
+         <target>   رمز عبور </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/log-in/log-in.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="931252989873527145" datatype="html">
+        <source>Remember me</source>
+         <target>  مرا به خاطر بسپار </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/log-in/log-in.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2012659005494284050" datatype="html">
+        <source>Forgot your password?</source>
+         <target>  آیا رمز عبور خود را فراموش کرده اید؟  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/log-in/log-in.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5207635742003539443" datatype="html">
+        <source>Sign in</source>
+        <target> ورود</target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/log-in/log-in.component.html</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2101902914887471883" datatype="html">
+        <source>Sign In</source>
+        <target> ورود</target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/log-in/log-in.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4552823196263551873" datatype="html">
+        <source>Or continue with</source>
+        <target>   یا ادامه دهید </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/log-in/log-in.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2308975396733519902" datatype="html">
+        <source>Create an account</source>
+        <target>  حساب کاربری برای خود ایجاد کنید</target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/log-in/log-in.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6549506770918448718" datatype="html">
+        <source>Would you like to Sign Out</source>
+        <target> آیا از حساب خود خارج می شوید؟ </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/log-in/log-in.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5566625162353045387" datatype="html">
+        <source>Sign Out to your account</source>
+        <target>   خروج از  حساب کاربری  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/log-out/log-out.component.html</context>
+          <context context-type="linenumber">59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6150305431448027194" datatype="html">
+        <source>SignOut</source>
+        <target>  خروج  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/log-out/log-out.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="146378539290693943" datatype="html">
+        <source>Login your account</source>
+        <target>  ورود به حساب کاربری  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      ------------------------------register component -----------------------------------
+       <trans-unit id="8953033926734869941" datatype="html">
+        <source>Name</source>
+        <target> نام  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6545811373740306794" datatype="html">
+        <source><x id="START_SMALL_TEXT" ctype="x-small" equiv-text="&lt;small *ngIf=&quot;reactiveForm.get(&apos;personalDetails.firstName&apos;).errors?.[&apos;required&apos;] &quot;&gt;"/>Your name is requied field<x id="CLOSE_SMALL_TEXT" ctype="x-small" equiv-text="&lt;/small&gt;"/><x id="START_SMALL_TEXT_1" equiv-text="&lt;small *ngIf=&quot;reactiveForm.get(&apos;personalDetails.firstName&apos;).errors?.[&apos;onSpaceAllowed&apos;]&quot;&gt;"/>Your name can not contain a space<x id="CLOSE_SMALL_TEXT" ctype="x-small" equiv-text="&lt;/small&gt;"/></source>
+        <target> فیلد نام الزامی است  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6752214914257704626" datatype="html">
+        <source>Email is requied field</source>
+        <target> فیلد ایمیل الزامی است  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7932177378978471350" datatype="html">
+        <source>The email is not a valid email</source>
+        <target> ایمیل معتبر نیست </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2003925014497619981" datatype="html">
+        <source>Passwords are not match</source>
+        <target> رمزهای عبور مطابقت ندارند</target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="215965922747587760" datatype="html">
+        <source>Your name is requied field</source>
+        <target> فیلد نام الزامی است  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3696858150050933635" datatype="html">
+        <source>Your name can not contain a space</source>
+        <target> نام نمی تواند حاوی فاصله باشد </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3241357959735682038" datatype="html">
+        <source>Confirm Password</source>
+        <target> تکرار رمز عبور</target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="600008841656890825" datatype="html">
+        <source> Your name can only contain Persian characters </source>
+        <target> نام فقط می تواند دارای حروف فارسی باشد</target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+          <context context-type="linenumber">36,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1268300194326374" datatype="html">
+        <source> Your name is requied field </source>
+        <target> فیلد نام الزامی است  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+          <context context-type="linenumber">33,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5364443039375257394" datatype="html">
+        <source>Email is required field</source>
+        <target> فیلد ایمیل الزامی است </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/log-in/log-in.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2205179717264011954" datatype="html">
+        <source>Email must be completely formed with a period in the domain part</source>
+        <target> ایمیل باید کامل باشد </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/log-in/log-in.component.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+
+      -----------------------------preview--------------------------------------------------
+      <trans-unit id="5899915673291428255" datatype="html">
+        <source>Next Step <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot; fa-solid fa-circle-chevron-left mr-3 &quot;
+        style=&quot;font-size: x-large;&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></source>
+        <target> ادامه</target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">796,797</context>
+        </context-group>
+      </trans-unit>
+         <trans-unit id="6836937102338717981" datatype="html">
+        <source>continues</source>
+        <target> ادامه</target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">627</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">766</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">862</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">1164</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">1300</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">1511</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">1670</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">1828</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">1972</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">2104</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">2218</context>
+        </context-group>
+      </trans-unit>
+      -----------------------------start form--------------------------------------------------
+      <trans-unit id="2430517001158960653" datatype="html">
+        <source>Start Node</source>
+         <target> گره شروع </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1856124078565322869" datatype="html">
+        <source>Enter a name for the starting node</source>
+         <target>متن شروع را وارد کنید</target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="134594401210073626" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa fa-tag&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> Start Node Labale</source>
+        <target> برچسب گره شروع </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1489655852164556121" datatype="html">
+        <source>Start Node </source>
+        <target> گره شروع </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">331</context>
+        </context-group>
+      </trans-unit>
+      -----------------------------------------Notification -----------------------------------
+      <trans-unit id="4915348945945278750" datatype="html">
+        <source>Notification Node</source>
+        <target>  گره پیغام </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">423</context>
+        </context-group>
+      </trans-unit>
+      -----------------------------------------end form -----------------------------------
+      <trans-unit id="8542732053522961801" datatype="html">
+        <source>End Node</source>
+        <target>  گره پایان </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2741623173246501247" datatype="html">
+        <source>Enter a name for the end node</source>
+        <target> متن پایان را وارد کنید   </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5765967695798694238" datatype="html">
+        <source><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i
+        class=&quot;fa fa-tag&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/> End Node Labale</source>
+        <target> برچسب گره پایان </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">47,48</context>
+        </context-group>
+      </trans-unit>
+      -----------------------------------------descriptive form -----------------------------------
+      <trans-unit id="1323662356709155362" datatype="html">
+        <source>Descriptive Question </source>
+        <target>   سوال تشریحی  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">174</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1054160142805411956" datatype="html">
+        <source>Answer to this question</source>
+        <target> پاسخ به سوال تشریحی   </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">180</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4917838703167921835" datatype="html">
+        <source>Your Answer ...</source>
+        <target> پاسخ شما ...   </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">182</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7186503658731121368" datatype="html">
+        <source>This answer is required.</source>
+        <target> پاسخ به این سوال الزامی است </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6840922507733464276" datatype="html">
+        <source>descriptive Node</source>
+        <target>  فرم سوال تشریحی  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">766</context>
+        </context-group>
+      </trans-unit>
+      ------------------------------------------delay-----------------------------------
+      <trans-unit id="5355504849272679197" datatype="html">
+        <source>Delay Node</source>
+        <target>  گره تاخیر </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8228913398502961694" datatype="html">
+        <source>The purpose of this node is to create a delay between running a stream on nodes, and you can use this node to set wait times and restarts.</source>
+        <target>هدف این گره ایجاد تاخیر بین اجرای جریان بر روی گره ها است و می توانید از این گره برای تنظیم مدت زمان انتظار و راه اندازی مجدد جریان استفاده کنید. </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8893990354617287159" datatype="html">
+        <source>delay</source>
+        <target>  تاخیر </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">84</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8070396816726827304" datatype="html">
+        <source>Hours</source>
+        <target>  ساعت </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5531237363767747080" datatype="html">
+        <source>Minutes</source>
+        <target>  دقیقه </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8874012390997067175" datatype="html">
+        <source>Seconds</source>
+        <target>  ثانیه </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">89</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6083026006568353651" datatype="html">
+        <source>Timer</source>
+        <target> زمان انتظار  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="382310142203141899" datatype="html">
+        <source>Enter waiting time</source>
+        <target>  مدت زمان انتظار را وارد کنید </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2030837539274124858" datatype="html">
+        <source>Our next time is<x id="INTERPOLATION" equiv-text="{{node.duration}}"/><x id="INTERPOLATION_1" equiv-text="{{ node.waitingUnit }}"/></source>
+        <target> قرار بعدی ما  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">255</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1868282632319033334" datatype="html">
+        <source>later</source>
+        <target>  بعد  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">260</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3773201144929503783" datatype="html">
+        <source> You can go to next step</source>
+        <target>  مدت زمان انتظار به پایان رسید،  می توانید ادامه دهید </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">806</context>
+        </context-group>
+      </trans-unit>
+       ------------------------------------------Score-----------------------------------
+      <trans-unit id="7123653594948067002" datatype="html">
+        <source>Score</source>
+        <target>  امتیاز  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">969</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8876292100377357479" datatype="html">
+        <source>Score Node</source>
+        <target> گره امتیاز دهی </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">957</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8724070717259316548" datatype="html">
+        <source>your score is:</source>
+         <target>  امتیاز شما:  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">400</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5185584861125996512" datatype="html">
+        <source>save your score </source>
+        <target> ثبت امتیاز  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">397</context>
+        </context-group>
+      </trans-unit>
+       ------------------------------------------multi-select-----------------------------------
+        <trans-unit id="4068645371593868382" datatype="html">
+        <source> ادامه <x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot; fa-solid fa-circle-chevron-left mr-3 &quot; style=&quot;font-size: x-large;&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">649</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">710</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">794,795</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6785735604661883468" datatype="html">
+        <source>Multi Select Node</source>
+        <target>  گره سوال چند گزینه ای  </target> 
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">1031</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7372830387632266736" datatype="html">
+        <source>multi-select-en</source>
+        <target>  گره سوال چند گزینه ای  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">379</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8548292316877357798" datatype="html">
+        <source>Please choose one of the following options </source>
+        <target>  لطفا یکی از گزینه های زیر را انتخاب کنید </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">290</context>
+        </context-group>
+      </trans-unit>
+      ------------------------------------------appoinment-----------------------------------
+      <trans-unit id="4831789632101542730" datatype="html">
+        <source>appoinment-date</source>
+        <target>  گره تنظیم قرار     </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">403</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5959152509488287407" datatype="html">
+        <source>Your Anwser </source>
+         <target> پاسخ شما :  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/chatbot-preview/chatbot-preview.component.html</context>
+          <context context-type="linenumber">1037</context>
+        </context-group>
+      </trans-unit>
+      ------------------------------------------information-----------------------------------
+      <trans-unit id="2297688463310993102" datatype="html">
+        <source>Your Name</source>
+         <target> نام و نام خانوادگی  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">535</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3967269098753656610" datatype="html">
+        <source>Email address</source>
+         <target> ایمیل </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">545</context>
+        </context-group>
+        </trans-unit>
+        <trans-unit id="7101771514152083110" datatype="html">
+        <source>phone Number </source>
+         <target> شماره تلفن</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">554</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6304432362546770951" datatype="html">
+        <source>Address</source>
+         <target> آدرس </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">564</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4604185173371042185" datatype="html">
+        <source>personalInformation Node</source>
+        <target> گره اطلاعات شخصی  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">525</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2205179717264011954" datatype="html">
+        <source>Email must be completely formed with a period in the domain part</source>
+       
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">573,575</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7101771514152083110" datatype="html">
+        <source>phone Number </source>
+        <target>شماره تلفن </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">584</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5069904036878331382" datatype="html">
+        <source> Your Phone is required field </source>
+        <target>فیلد تلفن الزامی است</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">592,594</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="548738848394166476" datatype="html">
+        <source> Your phone number must only contain numbers and contain eleven digits </source>
+        <target>شماره تلفن شما فقط باید شامل + در ابتدا و اعداد تا دوازده رقم باشد</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">597,599</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3543317035467118975" datatype="html">
+        <source> Your address field is required in Persian language </source>
+         <target> فیلد آدرس شما به زبان فارسی الزامی است</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">617,619</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6748349907068916854" datatype="html">
+        <source> Address must contain numbers and digits </source>
+         <target> آدرس باید دارای اعداد و حروف فارسی باشد</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">623,625</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4574136403199016076" datatype="html">
+        <source>Name field is required in Persian language</source>
+        <target> فیلد نام در زبان فارسی الزامی است</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">539,540</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">551,552</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3634277633312759019" datatype="html">
+        <source>Name is required field</source>
+        <target> فیلد نام الزامی است</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">546</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6962699013778688473" datatype="html">
+        <source>Continue</source>
+        <target>  ادامه</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">667</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8515644878348828380" datatype="html">
+        <source> ادامه <x id="START_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;svg width=&quot;40px&quot; height=&quot;40px&quot; viewBox=&quot;0 0 20 28&quot; version=&quot;1.1&quot;
+                                    xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot;
+                                    style=&quot;margin-right: 5px;&quot;&gt;"/><x id="START_TAG__SVG_TITLE" ctype="x-_svg_title" equiv-text="&lt;title&gt;"/>arrow-left<x id="CLOSE_TAG__SVG_TITLE" ctype="x-_svg_title" equiv-text="&lt;/title&gt;"/><x id="START_TAG__SVG_DESC" ctype="x-_svg_desc" equiv-text="&lt;desc&gt;"/>Created with Sketch.<x id="CLOSE_TAG__SVG_DESC" ctype="x-_svg_desc" equiv-text="&lt;/desc&gt;"/><x id="START_TAG__SVG_DEFS" ctype="x-_svg_defs" equiv-text="&lt;defs&gt;"/><x id="CLOSE_TAG__SVG_DEFS" ctype="x-_svg_defs" equiv-text="&lt;/defs&gt;"/><x id="START_TAG__SVG_G_4" ctype="x-_svg_g_4" equiv-text="&lt;g id=&quot;Vivid.JS&quot; stroke=&quot;none&quot; stroke-width=&quot;1&quot; fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;&gt;"/><x id="START_TAG__SVG_G_3" ctype="x-_svg_g_3" equiv-text="&lt;g id=&quot;Vivid-Icons&quot; transform=&quot;translate(-437.000000, -651.000000)&quot;&gt;"/><x id="START_TAG__SVG_G_2" ctype="x-_svg_g_2" equiv-text="&lt;g id=&quot;Icons&quot; transform=&quot;translate(37.000000, 169.000000)&quot;&gt;"/><x id="START_TAG__SVG_G_1" ctype="x-_svg_g_1" equiv-text="&lt;g id=&quot;arrow-left&quot; transform=&quot;translate(390.000000, 468.000000)&quot;&gt;"/><x id="START_TAG__SVG_G" ctype="x-_svg_g" equiv-text="&lt;g transform=&quot;translate(10.000000, 14.000000)&quot; id=&quot;Shape&quot;&gt;"/><x id="START_TAG__SVG_POLYGON" ctype="x-_svg_polygon" equiv-text="&lt;polygon fill=&quot;#FF6E6E&quot;
+                                                            points=&quot;28 12 8 12 13 17 10 20 0 10 10 0 13 3 8 8 28 8&quot;&gt;"/><x id="CLOSE_TAG__SVG_POLYGON" ctype="x-_svg_polygon" equiv-text="&lt;/polygon&gt;"/><x id="START_TAG__SVG_POLYGON_1" ctype="x-_svg_polygon_1" equiv-text="&lt;polygon fill=&quot;#0C0058&quot; points=&quot;20 8 20 12 28 12 28 8&quot;&gt;"/><x id="CLOSE_TAG__SVG_POLYGON" ctype="x-_svg_polygon" equiv-text="&lt;/polygon&gt;"/><x id="CLOSE_TAG__SVG_G" ctype="x-_svg_g" equiv-text="&lt;/g&gt;"/><x id="CLOSE_TAG__SVG_G" ctype="x-_svg_g" equiv-text="&lt;/g&gt;"/><x id="CLOSE_TAG__SVG_G" ctype="x-_svg_g" equiv-text="&lt;/g&gt;"/><x id="CLOSE_TAG__SVG_G" ctype="x-_svg_g" equiv-text="&lt;/g&gt;"/><x id="CLOSE_TAG__SVG_G" ctype="x-_svg_g" equiv-text="&lt;/g&gt;"/><x id="CLOSE_TAG__SVG_SVG" ctype="x-_svg_svg" equiv-text="&lt;/svg&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/setting/setting.component.html</context>
+          <context context-type="linenumber">31,60</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">430,459</context>
+        </context-group>
+      </trans-unit>
+      ------------------------------------------user-form-fa-----------------------------------
+      
+      <trans-unit id="3498970204767096106" datatype="html">
+        <source> This field is required </source>
+        <target> این فیلد الزامی است </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">543,545</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">572,574</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">601,603</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">621,623</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="2238860815288624196" datatype="html">
+        <source>User Form Node</source>
+        <target>گره فرم کاربری  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">456</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2157349320937831793" datatype="html">
+        <source> This field must only contain numbers with a minimum of 0 and a maximum of 11 digits </source>
+        <target> این فیلد فقط باید شامل اعدادی با حداقل 0 و حداکثر 11 رقم باشد</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">549,551</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1238148697620863447" datatype="html">
+        <source> The password must contain at least 8 characters </source>
+        <target> رمز عبور باید حداقل 8 کاراکتر داشته باشد</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">578,580</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1329179594880039441" datatype="html">
+        <source> this field is required in Persian language </source>
+        <target> این فیلد الزامی است</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">647,649</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="274188234745266891" datatype="html">
+        <source> the field must contain digits in Persian language </source>
+        <target> فیلد باید دارای اعداد باشد</target>
+        
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">653,655</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3626291907317303991" datatype="html">
+        <source> the field must contain alphabet in the Persian language </source>
+        <target> فیلد باید حاوی الفبای زبان فارسی باشد</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">614,616</context>
+        </context-group>
+      </trans-unit>
+       ------------------------------------------appoinment-date-----------------------------------
+      <trans-unit id="7301549775322068470" datatype="html">
+        <source>Appoinment Date Node</source>
+        <target>   گره تنظیم قرار </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">1075</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1074025898887180881" datatype="html">
+        <source>Appointment is required</source>
+        <target> تنظیم قرار الزامی است </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">1085</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7669440460710859430" datatype="html">
+        <source>Please select a date</source>
+        <target> لطفا تاریخ را انتخاب کنید</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">1080</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="762320002189428411" datatype="html">
+        <source>Please select a time</source>
+        <target> لطفا زمان را انتخاب کنید</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">1090</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="9113558153025981266" datatype="html">
+        <source>Please select a Date</source>
+        <target> لطفا تاریخ را انتخاب کنید</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">1081</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8971875637977101226" datatype="html">
+        <source>Please select a Time</source>
+        <target> لطفا زمان را انتخاب کنید</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">1100</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4998513079795745453" datatype="html">
+        <source>personalInformation Node </source>
+        <target> گره تاریخ قرار</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">744,745</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3229467388112490859" datatype="html">
+        <source>Appoinment Date Node </source>
+        <target>  گره زمان و تاریخ قرار   </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">1025,1026</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5636314921441847706" datatype="html">
+        <source>your chosen date is:</source>
+        <target>  تاریخ انتخابی شما :   </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">1173</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6348546461758077322" datatype="html">
+        <source>your chosen time is:</source>
+        <target>  زمان انتخابی شما : </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">1195</context>
+        </context-group>
+      </trans-unit>
+ ------------------------------------------side-bar ---------------------------------------------
+ <trans-unit id="1449429846069933327" datatype="html">
+        <source><x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span&gt;"/>Continue<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/><x id="START_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;i class=&quot;fa-solid fa-circle-chevron-left mr-3&quot; style=&quot;font-size: x-large;&quot;&gt;"/><x id="CLOSE_ITALIC_TEXT" ctype="x-i" equiv-text="&lt;/i&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">259</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">204,205</context>
+        </context-group>
+      </trans-unit>
+
+       <trans-unit id="5490891657457971506" datatype="html">
+        <source>Bot management</source>
+         <target> مدیریت بات  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/side-bar/side-bar.component.html</context>
+          <context context-type="linenumber">196</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6687088033850392180" datatype="html">
+        <source>Reports and Analysis</source>
+         <target> تحلیل و آنالیز  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/side-bar/side-bar.component.html</context>
+          <context context-type="linenumber">238</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7091571651222742304" datatype="html">
+        <source>Projects</source>
+          <target> پروژه ها </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/side-bar/side-bar.component.html</context>
+          <context context-type="linenumber">211</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4930506384627295710" datatype="html">
+        <source>Settings</source>
+          <target> تنظیمات </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/side-bar/side-bar.component.html</context>
+          <context context-type="linenumber">226</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2840914627091903087" datatype="html">
+        <source>Welcome to your management dashboard</source>
+        <target> به داشبورد مدیریتی خود خوش آمدید</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/side-bar/side-bar.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3161799423098469336" datatype="html">
+        <source>Use the button below to view and manage the user panel</source>
+        <target> برای مشاهده و مدیریت پنل کاربری از دکمه زیر استفاده کنید</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/side-bar/side-bar.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3510072881600305547" datatype="html">
+        <source> Open sidebar</source>
+        <target>  مشاهده پنل </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/side-bar/side-bar.component.html</context>
+          <context context-type="linenumber">28,30</context>
+        </context-group>
+      </trans-unit>
+------------------------------------------dashboard ---------------------------------------------
+      <trans-unit id="7290374659252540217" datatype="html">
+        <source>Instructions</source>
+        <target>  دستور العمل  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4346355796128196647" datatype="html">
+        <source>Use the guide menu below to design and build your own robots and see the result at the end by executing each step.</source>
+        <target>   برای طراحی و ساخت ربات های اختصاصی خود از منوی راهنمایی زیر استفاده کنید و با اجرای هر مرحله نتیجه را در انتها مشاهده فرمایید. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5973384445868375516" datatype="html">
+        <source>Create a bot</source>
+        <target>  ایجاد بات </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3513583481440972795" datatype="html">
+        <source>To create a bot, you need to register the requested information such as the name and type of bot function</source>
+        <target>  برای ایجاد بات  نیاز است مشخصات خواسته شده  مانند نام و نوع عملکرد بات را ثبت نمایید .</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6594590522850023644" datatype="html">
+        <source>Go to page<x id="START_TAG_SPAN" ctype="x-span" equiv-text="&lt;span
+                            aria-hidden=&quot;true&quot;&gt;"/> →<x id="CLOSE_TAG_SPAN" ctype="x-span" equiv-text="&lt;/span&gt;"/></source>
+        <target> برو به </target>                    
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">77,78</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7381477064159216700" datatype="html">
+        <source>Bot design</source>
+        <target>  طراحی بات </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1264154257304264559" datatype="html">
+        <source>To design the bot, you enter the dedicated page for creating and designing the nodes you need and use the existing nodes based on your needs.</source>
+        <target> برای طراحی بات شما وارد صفحه اختصاصی ایجاد و طراحی گره های مورد نیاز خود می شوید و براساس نیاز خود از گره های موجود استفاده کنید.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3825716208513984371" datatype="html">
+        <source>Bot Show</source>
+         <target>  نمایش بات </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8070940772400608067" datatype="html">
+        <source>To display a bot, you will enter a dedicated display page in type of form, and ultimately, you can publish your bot..</source>
+         <target>   برای نمایش بات شما وارد صفحه اختصاصی نمایش به صورت تایپ فرم خواهید شد و در نهایت می توانید بات خود را انتشار دهید . </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3872937259094341701" datatype="html">
+        <source>Everything is possible</source>
+        <target> همه چیز امکان پذیر است</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/home/home.component.html</context>
+          <context context-type="linenumber">1437</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="3798559982143435666" datatype="html">
+        <source>welcome to your profile</source>
+        <target> به پروفایل خود خوش آمدید</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">183</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7901181706482865236" datatype="html">
+        <source>UserEmail</source>
+         <target> ایمیل کاربری</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">402</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8733527957173874244" datatype="html">
+        <source>If you wish, you can edit your information</source>
+        <target>  در صورت تمایل امکان ویرایش اطلاعات خود را دارید. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">395</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5342432350421167093" datatype="html">
+        <source>First name</source>
+        <target> نام </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">442</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="210971157287864605" datatype="html">
+        <source>complate name</source>
+        <target> نام و نام خانوادگی</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">270,271</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3586674587150281199" datatype="html">
+        <source>Last name</source>
+        <target> نام خانوادگی</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">448</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2694505948628058955" datatype="html">
+        <source>phone number </source>
+        <target> شماره تلفن</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">454</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="1489529088540992154" datatype="html">
+        <source>Street address</source>
+        <target>  آدرس کاربری</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">470,471</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1702220026386222079" datatype="html">
+        <source>City </source>
+        <target> شهر</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">477,478</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4224171965982811609" datatype="html">
+        <source>Street </source>
+        <target> خیابان </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">484,485</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7909039773077145898" datatype="html">
+        <source>ZIP / Postal code</source>
+        <target>  کد پستی</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">491</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3465962430409924123" datatype="html">
+        <source>Personal Information</source>
+        <target>  اطلاعات کاربری </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">436</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="7922001468601694433" datatype="html">
+        <source>If you wish, you can edit your information.</source>
+        <target>   در صورت تمایل امکان افزودن آدرس به اطلاعات خود را دارید </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">437</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="187187500641108332" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="otNameDesign}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/create-bot/create-bot.component.html</context>
+          <context context-type="linenumber">351,352</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5750485945694679561" datatype="html">
+        <source>Photo</source>
+        <target>  تصویر کاربری</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">409</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1230154438678955604" datatype="html">
+        <source>Change</source>
+        <target>   تعویض </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">418</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3768927257183755959" datatype="html">
+        <source>Save</source>
+        <target>  ذخیره </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">500</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="4214393630982487481" datatype="html">
+        <source>Select Photo</source>
+        <target>  انتخاب عکس پروفایل </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">457</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="8705920138904871541" datatype="html">
+        <source>Record changes</source>
+         <target>   ثبت تغییرات </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="8538627562235424491" datatype="html">
+        <source>email of :</source>
+        <target>   ایمیل کاربری</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="764613860017383106" datatype="html">
+        <source>Organizational information</source>
+         <target>   اطلاعات سازمانی</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">263</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="157738383293348788" datatype="html">
+        <source>If you wish, you can edit your Organizational information.</source>
+         <target>    شما امکان افزودن اطلاعات سازمانی را دارید</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">269</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7994701874129579070" datatype="html">
+        <source>name of organization</source>
+         <target>    نام سازمان</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">274</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6061573886854353692" datatype="html">
+        <source>Organization website</source>
+         <target>    وب سایت سازمان</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">281</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5408938164726094051" datatype="html">
+        <source>Organization email</source>
+         <target>    ایمیل سازمانی</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">288</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8552045252901993950" datatype="html">
+        <source>Upload the logo of the organization</source>
+         <target>  آپلود لوگوی سازمان </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">343</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="5306473977542913614" datatype="html">
+        <source>Activity</source>
+         <target> حوزه فعالیت  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">299</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3269455778164195091" datatype="html">
+        <source>educational</source>
+         <target> آموزشی </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">303</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3774877138129569014" datatype="html">
+        <source>commercial</source>
+         <target> تجاری </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">304</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8554963840572212796" datatype="html">
+        <source>scientific</source>
+         <target> علمی </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">305</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5971320496086359379" datatype="html">
+        <source>legal</source>
+         <target> حقوقی  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">306</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3356018487523380058" datatype="html">
+        <source>service</source>
+         <target> خدماتی </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">307</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3283299829454889645" datatype="html">
+        <source>health</source>
+         <target> سلامت </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">308</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="391682669528615985" datatype="html">
+        <source>non-profit</source>
+          <target> غیرانتفاعی </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">309</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7796156979263266819" datatype="html">
+        <source>others</source>
+        <target> سایر </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">310</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7726109143645105633" datatype="html">
+        <source>Email is required field if you want to change your email</source>
+        <target>فیلد ایمیل ضروری است در صورتیکه نیاز به تغییر ایمیل خود دارید  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">130,131</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6897649331056196882" datatype="html">
+        <source>Name field is required in Persian language if you want to change your email</source>
+        <target> فیلد نام به فارسی ضروری است در صورتیکه تمایل به تغییر نام خود دارید </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">164,166</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1441212685729004457" datatype="html">
+        <source> Your Phone is required field if you would like to add phone number </source>
+        <target> فیلد شماره تلفن در صورتیکه نیاز به افزودن شماره تلفن دارید ضروری است </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">194,196</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="859159852327399995" datatype="html">
+        <source>Email is required field if you want to add organization Email</source>
+        <target>فیلد ایمیل ضروری است در صورتیکه نیاز به اضافه کردن ایمیل سازمانی دارید  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">330,331</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="940883248348148561" datatype="html">
+        <source>Name field is required in Persian language if you want to add your complate Name</source>
+        <target>فیلد نام و نام خانوادگی به زبان فارسی در صورتیکه تمایل به اضافه کردن نام کامل  دارید ضروری است </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">276,278</context>
+        </context-group>
+      </trans-unit>  
+      <trans-unit id="983101934729484538" datatype="html">
+        <source>Street field is required in Persian language if you want to add Street name</source>
+       <target>فیلد خیابان به زبان فارسی در صورتیکه تمایل به اضافه کردن آن  دارید ضروری است </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">311,312</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3249690881888481794" datatype="html">
+        <source>Postal code field must only contain numbers and contain eleven digits if you want to add Postal code </source>
+        <target>فیلد کدپستی در صورتیکه تمایل به اضافه کردن آن  دارید باید شامل اعداد بدون فاصله باشد   </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">324,325</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7292103288009350908" datatype="html">
+        <source>Address field is required in Persian language if you want to add your Address</source>
+        <target>فیلد آدرس به زبان فارسی در صورتیکه تمایل به اضافه کردن آن  دارید ضروری است </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">290,291</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7501898193707462536" datatype="html">
+        <source>City field is required in Persian language if you want to add your City</source>
+        <target>فیلد شهر به زبان فارسی در صورتیکه تمایل به اضافه کردن آن  دارید ضروری است </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">301</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2796801369617058587" datatype="html">
+        <source>Name of organization field is required in Persian language if you want to add your name of organization</source>
+        <target>فیلد نام سازمان به زبان فارسی در صورتیکه تمایل به اضافه کردن آن  دارید ضروری است </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">383</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7485679721689590006" datatype="html">
+        <source>Web site field is required in website form if you want to add your organization Website</source>
+        <target>فیلد وب سایت سازمان به فرمت وب (www.example.ir) در صورتیکه تمایل به اضافه کردن آن  دارید ضروری است </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">394,395</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="410675222983741355" datatype="html">
+        <source>phone of copmany</source>
+        <target>تلفن سازمانی</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">428</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7511342689666183306" datatype="html">
+        <source>Your company member count must only contain numbers</source>
+        <target>تعداد اعضای شرکت شما فقط باید شامل اعداد باشد </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">450</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8413173303578382214" datatype="html">
+        <source>Organization members </source>
+         <target>تعداد اعضای شرکت </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">464</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9127270509542049524" datatype="html">
+        <source>organization name</source>
+        <target>آدرس سازمانی   </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">482</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="747224601951451541" datatype="html">
+        <source>organization name</source>
+        <target>آدرس سازمانی   </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">482</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="174632149185481583" datatype="html">
+        <source>Change Photo</source>
+        <target>  تغییر عکس پروفایل  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2298829217950463781" datatype="html">
+        <source>Change Photo of logo</source>
+        <target>  تغییر تصویر لوگو  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">639</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6484851997290968278" datatype="html">
+        <source>Select Photo of logo</source>
+        <target>  انتخاب تصویر لوگو  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">643</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3685809331634013935" datatype="html">
+        <source>release</source>
+         <target>   انتشار  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">353</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3759965007855499397" datatype="html">
+        <source>Run</source>
+        <target>   اجرا  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">260</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="281265912607312286" datatype="html">
+        <source>ID of Bot :</source>
+         <target>   ای دی بات  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">248,249</context>
+        </context-group>
+      </trans-unit>
+
+      ----------------------------------------------users----------------------------------------------
+      <trans-unit id="1273247493378508448" datatype="html">
+        <source>Welcome to your Edit Bot panel</source>
+        <target> به پنل ویرایش بات خوش آمدید </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/users/users.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="732420237909866866" datatype="html">
+        <source>Bot Name</source>
+        <target>اسم بات </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/users/users.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2468147703047937569" datatype="html">
+        <source>Type of Bot</source>
+        <target> نوع بات</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/users/users.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="914234891208748816" datatype="html">
+        <source>data registration</source>
+        <target>  ثبت بات جدید</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/users/users.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5344235314228644008" datatype="html">
+        <source>Forms Bot</source>
+        <target>   بات فرم</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/users/users.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8350114433597682257" datatype="html">
+        <source>Chat Bot</source>
+        <target>  چت بات</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/users/users.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2905271919376088556" datatype="html">
+        <source>Give informations</source>
+        <target>   دریافت اطلاعات</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/users/users.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3881818169480672345" datatype="html">
+        <source>other</source>
+        <target>  استفاده غیر </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/users/users.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3037676248997706751" datatype="html">
+        <source>Welcome to your user panel</source>
+        <target>  به پنل کاربری خود خوش آمدید</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/users/users.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+----------------------------------------------Multi Media----------------------------------------------
+      <trans-unit id="8663500875640121978" datatype="html">
+        <source>Multi Media Node</source>
+        <target>   گره چند رسانه ای </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">1258</context>
+        </context-group>
+      </trans-unit>
+---------------------------------------------upload files----------------------------------------------
+<trans-unit id="4884729058098783783" datatype="html">
+        <source>Upload Files Node</source>
+        <target>   گره آپلود فایل </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">1338</context>
+        </context-group>
+      </trans-unit>
+      
+      ---------------------------------------------mangement----------------------------------------------
+      <trans-unit id="8936797814937524404" datatype="html">
+        <source>Check bot created</source>
+        <target>   بررسی بات ایجاد شده </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="3069538420906129856" datatype="html">
+        <source>check errors</source>
+        <target> خطا ها را بررسی می کنم</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/create-bot/create-bot.component.html</context>
+          <context context-type="linenumber">400</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6847026616734094778" datatype="html">
+        <source>it does not important</source>
+        <target>  خطا ها مهم نیستند </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/create-bot/create-bot.component.html</context>
+          <context context-type="linenumber">402</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8056085264099200789" datatype="html">
+        <source>there are Errors</source>
+        <target> خطای طراحی وجود دارد</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/create-bot/create-bot.component.html</context>
+          <context context-type="linenumber">390</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1967945357858381990" datatype="html">
+        <source>You can check your created bot and make changes if needed. After that you&apos;re on your own though.</source>
+        <target>   شما می توانید بات ایجاد شده خود را بررسی کرده و در صورت نیاز تغییرات آن را ایجاد کنید</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6725494199481416588" datatype="html">
+        <source>Bot release</source>
+        <target>   انتشار بات</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2781320643139094863" datatype="html">
+        <source>Create and publish your bots in any environment.</source>
+        <target>   ربات های خود را ایجاد و در هر محیطی انتشار دهید </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">116</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="6793247652376990429" datatype="html">
+        <source>Based on your needs, you can create and review bots in the easiest way.</source>
+        <target>   برای اساس نیازهای خود می توانید  بات های  را با اسانترین روش ایجاد و بررسی کنید</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6906225099139488174" datatype="html">
+        <source>Please select an option</source>
+        <target> لطفا یک نوع برای بات خود  انتخاب کنید </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5636350124221988410" datatype="html">
+        <source>Name of Bot is required in Persian language</source>
+        <target> اسم بات به زبان فارسی الزامی است</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="679890154912556206" datatype="html">
+        <source>Name of Bot :</source>
+        <target> اسم بات :</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">176</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="1137648133997478276" datatype="html">
+        <source> List of Bots</source>
+        <target> لیست بات ها: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">162</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8507512534782649196" datatype="html">
+        <source> Edit</source>
+        <target> ویرایش </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">262</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7957947238711334886" datatype="html">
+        <source>Designing</source>
+        <target> طراحی</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">288</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1295614462098694869" datatype="html">
+        <source>Preview</source>
+        <target> پیش نمایش </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">299</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7022070615528435141" datatype="html">
+        <source>Delete</source>
+        <target> حذف </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">310</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4902817035128594900" datatype="html">
+        <source>Description</source>
+        <target> توضیحات </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/users/users.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2740128240125265410" datatype="html">
+        <source> information of </source>
+        <target> اطلاعات  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">194</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8729561497532277581" datatype="html">
+        <source>Please click to register and design a new bot</source>
+         <target> لطفا برای ثبت و طراحی بات جدید کلیک کنید  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/management/management.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2069702308147976531" datatype="html">
+        <source>Welcome to your Edit Bot panel </source>
+        <target> به پنل ویرایش بات خوش آمدید  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/edit-bot/edit-bot.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="155851325597615803" datatype="html">
+        <source>data Register new information </source>
+        <target> ثبت تغییرات  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/edit-bot/edit-bot.component.html</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="733459849949548496" datatype="html">
+        <source>Save and view of your bot</source>
+        <target> ذخیره و نمایش بات </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/create-bot/create-bot.component.html</context>
+          <context context-type="linenumber">92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7199794157405337295" datatype="html">
+        <source>data Register new information</source>
+        <target> ثبت تغییرات  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/edit-bot/edit-bot.component.html</context>
+          <context context-type="linenumber">81,82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2159130950882492111" datatype="html">
+        <source>Cancel</source>
+        <target> برگشت </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/edit-bot/edit-bot.component.html</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="1184306444873119195" datatype="html">
+        <source>Your chosen media</source>
+        <target> فایل انتخابی شما </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/view/view.component.html</context>
+          <context context-type="linenumber">1345</context>
+        </context-group>
+      </trans-unit>
+---------------------------------------------bot----------------------------------------------
+
+      <trans-unit id="7565155156017938502" datatype="html">
+        <source>Edit </source>
+         <target>  ویرایش بات</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/usermenu/usermenu.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7967677493713798494" datatype="html">
+        <source>Design </source>
+        <target>  طراحی بات</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/usermenu/usermenu.component.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4824161578636734802" datatype="html">
+        <source>Preview </source>
+        <target>  پیش نمایش بات </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/usermenu/usermenu.component.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5357644315691057585" datatype="html">
+        <source>publication </source>
+        <target>  انتشار بات</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/usermenu/usermenu.component.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6093075988016169363" datatype="html">
+        <source>Delete </source>
+        <target>  حذف  بات</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/usermenu/usermenu.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5574329803767843247" datatype="html">
+        <source>Edit of</source>
+        <target>   ویرایش  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/usermenu/usermenu.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="371702310430809228" datatype="html">
+        <source>Design of</source>
+        <target>   طراحی  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/usermenu/usermenu.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5077766231554038084" datatype="html">
+        <source>Preview of</source>
+        <target>    نمایش  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/usermenu/usermenu.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7688906398490820336" datatype="html">
+        <source>publication 0f</source>
+        <target>  انتشار  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/usermenu/usermenu.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="499563256752334200" datatype="html">
+        <source>Delete of</source>
+         <target>   حذف  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/usermenu/usermenu.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+
+
+
+    </body>
+  </file>
+</xliff>

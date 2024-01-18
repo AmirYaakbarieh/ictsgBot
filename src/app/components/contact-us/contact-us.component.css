@@ -1,0 +1,21 @@
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+}
+
+iframe {
+    width: 90%;
+    /* Adjust the width as per your requirements */
+    height: 90%;
+    /* Adjust the height as per your requirements */
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+.bg-gradient-to-t {
+    background-image: linear-gradient(to bottom, #1f2937, #240555)
+}

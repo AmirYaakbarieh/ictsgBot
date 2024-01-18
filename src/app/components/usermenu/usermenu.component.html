@@ -1,0 +1,194 @@
+
+<div >
+    <!-- <p>{{bitIdInMenu}}</p> -->
+    <div>
+        <nav class="bg-indigo-900">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                      
+                        <button type="button" (click)="toggleMainMenu($event)" (click)="toggleMainMenuOpen()"
+                            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="absolute -inset-0.5"></span>
+                            <span class="sr-only">Open main menu</span>
+                        
+                            <svg *ngIf="!isMainMenuOpen" class="block h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                         
+                            <svg *ngIf="isMainMenuOpen" class=" h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                        <div class="flex flex-shrink-0 items-center mx-6">
+                            <img class="h-8 w-auto" src="./assets/images/logotr.png" alt="ICTSG">
+                        </div>
+                        
+                        <div class="hidden sm:ml-6 sm:block">
+                            <div class="flex space-x-4" >
+                                <a (click)="navigateToEditBot(bitIdInMenu);"  
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" [style.cursor]="'pointer'"><span i18n>Edit of</span>
+                                </a>
+                                <a (click)="navigateDesignBot(bitIdInMenu)"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" [style.cursor]="'pointer'"><span i18n>Design of</span> 
+                                </a>
+                                <a  (click)="navigateViewBot(bitIdInMenu)"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" [style.cursor]="'pointer'"><span i18n>Preview of</span>
+                                </a>
+                                <a  [routerLink]="['/']"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" [style.cursor]="'pointer'"><span i18n>publication 0f</span>
+                                </a>
+                                <a   (click)="navigateToDeletBot(bitIdInMenu, bitIdInMenuName);" 
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" [style.cursor]="'pointer'"><span i18n>Delete of</span> 
+                                </a>
+                                <a i18n [routerLink]="['/sidebar']" routerLinkActive="active"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">user panel
+                                </a>
+                                <!-- <button i18n (click)="goToBotRegister()"
+                                class="flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">data
+                                registration</button> -->
+                               
+                                <!-- <p>{{bitIdInMenu}}</p> -->
+
+                                <!-- ----------------------- -->
+                                <!-- <div class="bg-gray-100">
+                                    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center">
+                                        <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+                                            <h2 class="text-2xl font-bold text-gray-900 ">{{bitIdInMenuName}}</h2>
+                                
+                                            <div class="mt-6 space-y-12 lg:grid lg:grid-cols-1 lg:gap-x-6 lg:space-y-0">
+                                                <div class="relative">
+                                                    <div
+                                                        class="relative h-8 w-8 overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1 mb-3">
+                                
+                                                        <img [src]="randomImageSrc"
+                                                            alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+                                                            class="h-full w-full object-cover object-center">
+                                
+                                                    </div>
+                                
+                                                    <span i18n class="mt-5 text-base font-semibold text-gray-900 text-center">Name of Bot
+                                                        :</span><span>{{bitIdInMenu}}</span>
+                                                    <h3 class="mt-6 text-sm text-gray-900"></h3>
+                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </div>   -->
+                                <!-- ----------------------- -->
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 ltr">
+                       
+                        <div class="relative ml-3">
+                            <div>
+                                <!-- <button type="button" (click)="toggleUserMenu($event)"
+                                    class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                    id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                    <span class="absolute -inset-1.5"></span>
+                                    <span class="sr-only">Open user menu</span>
+                                    <img class="h-8 w-8 rounded-full" src="./assets/images/83.jpg" alt="">
+                                </button> -->
+                            </div>
+                           <!-- <a [routerLink]="['/']">
+                            <div class="flex flex-shrink-0 items-center mx-6">
+                                <img class="h-12 w-auto" [src]="randomImageSrc" style="border-radius: 5px;">
+                            
+                            </div>
+                           </a> -->
+                          
+
+                            <div #dropdownRef *ngIf="isUserMenuOpen"
+                                class="rtl absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                                role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
+                                tabindex="-1">
+                                
+                                <a i18n [routerLink]="['/login']" class="block px-4 py-2 text-sm text-gray-700"
+                                    role="menuitem" tabindex="-1" id="user-menu-item-0">LogIn</a>
+                                <a i18n [routerLink]="['/dashboard']" class="block px-4 py-2 text-sm text-gray-700"
+                                    role="menuitem" tabindex="-1" id="user-menu-item-1">Edit your profile</a>
+                                <a i18n [routerLink]="['/logout']" class="block px-4 py-2 text-sm text-gray-700"
+                                    role="menuitem" tabindex="-1" id="user-menu-item-2">LogOut</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="sm:hidden" id="mobile-menu">
+                <div class=" rtl space-y-1 px-2 pb-3 pt-2" #dropdownRef *ngIf="isMenuOpen">
+                    
+                    <a  (click)="navigateToEditBot(bitIdInMenu)"  
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"><span i18n>Edit of</span>
+                    </a>
+                  
+                    <a (click)="navigateDesignBot(bitIdInMenu)"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+                        <span i18n>Design of</span>
+                    </a>
+                    <a  (click)="navigateViewBot(bitIdInMenu)"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+                        <span i18n>Preview of</span>
+                    </a>
+                    <a  [routerLink]="['/']"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+                        <span i18n>publication 0f</span>
+                    </a>
+                    <a  (click)="navigateToDeletBot(bitIdInMenu, bitIdInMenuName)"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+                        <span i18n>Delete of</span>
+                    </a>
+                    
+
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</div>
+<!-- ------------------------------------------------------------------------------------ -->
+<!-- <div class="bg-gray-100" *ngIf="botInformation"> -->
+<div class="bg-gray-100" *ngIf="false">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center">
+        <div class="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-32">
+            <!-- <h2 class="text-2xl font-bold text-gray-900 ">{{bitIdInMenu}}</h2> -->
+ 
+            <div class="mt-6 space-y-12 lg:grid lg:grid-cols-1 lg:gap-x-6 lg:space-y-0">
+                <div class="relative" >
+                    <div
+                        class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1 mb-3">
+
+                        <img [src]="randomImageSrc"
+                            alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
+                            class="h-full w-full object-cover object-center">
+
+                    </div>
+
+                    <span i18n class="mt-5 text-base font-semibold text-gray-900 text-center">Name of Bot
+                        :</span><span>{{ bitIdInMenuName}}</span>
+                    <h3 class="mt-6 text-sm text-gray-900">
+                        
+
+                    </h3>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

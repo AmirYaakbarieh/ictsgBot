@@ -1,0 +1,14 @@
+[
+    {
+        "id": "2c2ad0c214b70459",
+        "type": "descriptive-fa",
+        "z": "e2d960f4341e33f1",
+        "question": "آیا از زندگی خود راضی هستید؟",
+        "required": true,
+        "x": 320,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    }
+]

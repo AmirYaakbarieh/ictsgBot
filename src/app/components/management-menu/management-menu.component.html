@@ -1,0 +1,230 @@
+<div>
+    <div>
+        <nav class="bg-gray-800">
+            <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                <div class="relative flex h-16 items-center justify-between">
+                    <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                        <!-- Mobile menu button-->
+                        <!-- <button type="button" (click)="toggleMainMenu($event)" (click)="toggleMainMenuOpen()" -->
+                        <button type="button" (click)="toggleMainMenu($event)" (click)="toggleMainMenuOpen()"
+                            class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="absolute -inset-0.5"></span>
+                            <span class="sr-only">Open main menu</span>
+                            <!--
+                    Icon when menu is closed.
+        
+                    Menu open: "hidden", Menu closed: "block"
+                  -->
+                            <svg *ngIf="!isMainMenuOpen" class="block h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                            <!--
+                    Icon when menu is open.
+        
+                    Menu open: "block", Menu closed: "hidden"
+                  -->
+                            <svg *ngIf="isMainMenuOpen" class=" h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                        <div class="flex flex-shrink-0 items-center mx-6">
+                            <img class="h-8 w-auto" src="./assets/images/logotr.png" alt="ICTSG">
+
+                        </div>
+
+                        <div class="hidden sm:ml-6 sm:block">
+                            <div class="flex space-x-4">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+
+                                <a i18n [routerLink]="['/about']" [routerLinkActive]='["active"]'
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">About
+                                    Us
+                                </a>
+                                <!-- <a i18n [routerLink]="['/bot']"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Boots
+                                </a> -->
+                                <!-- <a  [routerLink]="['/preview']"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">preview
+                                </a> -->
+                                <!-- <a i18n [routerLink]="['/view']"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">view
+                                </a> -->
+
+                                <!-- <a i18n [routerLink]="['/dashboard']"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                                    aria-current="page">Dashboard</a> -->
+                                <a i18n [routerLink]="['/contactus']" [routerLinkActive]='["active"]'
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact
+                                    Us
+                                </a>
+                                <a i18n [routerLink]="['/sidebar']" routerLinkActive="active"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">user
+                                    panel
+                                </a>
+
+                                <div class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md  text-sm font-medium"
+                                    [routerLink]="['/']" [style.cursor]="'pointer'">
+                                    <svg width="40px" height="40px" viewBox="0 0 1024 1024" class="icon" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M855.04 815.36c0 17.92-16.64 32-38.4 32H226.56c-20.48 0-38.4-14.08-38.4-32V371.2c0-17.92 16.64-32 38.4-32h590.08c20.48 0 38.4 14.08 38.4 32v444.16z"
+                                            fill="#E1E0A6" />
+                                        <path
+                                            d="M816.64 860.16H226.56c-28.16 0-51.2-20.48-51.2-44.8V371.2c0-24.32 23.04-44.8 51.2-44.8h590.08c28.16 0 51.2 20.48 51.2 44.8v444.16c0 24.32-23.04 44.8-51.2 44.8zM226.56 352c-14.08 0-25.6 8.96-25.6 19.2v444.16c0 10.24 11.52 19.2 25.6 19.2h590.08c14.08 0 25.6-8.96 25.6-19.2V371.2c0-10.24-11.52-19.2-25.6-19.2H226.56z"
+                                            fill="#231C1C" />
+                                        <path
+                                            d="M917.76 449.28c0 21.76-14.08 39.68-32 39.68L520.96 328.96 156.16 488.96c-17.92 0-32-17.92-32-39.68v-56.32c0-21.76 14.08-39.68 32-39.68l364.8-184.32 364.8 184.32c17.92 0 32 17.92 32 39.68v56.32z"
+                                            fill="#6FB0BE" />
+                                        <path
+                                            d="M885.76 501.76c-1.28 0-3.84 0-5.12-1.28L520.96 343.04 161.28 500.48c-1.28 1.28-3.84 1.28-5.12 1.28-24.32 0-44.8-23.04-44.8-52.48v-56.32c0-28.16 17.92-51.2 40.96-52.48l362.24-183.04c3.84-1.28 7.68-1.28 11.52 0l362.24 183.04c23.04 2.56 40.96 24.32 40.96 52.48v56.32c1.28 28.16-17.92 52.48-43.52 52.48zM520.96 183.04l-358.4 181.76c-1.28 1.28-3.84 1.28-5.12 1.28-10.24 0-19.2 12.8-19.2 26.88v56.32c0 14.08 7.68 25.6 16.64 26.88l362.24-158.72c3.84-1.28 6.4-1.28 10.24 0l362.24 158.72c8.96-1.28 16.64-12.8 16.64-26.88v-56.32c0-15.36-8.96-26.88-19.2-26.88-2.56 0-3.84 0-6.4-1.28L520.96 183.04z"
+                                            fill="#231C1C" />
+                                        <path
+                                            d="M623.36 848.64H445.44V634.88c0-17.92 15.36-30.72 33.28-30.72h111.36c17.92 0 33.28 12.8 33.28 30.72v213.76z"
+                                            fill="#FDE8C2" />
+                                        <path
+                                            d="M623.36 861.44H445.44c-7.68 0-12.8-5.12-12.8-12.8V634.88c0-24.32 19.2-43.52 46.08-43.52h111.36c25.6 0 46.08 17.92 46.08 43.52v212.48c0 7.68-5.12 14.08-12.8 14.08z m-165.12-25.6h152.32V634.88c0-11.52-10.24-17.92-20.48-17.92h-111.36c-10.24 0-20.48 5.12-20.48 17.92v200.96z"
+                                            fill="#231C1C" />
+                                    </svg>
+
+                                </div>
+                                <button i18n (click)="goToBotRegister()"
+                                    class="flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">data
+                                    registration</button>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 ltr">
+
+
+                        <!-- <button type="button"
+                            class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                            <span class="absolute -inset-1.5"></span>
+                            <span class="sr-only">View notifications</span>
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                            </svg>
+                        </button> -->
+
+                        <!-- Profile dropdown -->
+                        <div class="relative ml-3">
+                            <div>
+                                <!-- <button type="button" (click)="toggleUserMenu($event)"
+                                    class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                    id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                    <span class="absolute -inset-1.5"></span>
+                                    <span class="sr-only">Open user menu</span>
+                                    <img class="h-8 w-8 rounded-full" src="./assets/images/83.jpg" alt="">
+                                </button> -->
+
+                                <button type="button" (click)="toggleUserMenu($event)"
+                                    class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                    id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                                    <span class="absolute -inset-1.5"></span>
+                                    <span class="sr-only">Open user menu</span>
+                                    <img class="h-8 w-8 rounded-full" *ngIf="profilePicURL" [src]="this.profilePicURL" alt="">
+                                    <img class="h-8 w-8 rounded-full" *ngIf="!profilePicURL" src="./assets/images/83.jpg" alt="">
+                                </button>
+
+
+                            </div>
+
+                            <!--
+                            Dropdown menu, show/hide based on menu state.
+                
+                            Entering: "transition ease-out duration-100"
+                            From: "transform opacity-0 scale-95"
+                            To: "transform opacity-100 scale-100"
+                            Leaving: "transition ease-in duration-75"
+                            From: "transform opacity-100 scale-100"
+                            To: "transform opacity-0 scale-95"
+                                -->
+                            <div #dropdownRef *ngIf="isUserMenuOpen"
+                                class="rtl absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                                role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
+                                tabindex="-1">
+                                <!-- Active: "bg-gray-100", Not Active: "" -->
+                                <a i18n [routerLink]="['/login']" class="block px-4 py-2 text-sm text-gray-700"
+                                    role="menuitem" tabindex="-1" id="user-menu-item-0">LogIn</a>
+                                <a i18n [routerLink]="['/dashboard']" class="block px-4 py-2 text-sm text-gray-700"
+                                    role="menuitem" tabindex="-1" id="user-menu-item-1">Edit your profile</a>
+                                <a i18n [routerLink]="['/logout']" class="block px-4 py-2 text-sm text-gray-700"
+                                    role="menuitem" tabindex="-1" id="user-menu-item-2">LogOut</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="sm:hidden" id="mobile-menu">
+                <div class=" rtl space-y-1 px-2 pb-3 pt-2" #dropdownRef *ngIf="isMenuOpen">
+                    <button i18n (click)="goToBotRegister()" [disabled]="isUserSignedIn"
+                        class="flex  rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-right">data
+                        registration</button>
+                    <br>
+                    <br>
+                    <div class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md  text-sm font-medium"
+                        [routerLink]="['/']" [style.cursor]="'pointer'">
+                        <svg width="40px" height="40px" viewBox="0 0 1024 1024" class="icon" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M855.04 815.36c0 17.92-16.64 32-38.4 32H226.56c-20.48 0-38.4-14.08-38.4-32V371.2c0-17.92 16.64-32 38.4-32h590.08c20.48 0 38.4 14.08 38.4 32v444.16z"
+                                fill="#E1E0A6" />
+                            <path
+                                d="M816.64 860.16H226.56c-28.16 0-51.2-20.48-51.2-44.8V371.2c0-24.32 23.04-44.8 51.2-44.8h590.08c28.16 0 51.2 20.48 51.2 44.8v444.16c0 24.32-23.04 44.8-51.2 44.8zM226.56 352c-14.08 0-25.6 8.96-25.6 19.2v444.16c0 10.24 11.52 19.2 25.6 19.2h590.08c14.08 0 25.6-8.96 25.6-19.2V371.2c0-10.24-11.52-19.2-25.6-19.2H226.56z"
+                                fill="#231C1C" />
+                            <path
+                                d="M917.76 449.28c0 21.76-14.08 39.68-32 39.68L520.96 328.96 156.16 488.96c-17.92 0-32-17.92-32-39.68v-56.32c0-21.76 14.08-39.68 32-39.68l364.8-184.32 364.8 184.32c17.92 0 32 17.92 32 39.68v56.32z"
+                                fill="#6FB0BE" />
+                            <path
+                                d="M885.76 501.76c-1.28 0-3.84 0-5.12-1.28L520.96 343.04 161.28 500.48c-1.28 1.28-3.84 1.28-5.12 1.28-24.32 0-44.8-23.04-44.8-52.48v-56.32c0-28.16 17.92-51.2 40.96-52.48l362.24-183.04c3.84-1.28 7.68-1.28 11.52 0l362.24 183.04c23.04 2.56 40.96 24.32 40.96 52.48v56.32c1.28 28.16-17.92 52.48-43.52 52.48zM520.96 183.04l-358.4 181.76c-1.28 1.28-3.84 1.28-5.12 1.28-10.24 0-19.2 12.8-19.2 26.88v56.32c0 14.08 7.68 25.6 16.64 26.88l362.24-158.72c3.84-1.28 6.4-1.28 10.24 0l362.24 158.72c8.96-1.28 16.64-12.8 16.64-26.88v-56.32c0-15.36-8.96-26.88-19.2-26.88-2.56 0-3.84 0-6.4-1.28L520.96 183.04z"
+                                fill="#231C1C" />
+                            <path
+                                d="M623.36 848.64H445.44V634.88c0-17.92 15.36-30.72 33.28-30.72h111.36c17.92 0 33.28 12.8 33.28 30.72v213.76z"
+                                fill="#FDE8C2" />
+                            <path
+                                d="M623.36 861.44H445.44c-7.68 0-12.8-5.12-12.8-12.8V634.88c0-24.32 19.2-43.52 46.08-43.52h111.36c25.6 0 46.08 17.92 46.08 43.52v212.48c0 7.68-5.12 14.08-12.8 14.08z m-165.12-25.6h152.32V634.88c0-11.52-10.24-17.92-20.48-17.92h-111.36c-10.24 0-20.48 5.12-20.48 17.92v200.96z"
+                                fill="#231C1C" />
+                        </svg>
+
+
+                    </div>
+
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <!-- <a i18n [routerLink]="['/dashboard']"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+                        aria-current="page">Dashboard</a> -->
+                    <a i18n [routerLink]="['/about']"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">About
+                        Us
+                    </a>
+                    <!-- <a i18n [routerLink]="['/about']"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+                        About Us </a> -->
+                    <a i18n [routerLink]="['/contactus']"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+                        Contact Us </a>
+                    <a i18n [routerLink]="['/sidebar']"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">
+                        user panel
+                    </a>
+
+
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</div>
+

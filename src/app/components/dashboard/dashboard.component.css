@@ -1,0 +1,17 @@
+/* Style to hide the default input button */
+.hidden-input {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+/* Style for the custom button (label) */
+.custom-button {
+    margin-left: 10px;
+    margin-right: 10px;
+    /* Adjust the margin as needed */
+    cursor: pointer;
+    /* Add other styles as needed for your design */
+}
+

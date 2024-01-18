@@ -1,0 +1,18 @@
+[
+    {
+        "id": "fd8d624b50f6d8d7",
+        "type": "appoinment-date",
+        "z": "e2d960f4341e33f1",
+        "name": "تنظیم قرار ",
+        "appointmentQuestion": "قرارمان تثبیت شد",
+        "duration": "5",
+        "durationType": "num",
+        "waitingUnit": "ساعت",
+        "required": true,
+        "x": 240,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    }
+]

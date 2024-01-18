@@ -1,0 +1,1723 @@
+
+<!-- start node -->
+<!-- <div class="bg-white " *ngIf="selectedNodeType ==='start-node'" >
+    <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+
+        <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24  shadow-2xl sm:rounded-3xl sm:px-16">
+
+            <div class="relative">
+                <div
+                    class="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+                    <img class="h-full w-full object-cover" [src]="randomImageSrc" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 926 676" aria-hidden="true"
+                        class="absolute left-24 -bottom-24 w-[57.875rem] transform-gpu blur-[118px]">
+                        <path fill="url(#60c3c621-93e0-4a09-a0e6-4c228a0116d8)" fill-opacity=".4"
+                            d="m254.325 516.708-90.89 158.331L0 436.427l254.325 80.281 163.691-285.15c1.048 131.759 36.144 345.144 168.149 144.613C751.171 125.508 707.17-93.823 826.603 41.15c95.546 107.978 104.766 294.048 97.432 373.585L685.481 297.694l16.974 360.474-448.13-141.46Z" />
+                        <defs>
+                            <linearGradient id="60c3c621-93e0-4a09-a0e6-4c228a0116d8" x1="926.392" x2="-109.635"
+                                y1=".176" y2="321.024" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#776FFF"></stop>
+                                <stop offset="1" stop-color="#FF4694"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="relative mx-auto max-w-7xl py-24 sm:py-32 lg:py-40 lg:px-8">
+                    <div class=" pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
+                        <h2 i18n class="mt-2 text-2xl font-bold tracking-tight text-indigo-400">Start Node</h2>
+
+                        <p class="mt-6 text-2xl leading-7 text-gray-300">{{startNodeName}}</p>
+                        
+                        
+                        <div class="mt-8">
+
+
+                            <button i18n type="submit"   
+                               (click)="next()"
+                                
+                                class=" m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                ادامه <i class=" fa-solid fa-circle-chevron-left mr-3 " style="font-size: x-large;"></i>
+                            </button>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
+                class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2" aria-hidden="true">
+                <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+                    fill-opacity="0.7" />
+                <defs>
+                    <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217" cx="0" cy="0" r="1"
+                        gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(512)">
+                        <stop stop-color="#7775D6"></stop>
+                        <stop offset="1" stop-color="#E935C1" stop-opacity="0"></stop>
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</div> -->
+
+<!-- descriptive-fa -->
+<!-- <div class="bg-white " *ngIf="selectedNodeType ==='descriptive-fa'">
+    <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+
+        <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24  shadow-2xl sm:rounded-3xl sm:px-16">
+
+            <div class="relative">
+                <div
+                    class="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+                    <img class="h-full w-full object-cover" [src]="randomImageSrc" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 926 676" aria-hidden="true"
+                        class="absolute left-24 -bottom-24 w-[57.875rem] transform-gpu blur-[118px]">
+                        <path fill="url(#60c3c621-93e0-4a09-a0e6-4c228a0116d8)" fill-opacity=".4"
+                            d="m254.325 516.708-90.89 158.331L0 436.427l254.325 80.281 163.691-285.15c1.048 131.759 36.144 345.144 168.149 144.613C751.171 125.508 707.17-93.823 826.603 41.15c95.546 107.978 104.766 294.048 97.432 373.585L685.481 297.694l16.974 360.474-448.13-141.46Z" />
+                        <defs>
+                            <linearGradient id="60c3c621-93e0-4a09-a0e6-4c228a0116d8" x1="926.392" x2="-109.635"
+                                y1=".176" y2="321.024" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#776FFF"></stop>
+                                <stop offset="1" stop-color="#FF4694"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="relative mx-auto max-w-7xl py-24 sm:py-32 lg:py-40 lg:px-8">
+                    <div class=" pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
+                        <h2 i18n class="mt-2 text-4xl font-bold tracking-tight text-indigo-400">descriptive Node</h2>
+                        <p class="mt-6 text-2xl leading-7 text-gray-300">{{descriptiveFaNodeQuestion}}</p>
+                        <div class="mt-8">
+                            <div>
+                                
+
+                                <div class="grid grid-cols-6 gap-6">
+                                    <form [formGroup]="reactiveForm" class="sm:col-span-6">
+                                        <label i18n for="answer"
+                                            class="block text-sm font-medium tracking-tight text-indigo-400">Answer to
+                                            this question</label>
+                                        <div class="mt-3">
+                                            <textarea i18n-placeholder id="answer" rows="5"
+                                                placeholder=" Your Answer ..." formControlName="answer"
+                                                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                                        </div>
+
+                                       
+                                        <div *ngIf="descriptiveRequired">
+                                            <div
+                                                *ngIf="reactiveForm.get('answer').touched && reactiveForm.get('answer').pristine">
+                                                <p i18n class="text-red-600">This answer is required.</p>
+                                            </div>
+                                        </div>
+
+                                        <div [hidden]="descriptiveRequired">
+                                            <button type="submit"
+                                                (click)="next()"
+                                                class=" m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                                ادامه <i class=" fa-solid fa-circle-chevron-left mr-3 "
+                                                    style="font-size: x-large;"></i></button>
+                                        </div>
+                                        <div [hidden]="!descriptiveRequired">
+                                            <button i18n type="submit"
+                                                (click)="next()"
+                                                [disabled]=" reactiveForm.get('answer').pristine"
+                                                class=" m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                                ادامه <i class=" fa-solid fa-circle-chevron-left mr-3 "
+                                                    style="font-size: x-large;"></i></button>
+                                        </div>
+
+                                    </form> 
+                                </div>
+                            </div>
+
+                         
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
+                class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2" aria-hidden="true">
+                <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+                    fill-opacity="0.7" />
+                <defs>
+                    <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217" cx="0" cy="0" r="1"
+                        gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(512)">
+                        <stop stop-color="#7775D6"></stop>
+                        <stop offset="1" stop-color="#E935C1" stop-opacity="0"></stop>
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- <div class="bg-white " *ngIf="selectedNodeType ==='descriptive-fa'">
+    <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+
+        <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24  shadow-2xl sm:rounded-3xl sm:px-16">
+
+            <div class="relative">
+                <div
+                    class="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+                    <img class="h-full w-full object-cover" [src]="randomImageSrc" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 926 676" aria-hidden="true"
+                        class="absolute left-24 -bottom-24 w-[57.875rem] transform-gpu blur-[118px]">
+                        <path fill="url(#60c3c621-93e0-4a09-a0e6-4c228a0116d8)" fill-opacity=".4"
+                            d="m254.325 516.708-90.89 158.331L0 436.427l254.325 80.281 163.691-285.15c1.048 131.759 36.144 345.144 168.149 144.613C751.171 125.508 707.17-93.823 826.603 41.15c95.546 107.978 104.766 294.048 97.432 373.585L685.481 297.694l16.974 360.474-448.13-141.46Z" />
+                        <defs>
+                            <linearGradient id="60c3c621-93e0-4a09-a0e6-4c228a0116d8" x1="926.392" x2="-109.635"
+                                y1=".176" y2="321.024" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#776FFF"></stop>
+                                <stop offset="1" stop-color="#FF4694"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="relative mx-auto max-w-7xl py-24 sm:py-32 lg:py-40 lg:px-8">
+                    <div class=" pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
+                        <h2 i18n class="mt-2 text-4xl font-bold tracking-tight text-indigo-400">descriptive Node</h2>
+                        <p class="mt-6 text-2xl leading-7 text-gray-300">{{descriptiveFaNodeQuestion}}</p>
+                        <div class="mt-8">
+                                <div >
+                                   
+
+
+                                    <form class="space-y-6" [formGroup]="reactiveForm">
+                                        <div formGroupName="personalDetails">
+                                            <div>
+                                                <div class="sm:col-span-6">
+                                                   
+                                                    <label i18n for="answer" class="block text-sm font-medium tracking-tight text-indigo-400">Answer to
+                                                        this question</label>
+                                                    
+                                                        <div class="mt-3">
+                                                            <textarea i18n-placeholder id="answer" rows="5" placeholder=" Your Answer ..." formControlName="ans"
+                                                                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"></textarea>
+                                                        </div>
+                                                    
+                                                    <div>
+                                                        <div *ngIf="reactiveForm.get('personalDetails.ans').touched">
+                                                            <small i18n class="text-red-600"
+                                                                *ngIf="reactiveForm.get('personalDetails.ans').hasError('required')">
+                                                                This field is required
+                                                            </small>
+                                                        </div>
+                                                        <div *ngIf=" reactiveForm.get('personalDetails.ans').dirty">
+                                                            <small i18n class="text-red-600"
+                                                                *ngIf="reactiveForm.get('personalDetails.ans').hasError('addressMultiFormat') ">
+                                                                the field must contain alphabet in the Persian language
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    
+                                    
+                                            <div [hidden]="descriptiveRequired ">
+                                                <div class="mt-8">
+                                    
+                                                    <button i18n type="submit" (click)="next()"
+                                                        class="m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                                        <span>Continue</span><i class="fa-solid fa-circle-chevron-left mr-3" style="font-size: x-large;"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                    
+                                            <div [hidden]="!descriptiveRequired">
+                                                <div class="mt-8">
+                                    
+                                                    <button type="submit" (click)="next()"
+                                                        [disabled]="(descriptiveRequired && reactiveForm.get('personalDetails.ans').hasError('required')) ||
+                                                         (descriptiveRequired && reactiveForm.get('personalDetails.ans').hasError('addressMultiFormat'))"
+                                                        class="m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                                        <span i18n>Continue</span><i class="fa-solid fa-circle-chevron-left mr-3"
+                                                            style="font-size: x-large;"></i>
+                                                    </button>
+                                    
+                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
+                class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2" aria-hidden="true">
+                <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+                    fill-opacity="0.7" />
+                <defs>
+                    <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217" cx="0" cy="0" r="1"
+                        gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(512)">
+                        <stop stop-color="#7775D6"></stop>
+                        <stop offset="1" stop-color="#E935C1" stop-opacity="0"></stop>
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</div>  -->
+
+
+<!-- end node -->
+<!-- <div class="bg-white " *ngIf="selectedNodeType ==='end-node'" >
+    <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+
+        <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24  shadow-2xl sm:rounded-3xl sm:px-16">
+
+            <div class="relative">
+                <div
+                    class="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+                    <img class="h-full w-full object-cover" [src]="randomImageSrc" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 926 676" aria-hidden="true"
+                        class="absolute left-24 -bottom-24 w-[57.875rem] transform-gpu blur-[118px]">
+                        <path fill="url(#60c3c621-93e0-4a09-a0e6-4c228a0116d8)" fill-opacity=".4"
+                            d="m254.325 516.708-90.89 158.331L0 436.427l254.325 80.281 163.691-285.15c1.048 131.759 36.144 345.144 168.149 144.613C751.171 125.508 707.17-93.823 826.603 41.15c95.546 107.978 104.766 294.048 97.432 373.585L685.481 297.694l16.974 360.474-448.13-141.46Z" />
+                        <defs>
+                            <linearGradient id="60c3c621-93e0-4a09-a0e6-4c228a0116d8" x1="926.392" x2="-109.635"
+                                y1=".176" y2="321.024" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#776FFF"></stop>
+                                <stop offset="1" stop-color="#FF4694"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="relative mx-auto max-w-7xl py-24 sm:py-32 lg:py-40 lg:px-8">
+                    <div class=" pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
+                        <h2 i18n class="mt-2 text-4xl font-bold tracking-tight text-indigo-400">End Node</h2>
+                       
+                        <p class="mt-6 text-2xl leading-7 text-gray-300">{{endNodeName}}</p>
+                        <div class="mt-8">
+
+                            <button i18n type="submit"
+                                class=" m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                ادامه <i class=" fa-solid fa-circle-chevron-left mr-3 "
+                                    style="font-size: x-large;"></i></button>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
+                class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2" aria-hidden="true">
+                <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+                    fill-opacity="0.7" />
+                <defs>
+                    <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217" cx="0" cy="0" r="1"
+                        gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(512)">
+                        <stop stop-color="#7775D6"></stop>
+                        <stop offset="1" stop-color="#E935C1" stop-opacity="0"></stop>
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</div> -->
+
+<!-- notification -->
+<!-- <div *ngIf="selectedNodeType === 'notification-fa'">
+    <div class="flex justify-center items-center">
+        <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+            <div class="rounded-md bg-blue-50 p-14">
+                <div class="flex">
+                    <div class="flex-shrink-0">
+                      
+                        <svg class="h-5 w-5 text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                            fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="flex-1 md:grid md:grid-cols-1 md:gap-2">
+                        <p class="text-sm text-blue-700">{{notificationNodeName}}</p>
+                        <p class="text-sm text-blue-700">{{notificationNodeQuestion}}</p>
+                        <p class="mt-2 text-sm md:mt-0 md:ml-6">
+                            <button type="submit" (click)="next()"
+                                class=" m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                ادامه <i class=" fa-solid fa-circle-chevron-left mr-3 "
+                                    style="font-size: x-large;"></i></button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- multi-select -->
+<!-- <div class="bg-white " *ngIf="selectedNodeType === 'multi-select-fa'">
+    <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+
+        <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24  shadow-2xl sm:rounded-3xl sm:px-16">
+
+            <div class="relative">
+                <div
+                    class="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+                    <img class="h-full w-full object-cover" [src]="randomImageSrc" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 926 676" aria-hidden="true"
+                        class="absolute left-24 -bottom-24 w-[57.875rem] transform-gpu blur-[118px]">
+                        <path fill="url(#60c3c621-93e0-4a09-a0e6-4c228a0116d8)" fill-opacity=".4"
+                            d="m254.325 516.708-90.89 158.331L0 436.427l254.325 80.281 163.691-285.15c1.048 131.759 36.144 345.144 168.149 144.613C751.171 125.508 707.17-93.823 826.603 41.15c95.546 107.978 104.766 294.048 97.432 373.585L685.481 297.694l16.974 360.474-448.13-141.46Z" />
+                        <defs>
+                            <linearGradient id="60c3c621-93e0-4a09-a0e6-4c228a0116d8" x1="926.392" x2="-109.635"
+                                y1=".176" y2="321.024" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#776FFF"></stop>
+                                <stop offset="1" stop-color="#FF4694"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="relative mx-auto max-w-7xl py-24 sm:py-32 lg:py-40 lg:px-8">
+                    <div class=" pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
+                        <h2 i18n class="mt-2 text-2xl font-bold tracking-tight text-indigo-400">Multi Select Node</h2>
+
+                        <p class="mt-6 text-2xl leading-7 text-gray-300">{{multiSelectEnNodeQuestion}}</p>
+
+                        
+                           
+                            <label i18n 
+                                class="block  font-medium text-indigo-400 sm:mt-px sm:pt-2">Please choose one of the following options </label>
+
+                      
+
+
+                        <fieldset>
+                            <legend class="text-lg font-medium text-gray-900">Side</legend>
+                            <div class="mt-0 divide-y divide-gray-200">
+                                <div class="relative flex items-start py-4"
+                                    *ngFor="let vProperty of multiSelectEnNodeAnswersArray; let i = index">
+                                    <div class="min-w-0 flex-1 text-sm">
+                                        <label for="side-null" class="select-none font-medium text-white">{{ vProperty}}</label>
+                                    </div>
+                                    <div class="ml-5 flex h-15 ">
+                                        <input id="side-null" name="plan" type="radio" [id]="'radio-' + i"
+                                            [value]="vProperty" [(ngModel)]="selectedValue"
+                                            (change)="onRadioChange(vProperty)"
+                                            class="h-4 w-8 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <p [hidden]="doNOtOpen"> Selected index: {{ getSelectedWireType() }}</p>
+
+                        <div *ngIf="multiSelectEnRequired">
+                            <div>
+                                <p [hidden]="selectedValue" i18n class="text-red-600 pt-3">This answer is required.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="mt-8">
+                            <button type="submit" (click)="next()"
+                                class=" m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                ادامه <i class=" fa-solid fa-circle-chevron-left mr-3 " style="font-size: x-large;"></i>
+                            </button>
+                        </div>
+
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
+                class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2" aria-hidden="true">
+                <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+                    fill-opacity="0.7" />
+                <defs>
+                    <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217" cx="0" cy="0" r="1"
+                        gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(512)">
+                        <stop stop-color="#7775D6"></stop>
+                        <stop offset="1" stop-color="#E935C1" stop-opacity="0"></stop>
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</div> -->
+
+<!-- score -->
+<!-- <div class="bg-white " *ngIf="selectedNodeType === 'score-node'">
+    <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+
+        <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24  shadow-2xl sm:rounded-3xl sm:px-16">
+
+            <div class="relative">
+                <div
+                    class="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+                    <img class="h-full w-full object-cover" [src]="randomImageSrc" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 926 676" aria-hidden="true"
+                        class="absolute left-24 -bottom-24 w-[57.875rem] transform-gpu blur-[118px]">
+                        <path fill="url(#60c3c621-93e0-4a09-a0e6-4c228a0116d8)" fill-opacity=".4"
+                            d="m254.325 516.708-90.89 158.331L0 436.427l254.325 80.281 163.691-285.15c1.048 131.759 36.144 345.144 168.149 144.613C751.171 125.508 707.17-93.823 826.603 41.15c95.546 107.978 104.766 294.048 97.432 373.585L685.481 297.694l16.974 360.474-448.13-141.46Z" />
+                        <defs>
+                            <linearGradient id="60c3c621-93e0-4a09-a0e6-4c228a0116d8" x1="926.392" x2="-109.635"
+                                y1=".176" y2="321.024" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#776FFF"></stop>
+                                <stop offset="1" stop-color="#FF4694"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="relative mx-auto max-w-7xl py-24 sm:py-32 lg:py-40 lg:px-8">
+                    <div class=" pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
+                        <h2 i18n class="mt-2 text-4xl font-bold tracking-tight text-indigo-400">Score Node</h2>
+                    
+
+                        
+                        <p class="mt-6 pb-6 text-2xl leading-7 text-gray-300">{{scoreNodeQuestion}}</p>
+
+                        <mat-card class="example-result-cardn " style="background-color: white">
+                            <mat-card-content>
+                                
+
+                                <div class="example-label-container ">
+                                    <label i18n id="example-name-label" class="example-name-label">Score</label>
+                                    <label class="example-value-label">{{maxScoreOfScoreNode}}</label>
+                                </div>
+                                <mat-slider class="example-margin" [max]="maxScore" [min]="min" [discrete]="thumbLabel"
+                                    [showTickMarks]="showTicks">
+                                    <input matSliderThumb [(ngModel)]="value" #slider>
+                                </mat-slider>
+                                <p > <span i18n>your score is:</span> {{value}} </p>
+                                <button i18n class=" m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left" (click)="updateValueFromEvent(value)">save your score </button>
+                            </mat-card-content>
+                        </mat-card>
+
+                        <div class="mt-8">
+
+                            <button type="submit" (click)="next()"
+                                class=" m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                ادامه <i class=" fa-solid fa-circle-chevron-left mr-3 "
+                                    style="font-size: x-large;"></i></button>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
+                class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2" aria-hidden="true">
+                <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+                    fill-opacity="0.7" />
+                <defs>
+                    <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217" cx="0" cy="0" r="1"
+                        gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(512)">
+                        <stop stop-color="#7775D6"></stop>
+                        <stop offset="1" stop-color="#E935C1" stop-opacity="0"></stop>
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- user-form-fa-->
+<!-- <div class="bg-white " *ngIf="selectedNodeType === 'user-form-fa'">
+    <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+
+        <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24  shadow-2xl sm:rounded-3xl sm:px-16">
+
+            <div class="relative">
+                <div
+                    class="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+                    <img class="h-full w-full object-cover" [src]="randomImageSrc" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 926 676" aria-hidden="true"
+                        class="absolute left-24 -bottom-24 w-[57.875rem] transform-gpu blur-[118px]">
+                        <path fill="url(#60c3c621-93e0-4a09-a0e6-4c228a0116d8)" fill-opacity=".4"
+                            d="m254.325 516.708-90.89 158.331L0 436.427l254.325 80.281 163.691-285.15c1.048 131.759 36.144 345.144 168.149 144.613C751.171 125.508 707.17-93.823 826.603 41.15c95.546 107.978 104.766 294.048 97.432 373.585L685.481 297.694l16.974 360.474-448.13-141.46Z" />
+                        <defs>
+                            <linearGradient id="60c3c621-93e0-4a09-a0e6-4c228a0116d8" x1="926.392" x2="-109.635"
+                                y1=".176" y2="321.024" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#776FFF"></stop>
+                                <stop offset="1" stop-color="#FF4694"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="relative mx-auto max-w-7xl py-24 sm:py-32 lg:py-40 lg:px-8">
+                    <div class=" pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
+                        <h2 i18n class="mt-2 text-4xl font-bold tracking-tight text-indigo-400">User Form Node</h2>
+                    
+
+                        
+                        <p class="mt-6 pb-6 text-2xl leading-7 text-gray-300">{{UserFormFaQuestion}}</p>
+
+                        <div >
+                            <form class="space-y-6" [formGroup]="reactiveForm">
+                                <div formGroupName="personalDetails">
+                            
+                                    <div class="pt-4">
+                            
+                                        <div class="mt-4 grid  gap-y-5 gap-x-3 " *ngFor="let item of UserFormFaOptions, let i = index ">
+                                           
+                                            <div class="sm:col-span-6 " *ngIf="item.type === 'email'">
+                                                <label for="email" class="block text-sm font-medium text-indigo-400 mb-1">{{item.value}}</label>
+                                                <div class="mt-0">
+                                                    <input id="email" name="email" type="email" autocomplete="email" placeholder="expamle@mail.com"
+                                                        formControlName="userEmail"
+                                                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3"
+                                                        style="direction: ltr;">
+                                                </div>
+                                                <div *ngIf="item.required">
+                                                    
+                                                    <div *ngIf="reactiveForm.get('personalDetails.userEmail').touched">
+                                                        <small i18n class="text-red-600"
+                                                            *ngIf="reactiveForm.get('personalDetails.userEmail').hasError('required')">Email is
+                                                            required field</small>
+                                                        <small i18n class="text-red-600"
+                                                            *ngIf="reactiveForm.get('personalDetails.userEmail').hasError('email')">The
+                                                            email is not a valid
+                                                            email</small>
+                                                        <small i18n class="text-red-600"
+                                                            *ngIf="reactiveForm.get('personalDetails.userEmail').hasError('emailFormat')">Email must
+                                                            be completely
+                                                            formed with a
+                                                            period in the domain part</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+ 
+                                            <div class="sm:col-span-6" *ngIf="item.type === 'number' ">
+                                                <label  for="phone Number" class="block text-sm font-medium text-indigo-400">{{item.value}}
+                                                </label>
+                                                <div class="mt-1">
+                                                    <input id="Number" name="Number" type="text" formControlName="userNnmber"
+                                                        autocomplete="Number" 
+                                                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3"
+                                                        style="direction: ltr;">
+                                                </div>
+                            
+                                                <div *ngIf="item.required">
+                                                    <div *ngIf="reactiveForm.get('personalDetails.userNnmber').touched">
+                                                        <small i18n class="text-red-600"
+                                                            *ngIf="reactiveForm.get('personalDetails.userNnmber').hasError('required')">
+                                                            This field is required 
+                                                        </small>
+                                                        <div *ngIf=" reactiveForm.get('personalDetails.userNnmber').dirty">
+                            
+                                                            <small i18n class="text-red-600"
+                                                                *ngIf="reactiveForm.get('personalDetails.userNnmber').hasError('numberFormat') ">
+                                                                This field must only contain numbers with a minimum of 0 and a maximum of 11 digits
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="sm:col-span-6" *ngIf="item.type === 'password' ">
+                                                <label  for="phone Number" class="block text-sm font-medium text-indigo-400">{{item.value}}
+                                                </label>
+                                                <div class="mt-1">
+                                                    <input id="pass" name="password" type="password" formControlName="userPass"
+                                                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3"
+                                                        style="direction: ltr;">
+                                                </div>
+                            
+                                                <div *ngIf="item.required">
+                                                    <div *ngIf="reactiveForm.get('personalDetails.userPass').touched">
+                                                        <small i18n class="text-red-600"
+                                                            *ngIf="reactiveForm.get('personalDetails.userPass').hasError('required')">
+                                                            This field is required 
+                                                        </small>
+                                                        <div *ngIf=" reactiveForm.get('personalDetails.userPass').dirty">
+                            
+                                                            <small i18n class="text-red-600"
+                                                                *ngIf="reactiveForm.get('personalDetails.userPass').hasError('passwordComplexity') ">
+                                                                The password must contain at least 8 characters
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="sm:col-span-6" *ngIf="item.type === 'date' ">
+                                                <label  for="date" class="block text-sm font-medium text-indigo-400">{{item.value}}
+                                                </label>
+                                                <div class="mt-1">
+                                                    <input id="date" name="date" type="date" formControlName="dateUser"
+                                                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3"
+                                                        style="direction: ltr;">
+                                                </div>
+                            
+                                                <div *ngIf="item.required">
+                                                    <div *ngIf="reactiveForm.get('personalDetails.dateUser').touched">
+                                                        <small i18n class="text-red-600"
+                                                            *ngIf="reactiveForm.get('personalDetails.dateUser').hasError('required')">
+                                                            This field is required 
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            
+                                            <div class="sm:col-span-6" *ngIf="item.type === 'time' ">
+                                                <label  for="time" class="block text-sm font-medium text-indigo-400">{{item.value}}
+                                                </label>
+                                                <div class="mt-1">
+                                                    <input id="time" name="time" type="time" formControlName="timeUser"
+                                                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3"
+                                                        style="direction: ltr;">
+                                                </div>
+                            
+                                                <div *ngIf="item.required">
+                                                    <div *ngIf="reactiveForm.get('personalDetails.timeUser').touched">
+                                                        <small i18n class="text-red-600"
+                                                            *ngIf="reactiveForm.get('personalDetails.timeUser').hasError('required')">
+                                                            This field is required 
+                                                        </small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+ 
+                                            <div class="sm:col-span-6" *ngIf="item.type === 'text'">
+                                                <label for="street-address" class="block text-sm font-medium text-indigo-400">{{item.value}}</label>
+                                                <div class="mt-1">
+                                                    <div >
+                                                        <input id="text" name="text" type="text" placeholder="Your Text" formControlName="userText"
+                                                            class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3"
+                                                            style="direction: rtl;">
+                                                    </div>
+                                                </div>
+                                            
+                                                <div *ngIf="(item.required == true  )">
+                                                    <div *ngIf="reactiveForm.get('personalDetails.userText').touched">
+                                                        <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.userText').hasError('required')">
+                                                            this field is required in Persian language
+                                                        </small>
+                                                        <div *ngIf=" reactiveForm.get('personalDetails.userText').dirty">
+                                                            <small i18n class="text-red-600"
+                                                                *ngIf="reactiveForm.get('personalDetails.userText').hasError('addressFormat') ">
+                                                                the field must contain alphabet in the Persian language
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              
+                                            </div>
+
+                                            <div class="sm:col-span-6" *ngIf=" item.type === 'multiline'">
+                                                <label for="street-address" class="block text-sm font-medium text-indigo-400">{{item.value}}</label>
+                                                <div class="mt-1">
+                                                    <div >
+                                                        <textarea type="text" name="multiline" formControlName="userTextMulti" id="multiline" rows="{{item.rows}}"
+                                                            class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm ps-3 pt-1"></textarea>
+                                                    </div>
+                                                </div>
+                                            
+                                                <div *ngIf="(item.required == true )">
+                                                    <div *ngIf="reactiveForm.get('personalDetails.userTextMulti').touched">
+                                                        <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.userTextMulti').hasError('required')">
+                                                            this field is required in Persian language
+                                                        </small>
+                                                        <div *ngIf=" reactiveForm.get('personalDetails.userTextMulti').dirty">
+                                                            <small i18n class="text-red-600"
+                                                                *ngIf="reactiveForm.get('personalDetails.userTextMulti').hasError('addressMultiFormat') ">
+                                                                the field must contain alphabet in the Persian language
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        [hidden]="(multilineOptionType ) || (textOptionType )  || (timeOptionType ) || (dateOptionType ) || (passwordOptionType  ) || (numberOptionType ) || (emailOptionType ) ">
+                                        <div class="mt-8">
+                                    
+                                            <button i18n type="submit" (click)="next()"
+                                                class="m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                                ادامه <i class="fa-solid fa-circle-chevron-left mr-3" style="font-size: x-large;"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div
+                                        [hidden]="!(multilineOptionType)  && !(textOptionType ) && !(timeOptionType ) && !(dateOptionType )  && !(passwordOptionType  ) && !(numberOptionType ) && !(emailOptionType ) ">
+                                        <div class="mt-8">
+                                    
+                                            <button type="submit" (click)="next()"
+                                                [disabled]="
+                                                (emailOptionRequired && reactiveForm.get('personalDetails.userEmail').hasError('emailFormat')) ||
+                                                (numberOptionRequired && reactiveForm.get('personalDetails.userNnmber').hasError('numberFormat') ) ||
+                                                (passwordOptionRequired && reactiveForm.get('personalDetails.userPass').hasError('passwordComplexity')) ||
+                                                (dateOptionRequired && reactiveForm.get('personalDetails.dateUser').hasError('required')) ||
+                                                 (timeOptionRequired && reactiveForm.get('personalDetails.timeUser').hasError('required')) ||
+                                                  (textOptionRequired  && reactiveForm.get('personalDetails.userText').hasError('addressFormat')) || 
+                                                  (multilineOptionRequired && reactiveForm.get('personalDetails.userTextMulti').hasError('addressMultiFormat')) "
+                                                class="m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                                <span i18n>Continue</span><i class="fa-solid fa-circle-chevron-left mr-3" style="font-size: x-large;"></i>
+                                            </button>
+                                    
+                                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
+                class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2" aria-hidden="true">
+                <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+                    fill-opacity="0.7" />
+                <defs>
+                    <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217" cx="0" cy="0" r="1"
+                        gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(512)">
+                        <stop stop-color="#7775D6"></stop>
+                        <stop offset="1" stop-color="#E935C1" stop-opacity="0"></stop>
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- delay -->
+<!-- <div class="bg-white " *ngIf="selectedNodeType === 'delay'">
+    <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+
+        <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24  shadow-2xl sm:rounded-3xl sm:px-16">
+
+            <div class="relative">
+                <div
+                    class="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+                    <img class="h-full w-full object-cover" [src]="randomImageSrc" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 926 676" aria-hidden="true"
+                        class="absolute left-24 -bottom-24 w-[57.875rem] transform-gpu blur-[118px]">
+                        <path fill="url(#60c3c621-93e0-4a09-a0e6-4c228a0116d8)" fill-opacity=".4"
+                            d="m254.325 516.708-90.89 158.331L0 436.427l254.325 80.281 163.691-285.15c1.048 131.759 36.144 345.144 168.149 144.613C751.171 125.508 707.17-93.823 826.603 41.15c95.546 107.978 104.766 294.048 97.432 373.585L685.481 297.694l16.974 360.474-448.13-141.46Z" />
+                        <defs>
+                            <linearGradient id="60c3c621-93e0-4a09-a0e6-4c228a0116d8" x1="926.392" x2="-109.635"
+                                y1=".176" y2="321.024" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#776FFF"></stop>
+                                <stop offset="1" stop-color="#FF4694"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="relative mx-auto max-w-7xl py-24 sm:py-32 lg:py-40 lg:px-8">
+                    <div class=" pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
+                        <h2 i18n class="mt-2 text-4xl font-bold tracking-tight text-indigo-400">Delay Node</h2>
+                      
+
+                        <p class="mt-6 text-2xl leading-7 text-gray-300"> {{durationTypeOfDelay}} {{delayUnits}}
+                            {{delayNodeQuestion}}</p>
+
+                        
+
+                        <div class="mt-8">
+
+
+                            <button type="submit" (click)="next()"
+                                class=" m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                ادامه <i class=" fa-solid fa-circle-chevron-left mr-3 "
+                                    style="font-size: x-large;"></i></button>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
+                class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2" aria-hidden="true">
+                <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+                    fill-opacity="0.7" />
+                <defs>
+                    <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217" cx="0" cy="0" r="1"
+                        gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(512)">
+                        <stop stop-color="#7775D6"></stop>
+                        <stop offset="1" stop-color="#E935C1" stop-opacity="0"></stop>
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</div> -->
+
+<!-- personal-information -->
+<!-- <div class="bg-white " *ngIf="selectedNodeType ==='personal-information'">
+    <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+
+        <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24  shadow-2xl sm:rounded-3xl sm:px-16">
+
+            <div class="relative">
+                <div
+                    class="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+                    <img class="h-full w-full object-cover" [src]="randomImageSrc" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 926 676" aria-hidden="true"
+                        class="absolute left-24 -bottom-24 w-[57.875rem] transform-gpu blur-[118px]">
+                        <path fill="url(#60c3c621-93e0-4a09-a0e6-4c228a0116d8)" fill-opacity=".4"
+                            d="m254.325 516.708-90.89 158.331L0 436.427l254.325 80.281 163.691-285.15c1.048 131.759 36.144 345.144 168.149 144.613C751.171 125.508 707.17-93.823 826.603 41.15c95.546 107.978 104.766 294.048 97.432 373.585L685.481 297.694l16.974 360.474-448.13-141.46Z" />
+                        <defs>
+                            <linearGradient id="60c3c621-93e0-4a09-a0e6-4c228a0116d8" x1="926.392" x2="-109.635"
+                                y1=".176" y2="321.024" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#776FFF"></stop>
+                                <stop offset="1" stop-color="#FF4694"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                
+                <div class="relative mx-auto max-w-7xl py-24 sm:py-32 lg:py-40 lg:px-8">
+                    <div class=" pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
+                        <h2 i18n class="mt-2 text-2xl font-bold tracking-tight text-indigo-400">personalInformation Node</h2>
+
+                        <p class="mt-6 text-2xl leading-7 text-gray-300">{{personalInformationPayload}}</p>
+
+                        <form class="space-y-6" [formGroup]="reactiveForm" >
+                            <div formGroupName="personalDetails">
+
+                                <div class="pt-4">
+                                    
+                                    <div class="mt-4 grid  gap-y-5 gap-x-3 ">
+                                        
+                                        <div class="sm:col-span-6"  *ngIf="personalInformationUsername">
+                                            <label i18n for="name" class="block text-sm font-medium text-indigo-400" >Your Name</label>
+                                            <div class="mt-1">
+                                                <input type="text" name="name" id="name" autocomplete="given-name"  formControlName="userName" 
+                                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3">
+                                            </div>
+                                            <div *ngIf="reactiveForm.get('personalDetails.userName').touched">
+                                                <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.userName').hasError('nameFormat')">Name field
+                                                is required in Persian language</small>
+                                            </div>
+
+                                            <div *ngIf="personalInformationRequiredUsername ">
+                                                <div *ngIf="reactiveForm.get('personalDetails.userName').touched">
+                                                    <small i18n class="text-red-600" 
+                                                        *ngIf="reactiveForm.get('personalDetails.userName').hasError('required')">Name is required field</small>
+                                                </div>
+                                            
+                                            </div>
+                                        </div>
+                                
+                                        <div class="sm:col-span-6 " *ngIf="personalInformationSecurityEmail">
+                                            <label i18n for="email" class="block text-sm font-medium text-indigo-400">Email address</label>
+                                            <div class="mt-0">
+                                                <input id="email" name="email" type="email" autocomplete="email"  placeholder="expamle@mail.com" formControlName="userEmail" 
+                                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3" style="direction: ltr;">
+                                            </div>
+                                            <div *ngIf="personalInformationRequiredSecurityEmail ">
+                                                <div *ngIf="reactiveForm.get('personalDetails.userEmail').touched">
+                                                    <small i18n class="text-red-600" 
+                                                        *ngIf="reactiveForm.get('personalDetails.userEmail').hasError('required')">Email is required field</small>
+                                                    <small i18n class="text-red-600"  *ngIf="reactiveForm.get('personalDetails.userEmail').hasError('email')">The
+                                                        email is not a valid
+                                                        email</small>
+                                                    <small i18n class="text-red-600" 
+                                                        *ngIf="reactiveForm.get('personalDetails.userEmail').hasError('emailFormat')">Email must be completely
+                                                        formed with a
+                                                        period in the domain part</small>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+
+                                        
+
+                                        <div class="sm:col-span-6" *ngIf="personalInformationSecurityPhoneNumber ">
+                                            <label i18n for="phone Number" class="block text-sm font-medium text-indigo-400">phone Number </label>
+                                            <div class="mt-1">
+                                                <input id="phone Number" name="phone Number" type="phone Number" formControlName="userPhone"  autocomplete="phone Number" placeholder="098..."  
+                                                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3" style="direction: ltr;">
+                                            </div >
+                                            
+                                            <div *ngIf="personalInformationRequiredSecurityPhoneNumber">
+                                                    <div *ngIf="reactiveForm.get('personalDetails.userPhone').touched">
+                                                        <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.userPhone').hasError('required')">
+                                                            Your Phone is required field
+                                                        </small>
+                                                        <div *ngIf=" reactiveForm.get('personalDetails.userPhone').dirty">
+
+                                                            <small i18n class="text-red-600"  *ngIf="reactiveForm.get('personalDetails.userPhone').hasError('phoneNumberFormat') ">
+                                                                Your phone number must only contain numbers and contain eleven digits
+                                                            </small>
+                                                        </div >
+                                                    </div>
+
+                                            </div>
+
+                                        </div>
+                                
+                    
+                                        <div class="sm:col-span-6" *ngIf="personalInformationSecurityAdress ">
+                                            <label i18n for="street-address" class="block text-sm font-medium text-indigo-400">Address</label>
+                                            <div class="mt-1">
+                                                <textarea type="text" name="street-address" formControlName="userAddress" id="street-address" autocomplete="street-address" 
+                                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm ps-3 pt-1"></textarea>
+                                            </div>
+
+                                            <div *ngIf="personalInformationRequiredSecurityAdress">
+                                                    <div *ngIf="reactiveForm.get('personalDetails.userAddress').touched">
+                                                        <small i18n class="text-red-600" *ngIf="reactiveForm.get('personalDetails.userAddress').hasError('required')">
+                                                            Your address field is required in Persian language
+                                                        </small>
+                                                        <div *ngIf=" reactiveForm.get('personalDetails.userAddress').dirty">
+                                                        
+                                                            <small i18n class="text-red-600"
+                                                                *ngIf="reactiveForm.get('personalDetails.userAddress').hasError('addressFormat') ">
+                                                                Address must contain numbers and digits 
+                                                            </small>
+                                                        </div>
+
+                                                    </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                                <div [hidden]="personalInformationRequiredSecurityPhoneNumber || personalInformationRequiredSecurityEmail  || personalInformationRequiredSecurityAdress || personalInformationRequiredUsername ">
+                                    <div class="mt-8">
+                                    
+                                        <button i18n type="submit" (click)="next()"
+                                            class="m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                            ادامه <i class="fa-solid fa-circle-chevron-left mr-3" style="font-size: x-large;"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                
+                                
+                                <div [hidden]="!personalInformationRequiredSecurityEmail  && !personalInformationRequiredSecurityPhoneNumber && !personalInformationRequiredSecurityAdress && !personalInformationRequiredUsername">
+                                    <div class="mt-8">
+                                        
+                                        <button type="submit" (click)="next()" [disabled]="
+                                            (personalInformationRequiredUsername && reactiveForm.get('personalDetails.userName')?.hasError('nameFormat')) ||
+                                            (personalInformationRequiredSecurityEmail && reactiveForm.get('personalDetails.userEmail')?.hasError('emailFormat')) ||
+                                            (personalInformationRequiredSecurityPhoneNumber && reactiveForm.get('personalDetails.userPhone')?.hasError('phoneNumberFormat')) ||
+                                            (personalInformationRequiredSecurityAdress && reactiveForm.get('personalDetails.userAddress')?.hasError('addressFormat'))"
+                                            class="m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                            <span i18n>Continue</span><i class="fa-solid fa-circle-chevron-left mr-3" style="font-size: x-large;"></i>
+                                        </button>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
+                class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2" aria-hidden="true">
+                <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+                    fill-opacity="0.7" />
+                <defs>
+                    <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217" cx="0" cy="0" r="1"
+                        gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(512)">
+                        <stop stop-color="#7775D6"></stop>
+                        <stop offset="1" stop-color="#E935C1" stop-opacity="0"></stop>
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</div> -->
+
+<!-- true-false -->
+<!-- <div class="bg-white " *ngIf="selectedNodeType === 'true-false'">
+    <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+
+        <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24  shadow-2xl sm:rounded-3xl sm:px-16">
+
+            <div class="relative">
+                <div
+                    class="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+                    <img class="h-full w-full object-cover" [src]="randomImageSrc" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 926 676" aria-hidden="true"
+                        class="absolute left-24 -bottom-24 w-[57.875rem] transform-gpu blur-[118px]">
+                        <path fill="url(#60c3c621-93e0-4a09-a0e6-4c228a0116d8)" fill-opacity=".4"
+                            d="m254.325 516.708-90.89 158.331L0 436.427l254.325 80.281 163.691-285.15c1.048 131.759 36.144 345.144 168.149 144.613C751.171 125.508 707.17-93.823 826.603 41.15c95.546 107.978 104.766 294.048 97.432 373.585L685.481 297.694l16.974 360.474-448.13-141.46Z" />
+                        <defs>
+                            <linearGradient id="60c3c621-93e0-4a09-a0e6-4c228a0116d8" x1="926.392" x2="-109.635"
+                                y1=".176" y2="321.024" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#776FFF"></stop>
+                                <stop offset="1" stop-color="#FF4694"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="relative mx-auto max-w-7xl py-24 sm:py-32 lg:py-40 lg:px-8">
+                    <div class=" pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
+                        <h2 i18n class="mt-2 text-2xl font-bold tracking-tight text-indigo-400">Multi Select Node</h2>
+
+                        <p class="mt-6 text-2xl leading-7 text-gray-300">{{tureFalseNodeQuestion}}</p>
+
+
+
+                        <label i18n class="block  font-medium text-indigo-400 sm:mt-px sm:pt-2">Please choose one of the
+                            following options </label>
+
+
+                        <fieldset>
+                    
+                            <div class="mt-0 divide-y divide-gray-200">
+                                <div class="relative flex items-start py-4" *ngFor="let vProperty of tureFalseNodeAnswer; let i = index">
+                                    <div class="min-w-0 flex-1 text-sm">
+                                        <label for="side-null" class="select-none font-medium text-white">{{ vProperty}}</label>
+                                    </div>
+                                    <div class="ml-5 flex h-15 ">
+                                        <input id="side-null" name="plan" type="radio" [id]="'radio-' + i" [value]="vProperty"
+                                            [(ngModel)]="selectedValue" (change)="onRadioChangeForTrueFalse(vProperty)"
+                                            class="h-4 w-8 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+                        
+
+                        <div *ngIf="tureFalseRequired">
+                            <div>
+                                <p [hidden]="selectedValue" i18n class="text-red-600 pt-3">This answer is required.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="mt-8">
+                            <button type="submit" (click)="next()"
+                                class=" m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                ادامه <i class=" fa-solid fa-circle-chevron-left mr-3 " style="font-size: x-large;"></i>
+                            </button>
+                        </div>
+
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
+                class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2" aria-hidden="true">
+                <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+                    fill-opacity="0.7" />
+                <defs>
+                    <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217" cx="0" cy="0" r="1"
+                        gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(512)">
+                        <stop stop-color="#7775D6"></stop>
+                        <stop offset="1" stop-color="#E935C1" stop-opacity="0"></stop>
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- appoinment-date -->
+<!-- <div class="bg-white " *ngIf="selectedNodeType === 'appoinment-date'">
+    <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+
+        <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24  shadow-2xl sm:rounded-3xl sm:px-16">
+
+            <div class="relative">
+                <div class="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+                    <img class="h-full w-full object-cover" [src]="randomImageSrc" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 926 676" aria-hidden="true"
+                        class="absolute left-24 -bottom-24 w-[57.875rem] transform-gpu blur-[118px]">
+                        <path fill="url(#60c3c621-93e0-4a09-a0e6-4c228a0116d8)" fill-opacity=".4"
+                            d="m254.325 516.708-90.89 158.331L0 436.427l254.325 80.281 163.691-285.15c1.048 131.759 36.144 345.144 168.149 144.613C751.171 125.508 707.17-93.823 826.603 41.15c95.546 107.978 104.766 294.048 97.432 373.585L685.481 297.694l16.974 360.474-448.13-141.46Z" />
+                        <defs>
+                            <linearGradient id="60c3c621-93e0-4a09-a0e6-4c228a0116d8" x1="926.392" x2="-109.635"
+                                y1=".176" y2="321.024" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#776FFF"></stop>
+                                <stop offset="1" stop-color="#FF4694"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="relative mx-auto max-w-7xl py-24 sm:py-32 lg:py-40 lg:px-8">
+                    <div class=" pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
+                        <h2 i18n class="mt-2 text-2xl font-bold tracking-tight text-indigo-400">Appoinment Date Node</h2>
+
+                        <p class="mt-6 text-2xl leading-7 text-gray-300">{{appointmentQuestionNode }}</p>
+
+                        
+                        <form class="space-y-6" [formGroup]="reactiveForm">
+                            
+                            <div formGroupName="personalDetails">
+                        
+                                <div class="pt-4">
+
+
+                                        <div class="sm:col-span-6" *ngIf="appointmentDurationType ">
+                                            <label i18n for="date" class="block text-sm font-medium text-indigo-400 mb-2">Please select a Date</label>
+                                            <div class="mt-1">
+                                                <input id="date" name="date" type="date" formControlName="dateUser"
+                                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3"
+                                                    style="direction: ltr;">
+                                            </div>
+
+            
+                                            <div>
+                                                <div *ngIf="reactiveForm.get('personalDetails.dateUser').touched">
+                                                    <small i18n class="text-red-600"
+                                                        *ngIf="reactiveForm.get('personalDetails.dateUser').hasError('required')">
+                                                        This field is required
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                        
+                        
+                                        <div class="sm:col-span-6 mt-5" *ngIf="appointmentWaitingUnit ">
+                                            <label i18n for="time" class="block text-sm font-medium text-indigo-400 ">Please select a Time</label>
+                                            <div class="mt-1">
+                                                <input id="time" name="time" type="time" formControlName="timeUser"
+                                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm p-3"
+                                                    style="direction: ltr;">
+                                            </div>
+                        
+                                            <div>
+                                                <div *ngIf="reactiveForm.get('personalDetails.timeUser').touched">
+                                                    <small i18n class="text-red-600"
+                                                        *ngIf="reactiveForm.get('personalDetails.timeUser').hasError('required')">
+                                                        This field is required
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                        
+                     
+                                    </div>
+                                
+                        
+                                <div
+                                    [hidden]="appointmentWaitingUnit || appointmentDurationType  ">
+                                    <div class="mt-8">
+                        
+                                        <button i18n type="submit" (click)="next()"
+                                            class="m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                            ادامه <i class="fa-solid fa-circle-chevron-left mr-3" style="font-size: x-large;"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                        
+                                <div
+                                    [hidden]="!appointmentWaitingUnit  && !appointmentDurationType ">
+                                    <div class="mt-8">
+                        
+                                        <button type="submit" (click)="next()"
+                                            [disabled]="
+                                            (appointmentDurationType && reactiveForm.get('personalDetails.dateUser').hasError('required')) ||
+                                            (appointmentWaitingUnit && reactiveForm.get('personalDetails.timeUser').hasError('required')) "
+                                            class="m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                            <span i18n>Continue</span><i class="fa-solid fa-circle-chevron-left mr-3"
+                                                style="font-size: x-large;"></i>
+                                        </button>
+                        
+                        
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+              
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
+                class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2" aria-hidden="true">
+                <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+                    fill-opacity="0.7" />
+                <defs>
+                    <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217" cx="0" cy="0" r="1"
+                        gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(512)">
+                        <stop stop-color="#7775D6"></stop>
+                        <stop offset="1" stop-color="#E935C1" stop-opacity="0"></stop>
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</div> -->
+
+<!-- multi-select -->
+
+<!-- <div class="bg-white ">
+    <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+
+        <div class="relative isolate overflow-hidden bg-gray-900 px-6 py-24  shadow-2xl sm:rounded-3xl sm:px-16">
+
+            <div class="relative">
+                <div
+                    class="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+                    <img class="h-full w-full object-cover" [src]="randomImageSrc" alt="">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 926 676" aria-hidden="true"
+                        class="absolute left-24 -bottom-24 w-[57.875rem] transform-gpu blur-[118px]">
+                        <path fill="url(#60c3c621-93e0-4a09-a0e6-4c228a0116d8)" fill-opacity=".4"
+                            d="m254.325 516.708-90.89 158.331L0 436.427l254.325 80.281 163.691-285.15c1.048 131.759 36.144 345.144 168.149 144.613C751.171 125.508 707.17-93.823 826.603 41.15c95.546 107.978 104.766 294.048 97.432 373.585L685.481 297.694l16.974 360.474-448.13-141.46Z" />
+                        <defs>
+                            <linearGradient id="60c3c621-93e0-4a09-a0e6-4c228a0116d8" x1="926.392" x2="-109.635"
+                                y1=".176" y2="321.024" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#776FFF"></stop>
+                                <stop offset="1" stop-color="#FF4694"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="relative mx-auto max-w-7xl py-24 sm:py-32 lg:py-40 lg:px-8">
+                    <div class=" pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-24 lg:pr-0 xl:pl-32">
+                        <h2 i18n class="mt-2 text-2xl font-bold tracking-tight text-indigo-400">Multi Select Node</h2>
+
+                        
+
+
+
+                        <label i18n class="block  font-medium text-indigo-400 sm:mt-px sm:pt-2">Please choose one of the
+                            following options </label>
+
+
+
+
+                        <fieldset>
+                            <legend class="text-lg font-medium text-gray-900">Side</legend>
+                            <div class="mt-0 divide-y divide-gray-200">
+                                <div class="grid grid-cols-2 gap-4"> 
+
+                                    <div>
+                                        <label class=" text-sm font-medium text-gray-700">Cover photo</label>
+                                        <div
+                                            class="mt-1  justify-center rounded-md border-2 border-dashed border-gray-300 px-2 pt-2 pb-2 w-200">
+                                            <div class=" text-center">
+                                                <img src="/assets/images/4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class=" text-sm font-medium text-gray-700">Cover photo</label>
+                                        <div
+                                            class="mt-1  justify-center rounded-md border-2 border-dashed border-gray-300 px-2 pt-2 pb-2">
+                                            <div class=" text-center">
+                                                <img src="/assets/images/5.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class=" text-sm font-medium text-gray-700">Cover photo</label>
+                                        <div
+                                            class="mt-1  justify-center rounded-md border-2 border-dashed border-gray-300 px-2 pt-2 pb-2">
+                                            <div class=" text-center ">
+                                                <img src="/assets/images/7.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                 
+
+
+
+
+
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                      
+
+                        <div *ngIf="multiSelectEnRequired">
+                            <div>
+                                <p [hidden]="selectedValue" i18n class="text-red-600 pt-3">This answer is required.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <button type="submit" (click)="next()"
+                                class=" m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                ادامه <i class=" fa-solid fa-circle-chevron-left mr-3 " style="font-size: x-large;"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
+                class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2" aria-hidden="true">
+                <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+                    fill-opacity="0.7" />
+                <defs>
+                    <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217" cx="0" cy="0" r="1"
+                        gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(512)">
+                        <stop stop-color="#7775D6"></stop>
+                        <stop offset="1" stop-color="#E935C1" stop-opacity="0"></stop>
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- <p>home works!</p>
+<div>
+    <h2>File Upload</h2>
+    <form (ngSubmit)="onSubmit()" #uploadForm="ngForm">
+        <div class="form-group">
+            <label for="file">File</label>
+            <input type="file" id="file" name="file" (change)="onFileSelected($event)"
+                accept=".txt, .pdf, .jpg, .jpeg, .png" required />
+        </div>
+        <button type="submit" [disabled]="!selectedFile">Upload</button>
+    </form>
+</div> -->
+
+<!-- Replace your date input with this -->
+<!-- -------------------------------------------------------------- -->
+
+<!-- <div class="container text-center" >
+    <div class="panel" [ngClass]="{'active': activePanel === 1}" (click)="setActivePanel(1)"
+        style="background: url(/assets/images/1.jpg);">
+        
+    </div>
+    <div class="panel" [ngClass]="{'active': activePanel === 2}" (click)="setActivePanel(2)"
+        style="background: url(/assets/images/2.jpg);">
+        
+    </div>
+    <div class="panel" [ngClass]="{'active': activePanel === 3}" (click)="setActivePanel(3)"
+        style="background: url(/assets/images/3.jpg);">
+       
+    </div>
+    <div class="panel" [ngClass]="{'active': activePanel === 4}" (click)="setActivePanel(4)"
+        style="background: url(/assets/images/4.jpg);">
+        
+    </div>
+    <div class="panel" [ngClass]="{'active': activePanel === 5}" (click)="setActivePanel(5)"
+        style="background: url(/assets/images/5.jpg);">
+      
+    </div>
+</div> -->
+
+
+<!-- <img src="/assets/images/main.jpg" alt=""> -->
+
+<!-- <div class="grid min-h-full grid-cols-1 grid-rows-2 lg:grid-cols lg:grid-rows-1">
+    <div class="relative flex">
+        <img src="/assets/images/close-up-laptop-keyboard-colorful-neon-illumination-backlit-keyboard.jpg" alt=""
+            class="absolute inset-0 h-full w-full object-cover object-center">
+        <div class="relative flex w-full flex-col items-start justify-end bg-black bg-opacity-40 p-8 sm:p-12">
+            <h2 class="text-lg font-medium text-white text-opacity-75">Self-Improvement</h2>
+            <p class="mt-1 text-2xl font-medium text-white">Journals and note-taking</p>
+            <a href="#"
+                class="mt-4 rounded-md bg-white py-2.5 px-4 text-sm font-medium text-gray-900 hover:bg-gray-50">Shop
+                now</a>
+        </div>
+    </div>
+   
+   
+</div> -->
+<!-- <div class="image-container grid min-h-full grid-cols-1 grid-rows-2 lg:grid-cols lg:grid-rows-1">
+    <img src="/assets/images/close-up-laptop-keyboard-colorful-neon-illumination-backlit-keyboard.jpg" alt=""
+        class="image">
+    <div class="text-container">
+        <h2 class="text-lg font-medium text-white text-opacity-75">Self-Improvement</h2>
+        <p class="mt-1 text-2xl font-medium text-white">Journals and note-taking</p>
+        <a href="#" class="mt-4 rounded-md bg-white py-2.5 px-4 text-sm font-medium text-gray-900 hover:bg-gray-50">Shop
+            now</a>
+    </div>
+</div> -->
+
+<div class="grid min-h-full grid-cols-1 grid-rows-2 lg:grid-cols lg:grid-rows-1 image-container">
+    <div class="relative flex">
+        <img src="/assets/images/close-up-laptop-keyboard-colorful-neon-illumination-backlit-keyboard.jpg" alt=""
+            class="absolute inset-0 h-full w-full object-cover object-center">
+
+        <div class="absolute inset-0 flex flex-col items-start justify-end bg-black bg-opacity-40 p-8 sm:p-12 text-container">
+            <h1 i18n class="text-3lg font-medium text-white text-opacity-75 ">Welcome to our Chatbot-Powered Design Hub!</h1>
+            <p i18n class="mt-1 text-4xl font-medium text-white pb-20">JExperience seamless interaction and modern design at ICTSG. Our chatbots make navigating our site a breeze, ensuring a
+            user-friendly and engaging journey. Dive in and let the conversation unfold!</p>
+           
+        </div>
+    </div>
+</div>
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+<div class="bg-white">
+    <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl animated-box">
+        <div class="relative overflow-hidden rounded-lg lg:h-96">
+            <div class="absolute inset-0">
+                <img src="assets/images/55897.jpg" alt=""
+                    class="h-full w-full object-cover object-center">
+            </div>
+            <div aria-hidden="true" class="relative h-96 w-full lg:hidden"></div>
+            <div aria-hidden="true" class="relative h-32 w-full lg:hidden"></div>
+            <div
+                class="absolute inset-x-0 bottom-0 rounded-bl-lg rounded-br-lg bg-black bg-opacity-75 p-6 backdrop-blur backdrop-filter sm:flex sm:items-center sm:justify-between lg:inset-y-0 lg:inset-x-auto lg:w-96 lg:flex-col lg:items-start lg:rounded-tl-lg lg:rounded-br-none">
+                <div>
+                    <h2 i18n class="text-xl font-bold text-white">The possibility of online bot design</h2>
+                    <p i18n class="mt-1 text-sm text-gray-300">Revolutionizing Interaction: Where Design Meets Intelligence.</p>
+                </div>
+                <a i18n [routerLink]="['/contactus']"
+                    class="mt-6 flex flex-shrink-0 items-center justify-center rounded-md border border-white border-opacity-25 bg-white bg-opacity-0 py-3 px-4 text-base font-medium text-white hover:bg-opacity-10 sm:mt-0 sm:ml-8 lg:ml-0 lg:w-full">Click for advice</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ------------------------------------------------------------------------------------ -->
+<div>
+    <div class="bg-white">
+        <!-- Header -->
+        <div class="relative bg-gray-800 pb-32">
+            <div class="absolute inset-0">
+                <img i18n-alt class="h-full w-full object-cover" src="assets/images/homeOneRTL.png" alt="">
+                <div class="absolute inset-0 bg-gray-800 mix-blend-multiply" aria-hidden="true"></div>
+            </div>
+            <div class=" relative mx-auto max-w-7xl py-24 px-6 sm:py-32 lg:px-8">
+              
+                <div class="relative mx-auto max-w-7xl py-24 px-6 sm:py-32 lg:px-8">
+                    <h1 i18n class="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">About Bot</h1>
+                    <p i18n class="mt-6 max-w-3xl text-xl text-gray-300">At <span style="color: cyan;">ICTSG</span>, we
+                        utilize cutting-edge
+                        technology to provide seamless and personalized customer experiences. Our platform
+                        enables the creation of smart bots that intelligently engage with customers, leveraging
+                        state-of-the-art
+                        artificial intelligence for advanced capabilities. Our smart bots offer intelligent
+                        personalization by learning from customer interactions, delivering tailored
+                        responses to meet individual needs and preferences. They boast advanced Natural Language
+                        Understanding (NLU) to accurately
+                        interpret customer queries, providing a natural and human-like conversational experience.
+
+                        Moreover, our platform seamlessly integrates with existing systems, supporting various business
+                        processes such as e-commerce, customer support, and lead generation. With AI at their core, our
+                        smart bots continuously learn and
+                        refine their responses, ensuring they stay up-to-date with the latest trends and customer
+                        preferences.
+
+                        Empowering self-service, our bots offer instant support, reducing wait times, and freeing up
+                        your team to focus
+                        on more complex tasks. In situations requiring human assistance, our platform allows seamless
+                        integration with human agents to
+                        ensure the best possible customer support. Data security and privacy are prioritized, and our
+                        user-friendly interface makes customizing smart bots hassle-free, even without extensive
+                        technical expertise.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overlapping cards -->
+        <section class="relative z-10 mx-auto -mt-32 max-w-7xl px-6 pb-32 lg:px-8" aria-labelledby="contact-heading">
+            <h2 i18n class="sr-only" id="contact-heading">Contact us</h2>
+            <div class="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
+                <div class=" flex flex-col rounded-2xl bg-white shadow-xl">
+                    <div class="relative flex-1 px-6 pt-16 pb-8 md:px-8">
+                        <div
+                            class="absolute top-0 inline-block -translate-y-1/2 transform rounded-xl bg-indigo-600 p-5 shadow-lg">
+                            <!-- Heroicon name: outline/phone -->
+                            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                            </svg>
+                        </div>
+                        <h3 i18n class="text-xl font-medium text-gray-900">Sales</h3>
+                        <p i18n class="mt-4 text-base text-gray-500">At ICTSG, we are committed to delivering
+                            exceptional products and services to our valued customers. Our
+                            dedicated sales team is ready to assist you in finding the perfect solutions that meet your
+                            needs.
+                            Whether you're looking for cutting-edge technology or innovative products, we're here to
+                            guide you through the buying
+                            process. Our knowledgeable representatives will provide personalized recommendations and
+                            answer any questions you may
+                            have.
+                            Your satisfaction is our top priority, and we strive to ensure a smooth and pleasant
+                            purchasing experience. Contact our
+                            sales team today, and let us help you find the right solutions for your requirements.</p>
+                    </div>
+                    <div class="rounded-bl-2xl rounded-br-2xl bg-gray-50 p-6 md:px-8">
+                        <a i18n [routerLink]="['/contactus']"
+                            class="text-base font-medium text-indigo-700 hover:text-indigo-600">Contact us<span
+                                aria-hidden="true"> &rarr;</span></a>
+                    </div>
+                </div>
+
+                <div class=" flex flex-col rounded-2xl bg-white shadow-xl">
+                    <div class="relative flex-1 px-6 pt-16 pb-8 md:px-8">
+                        <div
+                            class="absolute top-0 inline-block -translate-y-1/2 transform rounded-xl bg-indigo-600 p-5 shadow-lg">
+                            <!-- Heroicon name: outline/lifebuoy -->
+                            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M16.712 4.33a9.027 9.027 0 011.652 1.306c.51.51.944 1.064 1.306 1.652M16.712 4.33l-3.448 4.138m3.448-4.138a9.014 9.014 0 00-9.424 0M19.67 7.288l-4.138 3.448m4.138-3.448a9.014 9.014 0 010 9.424m-4.138-5.976a3.736 3.736 0 00-.88-1.388 3.737 3.737 0 00-1.388-.88m2.268 2.268a3.765 3.765 0 010 2.528m-2.268-4.796a3.765 3.765 0 00-2.528 0m4.796 4.796c-.181.506-.475.982-.88 1.388a3.736 3.736 0 01-1.388.88m2.268-2.268l4.138 3.448m0 0a9.027 9.027 0 01-1.306 1.652c-.51.51-1.064.944-1.652 1.306m0 0l-3.448-4.138m3.448 4.138a9.014 9.014 0 01-9.424 0m5.976-4.138a3.765 3.765 0 01-2.528 0m0 0a3.736 3.736 0 01-1.388-.88 3.737 3.737 0 01-.88-1.388m2.268 2.268L7.288 19.67m0 0a9.024 9.024 0 01-1.652-1.306 9.027 9.027 0 01-1.306-1.652m0 0l4.138-3.448M4.33 16.712a9.014 9.014 0 010-9.424m4.138 5.976a3.765 3.765 0 010-2.528m0 0c.181-.506.475-.982.88-1.388a3.736 3.736 0 011.388-.88m-2.268 2.268L4.33 7.288m6.406 1.18L7.288 4.33m0 0a9.024 9.024 0 00-1.652 1.306A9.025 9.025 0 004.33 7.288" />
+                            </svg>
+                        </div>
+                        <h3 i18n class="text-xl font-medium text-gray-900">Technical Support</h3>
+                        <p i18n class="mt-4 text-base text-gray-500">Our dedicated technical support team is here to
+                            assist you with any technical issues or inquiries you may have. Whether
+                            it's troubleshooting software problems, resolving hardware issues, or answering questions
+                            about our products, we are
+                            committed to providing prompt and reliable support.
+                            Our experts are available through various channels, including phone, email, and live chat,
+                            to ensure you receive timely
+                            assistance. We understand the importance of keeping your systems running smoothly, and our
+                            goal is to help you overcome
+                            any challenges you encounter.</p>
+                    </div>
+                    <div class="rounded-bl-2xl rounded-br-2xl bg-gray-50 p-6 md:px-8">
+                        <a i18n [routerLink]="['/contactus']"
+                            class="text-base font-medium text-indigo-700 hover:text-indigo-600">Contact us<span
+                                aria-hidden="true"> &rarr;</span></a>
+                    </div>
+                </div>
+
+                <div class=" flex flex-col rounded-2xl bg-white shadow-xl">
+                    <div class="relative flex-1 px-6 pt-16 pb-8 md:px-8">
+                        <div
+                            class="absolute top-0 inline-block -translate-y-1/2 transform rounded-xl bg-indigo-600 p-5 shadow-lg">
+                            <!-- Heroicon name: outline/newspaper -->
+                            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
+                            </svg>
+                        </div>
+                        <h3 i18n class="text-xl font-medium text-gray-900">Media Inquiries</h3>
+                        <p i18n class="mt-4 text-base text-gray-500">We welcome all media inquiries and are happy to
+                            provide information, interviews, and resources to journalists,
+                            reporters, and media outlets. Our team is available to assist you in gathering accurate and
+                            up-to-date information about
+                            our organization, products, or services. For media-related requests, please get in touch
+                            with our dedicated media
+                            relations department, and we will promptly respond to your inquiries. We value the role of
+                            the media in sharing our
+                            stories and engaging with our audience</p>
+                    </div>
+                    <div class="rounded-bl-2xl rounded-br-2xl bg-gray-50 p-6 md:px-8">
+                        <a i18n [routerLink]="['/contactus']"
+                            class="text-base font-medium text-indigo-700 hover:text-indigo-600">Contact us<span
+                                aria-hidden="true"> &rarr;</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+<!-- <div class="bg-gray-50" id="fade-image1">
+    <div class="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        <div class="sm:flex sm:items-baseline sm:justify-between">
+            <h1 i18n class="text-2xl font-bold tracking-tight text-gray-900" style="font-weight: 800;">Everything is possible</h1>
+           
+        </div>
+
+        <div class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-6 lg:gap-8">
+            <div
+                class="group aspect-w-2 aspect-h-1 overflow-hidden rounded-lg sm:aspect-h-1 sm:aspect-w-1 sm:row-span-2">
+                <img src="/assets/images/main.jpg"
+                    alt="Two models wearing women's black cotton crewneck tee and off-white cotton crewneck tee."
+                    class="object-cover object-center group-hover:opacity-75">
+                <div aria-hidden="true" class="bg-gradient-to-b from-transparent to-black opacity-50"></div>
+                <div class="flex items-end p-6">
+                    <div>
+                        <h3 class="font-semibold text-white">
+                            
+                        </h3>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="group aspect-w-2 aspect-h-1 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
+                <img src="/assets/images/time.jpg"
+                    alt="Wooden shelf with gray and olive drab green baseball caps, next to wooden clothes hanger with sweaters."
+                    class="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full">
+                
+                <div aria-hidden="true"
+                    class="bg-gradient-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0"></div>
+                <div class="flex items-end p-6 sm:absolute sm:inset-0">
+                    <div>
+                        <h3 class="font-semibold text-white">
+                            <a  [routerLink]="['/dashboard']">
+                                <span class="absolute inset-0"></span>
+                                Future
+                            </a>
+                        </h3>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="group aspect-w-2 aspect-h-1 overflow-hidden rounded-lg sm:aspect-none sm:relative sm:h-full">
+                <img src="/assets/images/21.jpg"
+                    alt="Walnut desk organizer set with white modular trays, next to porcelain mug on wooden desk."
+                    class="object-cover object-center group-hover:opacity-75 sm:absolute sm:inset-0 sm:h-full sm:w-full">
+                <div aria-hidden="true"
+                    class="bg-gradient-to-b from-transparent to-black opacity-50 sm:absolute sm:inset-0"></div>
+                <div class="flex items-end p-6 sm:absolute sm:inset-0">
+                    <div>
+                        <h3 class="font-semibold text-white">
+                            <a  [routerLink]="['/dashboard']">
+                                <span class="absolute inset-0"></span>
+                                Time
+                            </a>
+                        </h3>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-6 sm:hidden">
+            <a href="#" class="block text-sm font-semibold text-indigo-600 hover:text-indigo-500">
+                Browse all categories
+                <span aria-hidden="true"> &rarr;</span>
+            </a>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+

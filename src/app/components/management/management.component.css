@@ -1,0 +1,298 @@
+/* frame.component.css */
+.frame {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+}
+
+.frame-dialog {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.frame-content {
+
+    /* background-color: rgb(207, 189, 189) ;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px 50px;
+    padding: 50px 50px; */
+
+
+    background-color: rgb(207, 189, 189);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Add this line to center align content vertically */
+        flex-wrap: wrap;
+        gap: 50px 50px;
+        padding: 50px 50px;
+        position: relative;
+}
+
+.d-block {
+    display: block;
+}
+
+
+/* ---------------------------------------------------- */
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+
+    .card {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 350px;
+        height: 300px;
+        background: #dfd6d6;
+        box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+        transition: .5s;
+
+        .imgBx {
+            position: absolute;
+            top: 20px;
+            left: 22px;
+            width: 300px;
+            height: 220px;
+            background: #333;
+            border-radius: 12px;
+            transition: .5s;
+            overflow: hidden;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .content {
+            position: absolute;
+            overflow: hidden;
+            text-align: center;
+            height: 35px;
+            top: 252px;
+            padding: 0 30px;
+            transition: 0.5;
+
+            h2 {
+                font-size: 1.5em;
+                font-weight: 700;
+                color: var(--clr);
+            }
+
+
+            p {
+                color: #333;
+            }
+
+            a {
+                position: relative;
+                top: 15px;
+                display: inline-block;
+                padding: 12px 25px;
+                background: var(--clr);
+                color: #fff;
+                font-weight: 500;
+                text-decoration: none;
+                border-radius: 8px;
+            }
+
+
+        }
+    }
+
+
+
+    .card:hover {
+        height: 400px;
+
+        .imgBx {
+            top: -90px;
+            scale: 0.6s;
+            width: 250px;
+            left: 45px;
+            height: 180px;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+        }
+
+        .content {
+            top: 130px;
+            height: 260px;
+        }
+    }
+
+}
+
+
+
+.photo-gallery {
+    display: flex;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.photo-gallery-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.photo {
+    flex: 0 0 auto;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+
+.modal {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.modal-content {
+    width: 100%;
+}
+
+.modal-title {
+    flex-grow: 1;
+}
+
+
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    /* Adjust the top position as needed */
+    left: 10px;
+    /* Adjust the left position as needed */
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+}
+.close1 {
+    position: absolute;
+    top: 10px;
+    /* Adjust the top position as needed */
+    left: 10px;
+    /* Adjust the left position as needed */
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+}
+
+
+.min-main{
+    min-height: 30vh;
+}
+
+.compose-container-main {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 10px;
+    z-index: 1050;
+    min-width: 100px;
+    max-height: 60vh;
+    
+    overflow-y: auto;
+    background-color: #fff;
+   
+       
+    /* border-radius: 30px; */
+    margin: 10px;
+    padding-left: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+}
+
+.header{
+    background-image:url("src/assets/images/aug_8_01.jpg");
+    height: 100px;
+    margin-top: 3px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+
+}
+
+.text-color{
+    color: #fff;
+}
+
+
+@media (max-width: 767px) {
+
+    /* Adjust styles for screens with a maximum width of 767px (typical mobile devices) */
+    .compose-container-main {
+        position: fixed;
+        bottom: 0;
+        left: 10px;
+        width: 90%;
+        left: 0;
+        right: 0;
+        z-index: 1050;
+        /* border-radius: 10px; */
+        margin: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+    /* Adjust styles for screens between 768px and 1023px (typical tablet devices) */
+    .compose-container-main {
+        width: 60%;
+        z-index: 1050;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1023px) {
+
+    /* Adjust styles for screens between 768px and 1023px (typical tablet devices) */
+    .compose-container-main {
+        width: 60%;
+        z-index: 1050;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* Adjust styles for screens with a minimum width of 1024px (typical laptop devices) */
+    .compose-container-main {
+        width: 40%;
+        z-index: 1050;
+    }
+}
+
