@@ -14,6 +14,7 @@ import { FrameComponent } from '../frame/frame.component';
   declarations: [
     ManagementComponent,
     // UsermenuComponent
+    
     FrameComponent
     
   ],
