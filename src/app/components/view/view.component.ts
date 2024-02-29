@@ -1,5 +1,5 @@
 import * as jalaliMoment from 'jalali-moment'
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
 import { ChatbotDataService } from 'src/app/services/chatbot-data.service';
@@ -69,6 +69,7 @@ export class ViewComponent implements OnInit, OnDestroy {
   descriptiveProperty: boolean;
   descriptiveProperties: any;
   descriptiveFaValue: any
+ 
 
 
 
@@ -115,6 +116,7 @@ export class ViewComponent implements OnInit, OnDestroy {
   sPropertyValueImage: any;
   tPropertyValue: string;
   multiImageNodeAnswersArray: string[] = [];
+  multiImageNodeAnswersArrayFileType: string[] = [];
   selectedAnswerImage: string | null = null;
   multiImageNodeWiresArray: any;
 
@@ -260,7 +262,12 @@ export class ViewComponent implements OnInit, OnDestroy {
   selectedFileInfo: string;
 
   profileImageUrl: SafeResourceUrl;
+  profilevideoUrl: SafeResourceUrl;
+  profileAudioUrl: SafeResourceUrl;
   fileType: string;
+
+  fileTypeOfSrc: any;
+  // fileTypeOfSrc: string | null = null;
 
   nextFlag: boolean = false;
 
@@ -274,7 +281,11 @@ export class ViewComponent implements OnInit, OnDestroy {
 
   openDialog: boolean;
 
-  validationErrors: string[] = []
+  validationErrors: string[] = [];
+
+  uniqueIdentifier: number = 0;
+
+  uploadFile: boolean = false;
 
 
   // profileImageUrl: string | ArrayBuffer | null
@@ -289,7 +300,7 @@ export class ViewComponent implements OnInit, OnDestroy {
     // this.reactiveForm = this.formBuilder.group({
     //   answer: ['', Validators.required]
     // });
-
+    this.uniqueIdentifier++;
   }
   ngOnDestroy(): void {
     this.appComponent.showHeader = true;
@@ -343,6 +354,10 @@ export class ViewComponent implements OnInit, OnDestroy {
     this.countdown = Math.ceil(this.mainUnit / 1000);
 
 
+  }
+
+  refreshForm(): void {
+    this.reactiveForm.reset();
   }
 
   getFlows() {
@@ -430,7 +445,8 @@ export class ViewComponent implements OnInit, OnDestroy {
       if (this.selectedNodeType === 'multi-select-fa') {
         var type = this.getSelectedWireType()
 
-        currentNode = this.flowsArray.find(node => node.id === this.nextNodeOfMultiID)
+        currentNode = this.flowsArray.find(node => node.id === this.nextNodeOfMultiID);
+        console.log(currentNode)
         this.selectedNodeType = currentNode.type;
         this.selectedNodeId = currentNode.id;
         //score
@@ -483,44 +499,52 @@ export class ViewComponent implements OnInit, OnDestroy {
       }
       else if (this.selectedNodeType === 'condition-box-fa') {
         let next1;
+        let ruleMatch = 0
         let rulewires1 = current.wires.map(wires => wires[0]);
+        this.nextNodeOfMultiID = rulewires1[0]
         for (var i = 0; i < current.rules.length; i++) {
           var element = current.rules[i]
           if (element.t == 'eq') {
             if (this.totalScore == element.v) {
-              next1 = rulewires1[i]
+              next1 = rulewires1[i+1]
+              ruleMatch = 1
               break;
             }
           }
           else if (element.t == "neq") {
             if (this.totalScore != element.v) {
-              next1 = rulewires1[i]
+              next1 = rulewires1[i+1]
+              ruleMatch = 1
               break;
             }
 
           }
           else if (element.t == "lte") {
             if (this.totalScore <= element.v) {
-              next1 = rulewires1[i]
+              next1 = rulewires1[i+1]
+              ruleMatch = 1
               break;
             }
 
           }
           else if (element.t == "gte") {
             if (this.totalScore >= element.v) {
-              next1 = rulewires1[i]
+              next1 = rulewires1[i+1]
+              ruleMatch = 1
               break;
             }
           }
           else if (element.t == "btwn") {
             if (this.totalScore >= element.v && this.totalScore <= element.v2) {
-              next1 = rulewires1[i]
+              next1 = rulewires1[i+1]
+              ruleMatch = 1
               break;
             }
           }
 
         }
-        this.nextNodeOfMultiID = next1;
+        if (ruleMatch == 1)
+          this.nextNodeOfMultiID = next1;
         currentNode = this.flowsArray.find(node => node.id === this.nextNodeOfMultiID)
         this.selectedNodeType = currentNode.type;
         this.selectedNodeId = currentNode.id;
@@ -530,13 +554,14 @@ export class ViewComponent implements OnInit, OnDestroy {
         }
       }
       else if (this.selectedNodeType == 'goal-condition') {
+        this.nextNodeOfMultiID = current.wires[0][0]
         for (var i = 0; i <= current.rules.length; i++) {
           var element = current.rules[i]
           for (var j = 0; j <= this.resultUser.length; j++) {
             if (this.resultUser[j].label == "goal") {
               for (var k = 0; k <= this.resultUser[j].goal.length; k++) {
                 if (this.resultUser[j].goal[k] == element.g) {
-                  this.nextNodeOfMultiID = current.wires[0][i]
+                  this.nextNodeOfMultiID = current.wires[0][i+1]
                   currentNode = this.flowsArray.find(node => node.id === this.nextNodeOfMultiID)
                   this.selectedNodeType = currentNode.type;
                   this.selectedNodeId = currentNode.id;
@@ -553,8 +578,9 @@ export class ViewComponent implements OnInit, OnDestroy {
 
       }
       else if (this.selectedNodeType == 'property-condition') {
-        let next;
+        
         let rulewires = current.wires.map(wires => wires[0]);
+        let next = rulewires[0]
         for (var i = 0; i < current.rules.length; i++) {
           var element = current.rules[i]
           for (var j = 0; j < this.resultUser.length; j++) {
@@ -562,7 +588,7 @@ export class ViewComponent implements OnInit, OnDestroy {
               for (var k = 0; k < this.resultUser[j].property.length; k++) {
                 if ((this.resultUser[j].property[k].key == element.F) && (this.resultUser[j].property[k].value == element.T)) {
 
-                  next = rulewires[i]
+                  next = rulewires[i+1]
                   break;
                 }
               }
@@ -624,7 +650,7 @@ export class ViewComponent implements OnInit, OnDestroy {
     while (true)
 
     this.showNext(currentNode)
-
+    this.refreshForm()
 
   }
 
@@ -655,7 +681,11 @@ export class ViewComponent implements OnInit, OnDestroy {
       case 'upload-files':
         this.uploadFilesNodeTopic = currentNode.topic;
         this.uploadFilesNodeWires = currentNode.wires;
-        console.log(this.value)
+        console.log(this.value);
+        this.resultUser.push({
+          label: "upload-files",
+          topic: this.uploadFilesNodeTopic,
+        });
         break;
       case 'multi-media':
         this.multiMediaName = currentNode.name;
@@ -788,6 +818,8 @@ export class ViewComponent implements OnInit, OnDestroy {
           console.log(this.fPropertyValue);
         }
         this.multiImageNodeAnswersArray = this.multiImageNodeAnswers.map(answer => answer.f);
+        this.multiImageNodeAnswersArrayFileType = this.multiImageNodeAnswers.map(answer => answer.t);
+        console.log(this.multiImageNodeAnswersArrayFileType);
 
         console.log(this.multiImageNodeAnswersArray)
         for (const answer of this.multiImageNodeAnswers) {
@@ -1045,8 +1077,44 @@ export class ViewComponent implements OnInit, OnDestroy {
     const selectedRule = this.multiSelectEnNodeAnswers.find(rule => rule.v === selectedValue);
 
     if (selectedRule) {
-      const selectedIndex = this.multiSelectEnNodeAnswers.indexOf(selectedRule);
+      const selectedIndex = this.multiSelectEnNodeAnswers.indexOf(selectedRule) + 1;
       const selectedWireID = this.multiSelectEnNodeWiresArray[selectedIndex];
+      const selectedNode: IChatbotNode | undefined = this.flowsArray.find(node => node.id === selectedWireID);
+      if (selectedNode) {
+        this.nextNodeOfMultiType = selectedNode.type;
+        this.nextNodeOfMultiID = selectedNode.id;
+        console.log(this.nextNodeOfMultiType);
+        return selectedNode.type;
+      }
+
+    }
+    else {
+      const selectedIndex = 0
+      const selectedWireID = this.multiSelectEnNodeWiresArray[selectedIndex];
+      const selectedNode: IChatbotNode | undefined = this.flowsArray.find(node => node.id === selectedWireID);
+      if (selectedNode) {
+        this.nextNodeOfMultiType = selectedNode.type;
+        this.nextNodeOfMultiID = selectedNode.id;
+        console.log(this.nextNodeOfMultiType);
+        return selectedNode.type;
+      }
+
+    }
+
+    // Find the node with the selectedWireID in the nodes array
+
+
+
+    return '';
+  }
+
+  getSelectedWireTypeMulti(): string {
+    const selectedValue = this.selectedValue;
+    const selectedRule = this.multiImageNodeAnswers.find(rule => rule.f == selectedValue);
+
+    if (selectedRule) {
+      const selectedIndex = this.multiImageNodeAnswers.indexOf(selectedRule) + 1;
+      const selectedWireID = this.multiImageNodeWiresArray[selectedIndex];
 
       // Find the node with the selectedWireID in the nodes array
       const selectedNode: IChatbotNode | undefined = this.flowsArray.find(node => node.id === selectedWireID);
@@ -1058,16 +1126,8 @@ export class ViewComponent implements OnInit, OnDestroy {
         return selectedNode.type;
       }
     }
-
-    return '';
-  }
-
-  getSelectedWireTypeMulti(): string {
-    const selectedValue = this.selectedValue;
-    const selectedRule = this.multiImageNodeAnswers.find(rule => rule.f == selectedValue);
-
-    if (selectedRule) {
-      const selectedIndex = this.multiImageNodeAnswers.indexOf(selectedRule);
+    else {
+      const selectedIndex = 0
       const selectedWireID = this.multiImageNodeWiresArray[selectedIndex];
 
       // Find the node with the selectedWireID in the nodes array
@@ -1182,7 +1242,7 @@ export class ViewComponent implements OnInit, OnDestroy {
   }
   phoneNumberFormatValidator(): ValidatorFn {
     return (control: AbstractControl): { [key: string]: any } | null => {
-      const phoneRegex = /^[0-9]{11}$/;
+      const phoneRegex = /^\+[0-9]{12}$/;
       const isValid = phoneRegex.test(control.value);
       return isValid ? null : { phoneNumberFormat: true };
     };
@@ -1343,7 +1403,9 @@ export class ViewComponent implements OnInit, OnDestroy {
       text: this.endNodepayload
     })
 
-    console.log("Result", this.resultUser)
+    console.log("Result", this.resultUser);
+    this.botService.mainResult = this.resultUser;
+
     this.botId = this.chatbotDataService.bitIdInMenu;
     console.log(this.botId)
     this.authService.saveChatInfo(this.botId, this.resultUser);
@@ -1537,7 +1599,7 @@ export class ViewComponent implements OnInit, OnDestroy {
 
 
 
-  addResultUser(id: string, type: string, question: string, answerOne: any, answerTwo?: any, answerThree?: any, answerFour?: any) {
+   addResultUser(id: string, type: string, question: string, answerOne: any, answerTwo?: any, answerThree?: any, answerFour?: any) {
     const item = this.resultUser.find(item => item.id === id);
     // const answer = answerTwo !== undefined ? { answerOne, answerTwo } : { answerOne };
 
@@ -1564,7 +1626,7 @@ export class ViewComponent implements OnInit, OnDestroy {
           question: question,
           answer: answerOne,
           propertyKey: itemOfProperty.properties,
-          propertyValue: answerOne
+          propertyValue: answerOne,
 
         });
       }
@@ -1590,19 +1652,53 @@ export class ViewComponent implements OnInit, OnDestroy {
       } else {
         this.resultUser.push({
           id: id,
-          // type: type,
           label: type,
           question: question,
           answer: answer,
-
         });
       }
     }
 
 
     console.log(this.resultUser);
-
+     
   }
+
+
+  // ------------------------------------------------------------------------
+  // getFileTypeOfSrc(answerOne: string): Promise<string | null> {
+  //   return new Promise(async (resolve, reject) => {
+  //     try {
+  //       const response = await fetch(answerOne);
+
+  //       if (!response.ok) {
+  //         throw new Error('Network response was not ok');
+  //       }
+
+  //       const contentType = response.headers.get('Content-Type');
+  //       console.log("Content-Type:", contentType);
+
+  //       if (contentType.includes("image")) {
+  //         console.log("It's an image.");
+  //         resolve('image');
+  //       } else if (contentType.includes("video")) {
+  //         console.log("It's a video.");
+  //         resolve('video');
+  //       } else if (contentType.includes("audio")) {
+  //         console.log("It's an audio file.");
+  //         resolve('audio');
+  //       } else {
+  //         console.log("The file type is not recognized.");
+  //         resolve('unknown');
+  //       }
+  //     } catch (error) {
+  //       console.error('There was a problem with the fetch operation:', error);
+  //       resolve(null);
+  //     }
+  //   });
+  // }
+
+  // ------------------------------------------------------------------------
 
 
   doNotShowPhoto() {
@@ -1613,7 +1709,7 @@ export class ViewComponent implements OnInit, OnDestroy {
   onFileSelectedNew(fileInput: any) {
     const file: File = fileInput.files[0];
 
-    if (file) {
+    if (file) {  
       // Determine the file type based on the file extension
       const fileType = this.getFileType(file.name);
       this.authService.createFile("651134e7bb7d7d3c4fe1", file)
@@ -1621,7 +1717,8 @@ export class ViewComponent implements OnInit, OnDestroy {
 
 
 
-          console.log("file uploaded ", response)
+          console.log("file uploaded ", response);
+          this.uploadFile = true;
           this.resultUser.push({
             label: "file_upload",
             fileId: response.$id,
@@ -1638,14 +1735,18 @@ export class ViewComponent implements OnInit, OnDestroy {
         case 'image':
           this.fileType = 'image';
           this.profileImageUrl = this.sanitizer.bypassSecurityTrustResourceUrl(URL.createObjectURL(file));
+          console.log('image is uploud')
           break;
+          
         case 'video':
           this.fileType = 'video';
-          this.profileImageUrl = this.sanitizer.bypassSecurityTrustResourceUrl(URL.createObjectURL(file));
+          this.profilevideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(URL.createObjectURL(file));
+          console.log('video is uploud')
           break;
         case 'audio':
           this.fileType = 'audio';
-          this.profileImageUrl = this.sanitizer.bypassSecurityTrustResourceUrl(URL.createObjectURL(file));
+          this.profileAudioUrl = this.sanitizer.bypassSecurityTrustResourceUrl(URL.createObjectURL(file));
+          console.log('audio is uploud')
           break;
         default:
           // Handle other file types or show an error message

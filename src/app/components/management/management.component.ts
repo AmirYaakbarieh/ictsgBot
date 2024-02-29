@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Input, OnDestroy, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, NgZone, OnDestroy, OnInit, Output } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { LocalStorageService } from 'src/app/services/local-storage.service';
 import { AuthService } from 'src/app/services/auth.service';
-import { AuthTestParams, BotData, IBotId, ICodeBlocks, IUserId } from 'src/models/chatbot-node.models';
+import { AuthTestParams, BotData, IBotId, ICodeBlocks, IUserId, ListOfBot } from 'src/models/chatbot-node.models';
 import { ChatbotDataService } from 'src/app/services/chatbot-data.service';
 import { SharedDataService } from 'src/app/services/shared-data.service';
 import { AppComponent } from 'src/app/app.component';
@@ -20,6 +20,7 @@ import { Ripple, initTE } from "tw-elements";
 export class ManagementComponent implements OnInit, OnDestroy {
 
   @Input() receivedId: string;
+
 
   imageFilenames: string[] = [
     "/assets/images/4.jpg",
@@ -81,11 +82,38 @@ export class ManagementComponent implements OnInit, OnDestroy {
 
   botNameOfList: string;
   botIdOfList: string;
+  botId: string;
 
   errorOfResponse: boolean;
 
+  conversationArray: any[] = [];
+  listOfResult: any;
+  documents: any[] = [];
+  management: any;
+
+  currentPage: number = 1;
+  itemsPerPage: number = 5;
+
+  imageOpen: boolean = false;
+  vedioOpen: boolean = false;
+  audioOpen: boolean = false;
+
+  multiImageOpen: boolean = false;
+  multiVedioOpen: boolean = false;
+  multiAudioOpen: boolean = false;
+
+  imageSrcOpen: boolean = false;
+  vedioSrcOpen: boolean = false;
+  audioSrcOpen: boolean = false;
+
+  showSrcIMA: boolean = false
 
 
+  imageSrc: string;
+  videoSrc : string;
+  audioSrc: string;
+
+  srcOfshowInResult: string
 
   // ---------------------------------------
   startElementPayload: string;
@@ -110,9 +138,28 @@ export class ManagementComponent implements OnInit, OnDestroy {
 
   isFrameOpen = false;
 
+  openResult: boolean = false;
+
+  openList: boolean = false;
+
   isOpen = false;
 
   showComposeView = false;
+
+  srcValue: any;
+
+  // ------------------------------------------
+  descriptiveFaLabel: any;
+  multiImageLabel: any;
+  fileTypeOfSrc:any;
+
+  displayImage = false;
+  displayVideo = false;
+  displayAudio = false;
+
+  letMeOpen: boolean = false;
+  isPhotoModalOpen = false;
+  // ------------------------------------------
 
   openComposeView() {
     this.showComposeView = true;
@@ -141,7 +188,8 @@ export class ManagementComponent implements OnInit, OnDestroy {
     private sharedDataService: SharedDataService,
     private sanitizer: DomSanitizer,
     private appComponent: AppComponent,
-    private botService: BotService) { }
+    private botService: BotService,
+    private ngZone: NgZone) { }
 
 
   ngOnDestroy(): void {
@@ -656,6 +704,77 @@ export class ManagementComponent implements OnInit, OnDestroy {
   }
 
   // --------------------------------------------
+  resultBot(id: string) {
+    this.openResult = !this.openResult;
+    this.bitIdInMenu = id;
+
+    const listOfBot: ListOfBot = {
+      path: '/list',
+      data: {
+        botId: this.bitIdInMenu,
+        // customerId: ""
+      }
+    };
+
+    const listOfBotPraameter: JSON = JSON.parse(JSON.stringify(listOfBot))
+
+    this.authService.executeFunction('656335651ddc61dccd3b', listOfBotPraameter, '/list', 'POST', false)
+      .then((response) => {
+        console.log("response", response);
+        // this.listOfResult = JSON.stringify(response);
+        console.log(typeof (response.documents));
+        this.documents = response.documents;
+        console.log(this.documents)
+        this.currentPage = 1;
+
+        // }
+      })
+      .catch((error) => {
+        console.error('Error list of Bot:', error);
+      });
+
+
+    const list: AuthTestParams = {
+      path: '/get',
+      data: { botId: this.bitIdInMenu }
+    };
+
+    const listparamsJSON: JSON = JSON.parse(JSON.stringify(list));
+
+    this.authService.executeFunction('654cce698458b074ddd0', listparamsJSON, '/get', 'POST', false)
+      .then((response) => {
+        console.log("response", response);
+        console.log(typeof (response.botFile));
+        this.botService.mainResult = JSON.parse(response.botFile);
+        // this.conversationArray = JSON.parse(response.botFile);
+        // console.log(this.conversationArray)
+        console.log(response.$id)
+        this.botId = response.$id
+
+        console.log('Bot Name:', response.botName);
+        this.botNameOfList = response.botName;
+        console.log(this.botService.mainResult);
+
+      })
+      .catch((error) => {
+        console.error('Error list of Bot:', error);
+      });
+  }
+
+  close() {
+    this.openResult = !this.openResult
+  }
+  closeList() {
+    this.openList = !this.openList;
+    this.openResult = !this.openResult;
+    this.imageOpen = false;
+    this.audioOpen = false;
+    this.vedioOpen = false;
+
+    this.multiImageOpen = false;
+    this.multiVedioOpen = false;
+    this.multiAudioOpen = false;
+  }
   // --------------------------------------------
 
 
@@ -823,7 +942,540 @@ export class ManagementComponent implements OnInit, OnDestroy {
 
   // ---------------------------------------------------------------
 
+  // showDetails(i: number){
+  //   console.log(this.documents[i])
+  //   this.openList = !this.openList;
+  //   this.openResult = !this.openResult;
+  //   console.log(typeof(this.documents[i]))
+  //   this.conversationArray = JSON.parse(this.documents[i]);
+  //   console.log(this.conversationArray)
+  //   // JSON.parse
+  // }
+
+  showDetails(i: number) {
+
+    try {
+      //get chat JSON file
+      //*****************/
+      console.log(this.documents[i])
+      console.log(typeof this.documents[i]);
+
+      this.openList = !this.openList;
+      this.openResult = !this.openResult;
+
+      this.conversationArray = JSON.parse(this.documents[i].chatJSONFile);
+      console.log(this.conversationArray);
+
+      const indexWithAnswerOne = this.conversationArray.findIndex(obj => obj.answer && obj.answer.answerOne !== undefined);
+
+      // const indexWithAnswer = this.conversationArray.findIndex(obj => obj && obj.src !== undefined);
+      // ---------------------------------------------------------------
+      const fileUploadObject = this.conversationArray.find(obj => obj.label === "file_upload");
+
+      if (fileUploadObject) {
+        this.srcValue = fileUploadObject.src;
+        console.log(this.srcValue);
+        this.fetchAndSetDisplay(this.srcValue)
+      } else {
+        console.log("Object with label 'file_upload' not found in the array.");
+      }
+      // ---------------------------------------------------------------
+
+      if (indexWithAnswerOne !== -1) {
+        // this.descriptiveFaLabel = this.conversationArray.find((item) => item.label == "descriptive-fa");
+        // this.multiImageLabel = this.conversationArray.find((item) => item.label == "multi-image");
+
+        // if (this.descriptiveFaLabel) {
+        //   console.log(this.descriptiveFaLabel.answer.answerOne)
+        // }
+        // if (this.multiImageLabel) {
+        //   console.log(this.multiImageLabel.answer.answerOne);  
+        // }
+        // const answerOneValue = this.conversationArray[indexWithAnswerOne].answer.answerOne;
+        // console.log(answerOneValue);
+
+        const answerOneValue = this.conversationArray[indexWithAnswerOne].answer.answerOne;
+              console.log(answerOneValue);
+
+              fetch(answerOneValue)
+                .then(response => {
+                  if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                  }
+                  return response.headers.get('Content-Type');
+                })
+                .then(contentType => {
+                  console.log("Content-Type:", contentType);
 
 
+                  if (contentType.includes("image")) {
+                    console.log("It's an image.");
+                    this.imageOpen = true;
+                    this.vedioOpen = false;
+                    this.audioOpen = false;
+
+                  } else if (contentType.includes("video")) {
+                    console.log("It's a video.");
+                    this.imageOpen = false;
+                    this.vedioOpen = true;
+                    this.audioOpen = false;
+
+                  } else if (contentType.includes("audio")) {
+                    console.log("It's an audio file.");
+                    this.imageOpen = false;
+                    this.vedioOpen = false;
+                    this.audioOpen = true;
+
+                  } else {
+                    console.log("The file type is not recognized.");
+                  }
+                })
+                .catch(error => {
+                  console.error('There was a problem with the fetch operation:', error);
+                });
+
+      } else {
+        console.log("answerOne not found in any object in the array");
+      }
+
+
+    } catch (error) {
+      console.error('Error parsing JSON:', error);
+    }
+  }
+
+  // showDetails(i: number) {
+
+  //   try {
+  //     console.log(this.documents[i])
+  //     console.log(typeof this.documents[i]);
+
+  //     this.openList = !this.openList;
+  //     this.openResult = !this.openResult;
+
+  //     this.conversationArray = JSON.parse(this.documents[i].chatJSONFile);
+  //     console.log(this.conversationArray);
+
+  //     const indexWithAnswerOne = this.conversationArray.findIndex(obj => obj.answer && obj.answer.answerOne !== undefined);
+
+  //     // const indexWithAnswer = this.conversationArray.findIndex(obj => obj && obj.src !== undefined);
+
+  //     if (indexWithAnswerOne !== -1) {
+  //       this.descriptiveFaLabel = this.conversationArray.find((item) => item.label == "descriptive-fa");
+  //       this.multiImageLabel = this.conversationArray.find((item) => item.label == "multi-image");
+
+  //       if (this.descriptiveFaLabel) {
+  //         console.log(this.descriptiveFaLabel.answer.answerOne)
+  //       }
+  //       if (this.multiImageLabel) {
+  //         console.log(this.multiImageLabel.answer.answerOne);
+
+
+
+
+          
+  //         // this.getFileTypeOfSrc(this.multiImageLabel.answer.answerOne).then(result => {
+  //         //   this.ngZone.run(() => {
+  //         //     this.fileTypeOfSrc = result;
+  //         //     console.log(this.fileTypeOfSrc);
+  //         //   });
+  //         // });
+
+  //         // if (this.fileTypeOfSrc == "image") {
+  //         //   this.imageOpen = true;
+  //         //   this.audioOpen = false
+  //         //   this.vedioOpen = false
+  //         // }
+  //         // if (this.fileTypeOfSrc == "video") {
+  //         //   this.vedioOpen = true;
+  //         //   this.audioOpen = false
+  //         //   this.imageOpen = false
+  //         // }
+  //         // if (this.fileTypeOfSrc == "audio") {
+  //         //   this.audioOpen = true;
+  //         //   this.imageOpen = false
+  //         //   this.vedioOpen = false
+  //         // }
+
+  //       // -------------------------------------------------------------------------------------------
+  //         // if (indexWithAnswer !== -1 ) {
+  //         //   const answerValue = this.conversationArray[indexWithAnswer].src;
+  //         //   console.log(answerValue);
+
+  //         //   fetch(answerValue)
+  //         //     .then(response => {
+  //         //       if (!response.ok) {
+  //         //         throw new Error('Network response was not ok');
+  //         //       }
+  //         //       return response.headers.get('Content-Type');
+  //         //     })
+  //         //     .then(contentType => {
+  //         //       console.log("Content-Type:", contentType);
+
+
+  //         //       if (contentType.includes("image")) {
+  //         //         console.log("It's an image.");
+  //         //         this.multiImageOpen = !this.multiImageOpen;
+
+  //         //       } else if (contentType.includes("video")) {
+  //         //         console.log("It's a video.");
+  //         //         this.multiVedioOpen = !this.multiVedioOpen;
+
+  //         //       } else if (contentType.includes("audio")) {
+  //         //         console.log("It's an audio file.");
+  //         //         this.multiAudioOpen = !this.multiAudioOpen;
+
+  //         //       } else {
+  //         //         console.log("The file type is not recognized.");
+  //         //       }
+  //         //     })
+  //         //     .catch(error => {
+  //         //       console.error('There was a problem with the fetch operation:', error);
+  //         //     });
+  //         // }
+
+  //         fetch(this.multiImageLabel.answer.answerOne)
+  //           .then(response => {
+  //             if (!response.ok) {
+  //               throw new Error('Network response was not ok');
+  //             }
+  //             return response.headers.get('Content-Type');
+  //           })
+  //           .then(contentType => {
+  //             console.log("Content-Type:", contentType);
+  //             this.checkAndSetDisplay(contentType);
+  //           })
+  //           .catch(error => {
+  //             console.error('There was a problem with the fetch operation:', error);
+  //           });
+  //       }
+  //       const answerOneValue = this.conversationArray[indexWithAnswerOne].answer.answerOne;
+  //       console.log(answerOneValue);
+
+  //       // fetch(answerOneValue)
+  //       //   .then(response => {
+  //       //     if (!response.ok) {
+  //       //       throw new Error('Network response was not ok');
+  //       //     }
+  //       //     return response.headers.get('Content-Type');
+  //       //   })
+  //       //   .then(contentType => {
+  //       //     console.log("Content-Type:", contentType);
+
+
+  //       //     if (contentType.includes("image")) {
+  //       //       console.log("It's an image.");
+  //       //       this.imageOpen = !this.imageOpen;
+
+  //       //     } else if (contentType.includes("video")) {
+  //       //       console.log("It's a video.");
+  //       //       this.vedioOpen = !this.vedioOpen;
+
+  //       //     } else if (contentType.includes("audio")) {
+  //       //       console.log("It's an audio file.");
+  //       //       this.audioOpen = !this.audioOpen;
+
+  //       //     } else {
+  //       //       console.log("The file type is not recognized.");
+  //       //     }
+  //       //   })
+  //       //   .catch(error => {
+  //       //     console.error('There was a problem with the fetch operation:', error);
+  //       //   });
+
+  //     } else {
+  //       console.log("answerOne not found in any object in the array");
+  //     }
+
+
+  //   } catch (error) {
+  //     console.error('Error parsing JSON:', error);
+  //   }
+  // }
+
+  // showDetails(i: number) {
+  //   try {
+  //     console.log(this.documents[i])
+  //     console.log(typeof this.documents[i]);
+
+  //     this.openList = !this.openList;
+  //     this.openResult = !this.openResult;
+
+  //     this.conversationArray = JSON.parse(this.documents[i].chatJSONFile);
+  //     console.log(this.conversationArray);
+
+  //     const indexWithAnswer = this.conversationArray.findIndex(obj => obj && obj.src !== undefined);
+
+  //     if (indexWithAnswer !== -1) {
+  //       const answerValue = this.conversationArray[indexWithAnswer].src;
+  //       console.log(answerValue);
+
+  //       fetch(answerValue)
+  //         .then(response => {
+  //           if (!response.ok) {
+  //             throw new Error('Network response was not ok');
+  //           }
+  //           return response.headers.get('Content-Type');
+  //         })
+  //         .then(contentType => {
+  //           console.log("Content-Type:", contentType);
+
+
+  //           if (contentType.includes("image")) {
+  //             console.log("It's an image.");
+  //             this.multiImageOpen = !this.multiImageOpen;
+  //           } else if (contentType.includes("video")) {
+  //             console.log("It's a video.");
+  //             this.multiVedioOpen = !this.multiVedioOpen;
+  //           } else if (contentType.includes("audio")) {
+  //             console.log("It's an audio file.");
+  //             this.multiAudioOpen = !this.multiAudioOpen;
+  //           } else {
+  //             console.log("The file type is not recognized.");
+  //           }
+  //         })
+  //         .catch(error => {
+  //           console.error('There was a problem with the fetch operation:', error);
+  //         });
+  //     }
+
+  //     const indexWithAnswerOne = this.conversationArray.findIndex(obj => obj.answer && obj.answer.answerOne !== undefined);
+
+  //     if (indexWithAnswerOne !== -1) {
+  //       const answerOneValue = this.conversationArray[indexWithAnswerOne].answer.answerOne;
+  //       console.log(answerOneValue);
+
+  //       fetch(answerOneValue)
+  //         .then(response => {
+  //           if (!response.ok) {
+  //             throw new Error('Network response was not ok');
+  //           }
+  //           return response.headers.get('Content-Type');
+  //         })
+  //         .then(contentType => {
+  //           console.log("Content-Type:", contentType);
+
+
+  //           if (contentType.includes("image")) {
+  //             console.log("It's an image.");
+  //             this.imageOpen = !this.imageOpen;
+  //           } else if (contentType.includes("video")) {
+  //             console.log("It's a video.");
+  //             this.vedioOpen = !this.vedioOpen;
+  //           } else if (contentType.includes("audio")) {
+  //             console.log("It's an audio file.");
+  //             this.audioOpen = !this.audioOpen;
+  //           } else {
+  //             console.log("The file type is not recognized.");
+  //           }
+  //         })
+  //         .catch(error => {
+  //           console.error('There was a problem with the fetch operation:', error);
+  //         });
+  //     } else {
+  //       console.log("answerOne not found in any object in the array");
+  //     }
+  //   } catch (error) {
+  //     console.error('Error parsing JSON:', error);
+  //   }
+  // }
+
+
+
+
+  // calculateIndices(): { start: number; end: number } {
+  //   const start = (this.currentPage - 1) * this.itemsPerPage;
+  //   const end = start + this.itemsPerPage;
+  //   return { start, end };
+  // }
+
+
+
+  // ---------------------------------------------------------------------
+  
+  // showDetails(i: number) {
+  //   try {
+  //     console.log(this.documents[i]);
+  //     console.log(typeof this.documents[i]);
+
+  //     this.openList = !this.openList;
+  //     this.openResult = !this.openResult;
+
+  //     this.conversationArray = JSON.parse(this.documents[i].chatJSONFile);
+  //     console.log(this.conversationArray);
+
+  //     const indexWithAnswerOne = this.conversationArray.findIndex(obj => obj.answer && obj.answer.answerOne !== undefined);
+
+  //     if (indexWithAnswerOne !== -1) {
+  //       this.descriptiveFaLabel = this.conversationArray.find((item) => item.label == "descriptive-fa");
+  //       this.multiImageLabel = this.conversationArray.find((item) => item.label == "multi-image");
+
+  //       if (this.descriptiveFaLabel) {
+  //         console.log(this.descriptiveFaLabel.answer.answerOne);
+  //       }
+  //       if (this.multiImageLabel) {
+  //         this.fetchAndSetDisplay(this.multiImageLabel.answer.answerOne);
+  //       }
+  //       const answerOneValue = this.conversationArray[indexWithAnswerOne].answer.answerOne;
+  //       console.log(answerOneValue);
+  //     } else {
+  //       console.log("answerOne not found in any object in the array");
+  //     }
+  //   } catch (error) {
+  //     console.error('Error parsing JSON:', error);
+  //   }
+  // }
+
+  fetchAndSetDisplay(fileUrl: string) {
+    fetch(fileUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.headers.get('Content-Type');
+      })
+      .then(contentType => {
+        console.log("Content-Type:", contentType);
+        this.checkAndSetDisplay(contentType);
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+      });
+  }
+  
+  checkAndSetDisplay(contentType: string) {
+    if (contentType.includes("image")) {
+      console.log("It's an image.");
+      this.imageOpen = true;
+      this.audioOpen = false;
+      this.vedioOpen = false;
+    } else if (contentType.includes("video")) {
+      console.log("It's a video.");
+      this.vedioOpen = true;
+      this.audioOpen = false;
+      this.imageOpen = false;
+    } else if (contentType.includes("audio")) {
+      console.log("It's an audio file.");
+      this.audioOpen = true;
+      this.imageOpen = false;
+      this.vedioOpen = false;
+    } else {
+      console.log("The file type is not recognized.");
+    }
+  }
+
+  getFileTypeOfSrc(answerOne: string): Promise<string | null> {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const response = await fetch(answerOne);
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const contentType = response.headers.get('Content-Type');
+        console.log("Content-Type:", contentType);
+
+        if (contentType.includes("image")) {
+          console.log("It's an image.");
+          resolve('image');
+        } else if (contentType.includes("video")) {
+          console.log("It's a video.");
+          resolve('video');
+        } else if (contentType.includes("audio")) {
+          console.log("It's an audio file.");
+          resolve('audio');
+        } else {
+          console.log("The file type is not recognized.");
+          resolve('unknown');
+        }
+      } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+        resolve(null);
+      }
+    });
+  }
+
+  openContent(contentUrl: string): void {
+    console.log(contentUrl);
+
+    this.srcOfshowInResult = contentUrl;
+    this.showSrcIMA = true;
+
+    let URL: any
+
+    URL = this.fetchAndSetDisplay(contentUrl)
+    this.displayImage = URL === 'image';
+    this.displayVideo = URL === 'video';
+    this.displayAudio = URL === 'audio';
+
+    if (this.displayImage = URL === 'image') {
+      this.imageSrc = contentUrl;
+      this.imageSrcOpen = true;
+      this.vedioSrcOpen = false;
+      this.audioSrcOpen = false;
+    }
+    if (this.displayVideo = URL === 'video') {
+      this.videoSrc = contentUrl;
+      this.vedioSrcOpen = true;
+      this.imageSrcOpen = false;
+      this.audioSrcOpen = false;
+    }
+    if (this.displayAudio = URL === 'audio') {
+      this.audioSrc = contentUrl;
+      this.audioSrcOpen = true;
+      this.imageSrcOpen = false;
+      this.vedioSrcOpen = false;
+    }
+  }
+
+  closeIVA(){
+    // this.imageSrcOpen = false;
+    // this.vedioSrcOpen = false;
+    // this.audioSrcOpen = false;
+    this.srcOfshowInResult = '';
+    this.showSrcIMA = false;
+  }
+  // ---------------------------------------------------------------------
+
+  calculateIndices(): { start: number; end: number } {
+    const start = (this.currentPage - 1) * this.itemsPerPage;
+    const end = Math.min(start + this.itemsPerPage, this.documents.length);
+    return { start, end };
+  }
+
+  previousPage(): void {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+    }
+  }
+
+  nextPage(): void {
+    const totalPages = Math.ceil(this.documents.length / this.itemsPerPage);
+    if (this.currentPage < totalPages) {
+      this.currentPage++;
+    }
+  }
+
+  //----------------------------------------------------------
+
+  
+  
+
+  openPhotoModal() {
+    this.isPhotoModalOpen = true;
+    
+  }
+
+  closePhoto() {
+    this.isPhotoModalOpen = false;
+    
+  }
+
+  openSecontCode() {
+    this.letMeOpen = true;
+  }
+
+  //----------------------------------------------------------
 
 }

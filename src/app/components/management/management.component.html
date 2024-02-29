@@ -411,9 +411,9 @@
                                     <span i18n >Preview</span>
                                 </a>
 
-                                <a  class="text-gray-700 group flex items-center px-4 py-2 text-sm" role="menuitem" tabindex="-1" [style.cursor]="'pointer'" (click)="releaseBot(block.id)"
+                                <!-- <a  class="text-gray-700 group flex items-center px-4 py-2 text-sm" role="menuitem" tabindex="-1" [style.cursor]="'pointer'" (click)="releaseBot(block.id)"
                                     id="menu-item-3">
-                                    <!-- Heroicon name: mini/arrow-right-circle -->
+                                    
                                     
                                     <svg viewBox="0 0 280 280" fill="currentColor" aria-hidden="true"
                                         xmlns="http://www.w3.org/2000/svg" class="mr-3 h-5 w-5 text-gray-500 group-hover:text-gray-900">
@@ -434,6 +434,34 @@
                                         	c9.48,3.151,16.338,12.108,16.338,22.637V264.837z" />
                                     </svg>
                                     <span i18n >release</span>
+
+                                
+                                </a> -->
+
+                                <a  class="text-gray-700 group flex items-center px-4 py-2 text-sm" role="menuitem" tabindex="-1" [style.cursor]="'pointer'" (click)="resultBot(block.id)"
+                                    id="menu-item-3">
+                                   
+                                    <svg  width="20px" height="20px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true" class="mr-3 text-gray-500 group-hover:text-gray-900">
+                                        <defs>
+                                            <style>
+                                                .cls-1 {
+                                                    fill: none;
+                                                }
+                                            </style>
+                                        </defs>
+                                        <rect x="13.9999" y="23" width="8" height="2" />
+                                        <rect x="9.9999" y="23" width="2" height="2" />
+                                        <rect x="13.9999" y="18" width="8" height="2" />
+                                        <rect x="9.9999" y="18" width="2" height="2" />
+                                        <rect x="13.9999" y="13" width="8" height="2" />
+                                        <rect x="9.9999" y="13" width="2" height="2" />
+                                        <path
+                                            d="M25,5H22V4a2,2,0,0,0-2-2H12a2,2,0,0,0-2,2V5H7A2,2,0,0,0,5,7V28a2,2,0,0,0,2,2H25a2,2,0,0,0,2-2V7A2,2,0,0,0,25,5ZM12,4h8V8H12ZM25,28H7V7h3v3H22V7h3Z"
+                                            transform="translate(0 0)" />
+                                        <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32" />
+                                    </svg>
+
+                                    <span i18n >result</span>
 
                                 
                                 </a>
@@ -620,4 +648,431 @@
     </div>
 </div>
 </div>
+
+<div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true" *ngIf="openResult">
+    <!-- <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true" *ngIf="false"> -->
+
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity">
+
+    </div>
+
+    <div class="fixed inset-0 z-10 overflow-y-auto">
+        <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+                <div>
+                    <!-- <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
+                        Heroicon name: outline/check
+                        <svg class="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                        </svg>
+                        <svg width="20px" height="20px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            aria-hidden="true" class=" text-gray-500 group-hover:text-gray-900">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: none;
+                                    }
+                                </style>
+                            </defs>
+                            <rect x="13.9999" y="23" width="8" height="2" />
+                            <rect x="9.9999" y="23" width="2" height="2" />
+                            <rect x="13.9999" y="18" width="8" height="2" />
+                            <rect x="9.9999" y="18" width="2" height="2" />
+                            <rect x="13.9999" y="13" width="8" height="2" />
+                            <rect x="9.9999" y="13" width="2" height="2" />
+                            <path
+                                d="M25,5H22V4a2,2,0,0,0-2-2H12a2,2,0,0,0-2,2V5H7A2,2,0,0,0,5,7V28a2,2,0,0,0,2,2H25a2,2,0,0,0,2-2V7A2,2,0,0,0,25,5ZM12,4h8V8H12ZM25,28H7V7h3v3H22V7h3Z"
+                                transform="translate(0 0)" />
+                            <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" class="cls-1" width="32" height="32" />
+                        </svg>
+                    </div> -->
+                    <div>
+                        <div>
+                            <button type="button" class="close1" data-dismiss="modal" aria-label="Close" (click)="close()"><span
+                                    aria-hidden="true">&times;</span>
+                            </button>
+                            <h3 class="mt-6 text-sm text-gray-900 header">
+                                <span i18n class="mr-1 text-base font-semibold text-gray-900 text-color" style="float: right">Name of Bot
+                                    :</span><span class="mr-1 text-color" style="float: right">{{botNameOfList}}</span>
+                                <br>
+                                <span i18n class="mt-5 mr-1 text-base font-semibold text-gray-900 text-color" style="float: right">ID of Bot
+                                    :</span><span class=" mt-5 mr-1 text-color" style="float: right">{{botId}}</span>
+                            </h3>
+                            <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow">
+                                <div class="px-4 py-5 sm:px-6">
+                    
+                    
+                    
+                                </div>
+                                <div class="px-4 py-5 sm:p-6 min-main">
+                    
+                                    <!-- <p *ngIf="errorOfResponse" style="text-align: center; color: red;"> <span>It is not possible to publish
+                                            bots</span></p>
+                    
+                                    <p *ngIf="!errorOfResponse">{{startElementPayload}}</p> -->
+
+                                    <!-- ----------------------------------------------- -->
+                                <!-- <div class="conversation-container">
+                                    <div *ngFor="let item of conversationArray" class="conversation-item">
+                                        <div *ngIf="item.label === 'start' || item.label === 'end'" class="start-end">
+                                            <p>{{ item.text }}</p>
+                                        </div>
+                                        <div *ngIf="item.label !== 'start' && item.label !== 'end'" class="question-answer">
+                                            <div class="question-left">
+                                                <p>{{ item.question }}</p>
+                                            </div>
+                                            <div class="answer-right">
+                                                <p>Answer: {{ item.answer?.answerOne }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                    <!-- ----------------------------------------------- -->
+                                    <div *ngIf="!documents[0]" style="text-align: center; color: red;"> <span i18n>there is no any chat for this bots</span>
+                                    </div>
+                                    <div *ngIf="documents[0]" >
+                                        <!-- <ul>
+                                            <li *ngFor="let item of getPaginatedItems(); let i = index" (click)="showDetails(i)">
+                                                <span style="float: right">چت شماره  {{ i + 1 }} </span>
+                                                 <button type="button"
+                                                    class="inline-flex items-center rounded-full border border-transparent bg-indigo-600 px-3.5 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Delete</button>
+                                            </li>
+                                        </ul> -->
+                                        <ul>
+                                            <li *ngFor="let item of documents.slice(calculateIndices().start, calculateIndices().end); let i = index"
+                                                (click)="showDetails(calculateIndices().start + i)">
+                                                <span style="float: right">چت شماره {{ calculateIndices().start + i + 1 }} </span>
+                                                <button type="button"
+                                                    class="inline-flex items-center rounded-full border border-transparent bg-indigo-600 px-3.5 py-2 text-sm font-medium leading-4 text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Delete</button>
+                                            </li>
+                                        </ul>
+
+                                    </div> 
+
+                                   
+
+
+
+                                    
+                                    <!-- ----------------------------------------------- -->
+                    
+                                </div>
+                                <div class="px-4 py-4 sm:px-6">
+                    
+                                    <button type="button" (click)="previousPage()"  [disabled]="currentPage === 1"
+                                        class="mb-3 float-left inline-flex items-center rounded-full border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"><span
+                                            i18n>Previous</span></button>
+                                            
+
+                                    <button type="button" (click)="nextPage()"  [disabled]="currentPage * itemsPerPage >= documents.length"
+                                        class="mb-3 float-right inline-flex items-center rounded-full border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"><span
+                                            i18n>Next</span></button>
+                                </div>
+                            </div>
+                    
+                    
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
+                    <button type="button" (click)="errorCorrectionValidate()"
+                        class="inline-flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:col-start-2 sm:text-sm"><span
+                            i18n>check errors</span></button>
+                    <button type="button" (click)="doNotImportantValidate()"
+                        class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:col-start-1 sm:mt-0 sm:text-sm"><span
+                            i18n>it does not important</span></button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true" *ngIf="openList">
+    
+
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity">
+
+    </div>
+
+    <div class="fixed inset-0 z-10 overflow-y-auto">
+        <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+                <div>
+                    <div>
+                        <div>
+                            <button type="button" class="close1" data-dismiss="modal" aria-label="Close" (click)="closeList()"><span
+                                    aria-hidden="true">&times;</span>
+                            </button>
+                            <h3 class="mt-6 text-sm text-gray-900 header1">
+                                <span i18n class="mr-1 text-base font-semibold text-gray-900 text-color" style="float: right">Name of Bot
+                                    :</span><span class="mr-1 text-color" style="float: right">{{botNameOfList}}</span>
+                                <br>
+                                <span i18n class="mt-5 mr-1 text-base font-semibold text-gray-900 text-color" style="float: right">ID of Bot
+                                    :</span><span class=" mt-5 mr-1 text-color" style="float: right">{{botId}}</span>
+                            </h3>
+                            <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow">
+                                <div class="px-4 py-5 sm:px-6">
+                    
+                    
+                    
+                                </div>
+                                <div class="px-4 py-5 sm:p-6 min-main">
+                    
+                                    <!-- <p *ngIf="errorOfResponse" style="text-align: center; color: red;"> <span>It is not possible to publish
+                                            bots</span></p>
+                    
+                                    <p *ngIf="!errorOfResponse">{{startElementPayload}}</p> -->
+
+                                    <!-- ----------------------------------------------- -->
+                                <!-- <div class="conversation-container">
+                                    <div *ngFor="let item of conversationArray" class="conversation-item">
+                                        <div *ngIf="item.label === 'start' || item.label === 'end'" class="start-end">
+                                            <p>{{ item.text }}</p>
+                                        </div>
+                                        <div *ngIf="item.label !== 'start' && item.label !== 'end'" class="question-answer">
+                                            <div class="question-left">
+                                                <p>{{ item.question }}</p>
+                                            </div>
+                                            <div class="answer-right">
+                                                <p>Answer: {{ item.answer.answerOne }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                    <!-- ----------------------------------------------- -->
+                                <div class="conversation-container ">
+                                    <div *ngFor="let item of conversationArray" class="conversation-item  question-left" style="padding-bottom: 2px" >
+                                        <div *ngIf="item.label === 'start' || item.label === 'end'" class="start-end">
+                                            <p style="color: #ff0000;">{{ item.text }}</p>
+                                        </div>
+                                        <div *ngIf="item.label !== 'start' && item.label !== 'end'" class="question-left">
+                                            <div class="question-left">
+                                                <p *ngIf="item.question">{{ item.question }}</p>
+                                                <!-- <p *ngIf="item.text">{{ item.text }}</p> -->
+                                                <p *ngIf="item.topic">{{ item.topic }}</p>
+
+                                            </div>
+                                            <div *ngIf="item.answer" class="answer-right"> 
+                                                <div *ngIf="item.label === 'appoinment-date'" class="appoinment-date">
+                                                    <p *ngIf="item.answer.answerTwo"> {{item.answer.answerTwo }} <br> {{ item.answer.answerOne }} </p>
+                                                    <p *ngIf="!item.answer.answerTwo">  {{ item.answer.answerOne }} </p>
+                                                </div>
+                                                <div *ngIf="item.label === 'descriptive-fa'" class="descriptive-fa">
+                                                    <p> {{item.answer.answerOne}} </p>
+                                                </div>
+                                                <div *ngIf="item.label === 'multi-select-fa'" class="multi-select-fa">
+                                                    <p> {{item.answer.answerOne}} </p>
+                                                </div>
+                                                <div *ngIf="item.label === 'true-false'" class="true-false">
+                                                    <p> {{item.answer.answerOne}} </p>
+                                                </div>
+                                                <div *ngIf="item.label === 'personal-information'" class="personal-information">
+                                                    <p *ngIf="item.answer.answerOne"><span i18n class="question-left" style="float: right;"> name </span> {{item.answer.answerOne}} </p>
+                                                    <p *ngIf="item.answer.answerTwo"> <span i18n class="question-left" style="float: right;"> email </span> {{item.answer.answerTwo}} </p>
+                                                    <p *ngIf="item.answer.answerThree"><span i18n class="question-left" style="float: right;"> tel number </span> {{item.answer.answerThree}} </p>
+                                                    <p *ngIf="item.answer.answerFour"> <span i18n class="question-left" style="float: right;"> address </span>{{item.answer.answerFour}} </p>
+                                                </div>
+                                                <div *ngIf="item.label === 'multi-image'" class="multi-image">
+                                                    <!-- <p> {{item.answer.answerOne}}</p> -->
+                                                    <!-- <p *ngIf="item.answer.answerTwo"> second item</p> -->
+                                                    <!-- <p>
+                                                        <a [href]="item.answer.answerOne" target="_blank">{{ item.answer.answerOne }}</a>
+                                                    </p> -->
+                                                    <div class="multi-image">
+                                                        <div  *ngIf="imageOpen">
+                                                            <a (click)="openContent(item.answer.answerOne)" [style.cursor]="'pointer'">Open Link</a>
+                                                            <!-- <img [src]="item.answer.answerOne" alt="Image has an error" class="small-image" > -->
+                                                        </div>
+                                                        <div  *ngIf="vedioOpen">
+                                                            <a (click)="openContent(item.answer.answerOne)" [style.cursor]="'pointer'">Open Link</a>
+                                                            <!-- <video [src]="item.answer.answerOne" alt="vedio has an error" class="small-image" controls></video> -->
+                                                        </div>
+                                                        <div  *ngIf="audioOpen">
+                                                            <a (click)="openContent(item.answer.answerOne)" [style.cursor]="'pointer'">Open Link</a>
+                                                            <!-- <audio [src]="item.answer.answerOne" alt="audio has an error"  controls></audio> -->
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <!-- <div *ngIf="item.label === 'upload-files'" class="multi-image">
+                                        
+                                                    <div class="multi-image">
+                                                        <div  *ngIf="imageOpen">
+                                                            <a (click)="openContent(item.src)" [style.cursor]="'pointer'">Open Link</a>
+                                                        </div>
+                                                        <div  *ngIf="vedioOpen">
+                                                            <a (click)="openContent(item.answer.answerOne)" [style.cursor]="'pointer'">Open Link</a>
+                                                        </div>
+                                                        <div  *ngIf="audioOpen">
+                                                            <a (click)="openContent(item.answer.answerOne)" [style.cursor]="'pointer'">Open Link</a>
+                                                        </div>
+                                                    </div>
+
+                                                </div> -->
+                                                
+                                            </div>
+                                        </div>
+                                        <div *ngIf="item.label === 'multi-media'" class="multi-image">
+                                           
+                                            <div class="multi-image">
+                                                <div class="image-card" *ngIf="multiImageOpen">
+                                                    <img [src]="srcOfshowInResult" alt="Image has an error" class="small-image">
+                                                </div>
+                                                <div class="image-card" *ngIf="multiVedioOpen">
+                                                    <video [src]="srcOfshowInResult" alt="vedio has an error" class="small-image" controls></video>
+                                                </div>
+                                                <div class="image-card" *ngIf="multiAudioOpen">
+                                                    <audio [src]="srcOfshowInResult" alt="audio has an error" controls></audio>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                        <div *ngIf="item.label === 'file_upload'" class="upload-files">
+                                           
+                                            <div class="multi-image">
+                                                <div class="image-card" *ngIf="imageOpen">
+                                                    <a (click)="openContent(item.src)" [style.cursor]="'pointer'">Open Link</a>
+                                                </div>
+                                                <div class="image-card" *ngIf="vedioOpen">
+                                                    <a (click)="openContent(item.src)" [style.cursor]="'pointer'">Open Link</a>
+                                                </div>
+                                                <div class="image-card" *ngIf="audioOpen">
+                                                    <a (click)="openContent(item.src)" [style.cursor]="'pointer'">Open Link</a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div *ngIf="item.label === 'delay'" class="delay">
+                                            <p>{{ item.text }} -- {{item.duration}}{{item.units}}</p>
+                                        </div>
+                                        <div *ngIf="item.label === 'notification'" class="notification">
+                                            <p>{{ item.text }}</p>
+                                        </div>
+                                        <div *ngIf="item.label === 'property'" class="property answer-right">
+                                            <p>{{ item.property[0].value }}</p>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+
+                                    <!-- ----------------------------------------------- -->
+                    
+                                </div>
+                                <div class="px-4 py-4 sm:px-6">
+                    
+                                    <button type="button"
+                                        class="mb-3 float-left inline-flex items-center rounded-full border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"><span
+                                            i18n>Run</span></button>
+                                </div>
+                            </div>
+                    
+                    
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
+                    <button type="button" (click)="errorCorrectionValidate()"
+                        class="inline-flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:col-start-2 sm:text-sm"><span
+                            i18n>check errors</span></button>
+                    <button type="button" (click)="doNotImportantValidate()"
+                        class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:col-start-1 sm:mt-0 sm:text-sm"><span
+                            i18n>it does not important</span></button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- --------------------------------------------------------------------------------------- -->
+
+<!-- <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true" *ngIf="showSrcIMA">
+
+   
+
+    <div class="fixed inset-0 z-10 overflow-y-auto">
+        <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+
+            <div class="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6">
+     
+                    <div>
+                        <button type="button" class="close1" data-dismiss="modal" aria-label="Close"
+                            (click)="closeIVA()"><span aria-hidden="true">&times;</span>
+                        </button>
+                        <h3 class="mt-6 text-sm text-gray-900 header">
+                            <span i18n class="mr-1 text-base font-semibold text-gray-900 text-color"
+                                style="float: right">Name of Bot
+                                :</span><span class="mr-1 text-color" style="float: right">{{botNameOfList}}</span>
+                            <br>
+                                
+                        </h3>
+                    </div>
+                    
+                
+                
+                <div class="divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow">
+                    <div >
+                        <img [src]="srcOfshowInResult" >
+                    </div>
+                    <div >
+                        <video [src]="srcOfshowInResult" ></video>
+                    </div>
+                    <div >
+                        <audio [src]="srcOfshowInResult" ></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- ------------------------------------------------------------------------------- -->
+
+
+
+<div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true" *ngIf="showSrcIMA">
+   
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+
+    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+        <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        
+            <div
+                class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+                    <div class="sm:flex sm:items-start">
+                        <!-- <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+                           
+                        </div> -->
+                        <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                            <!-- <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">Deactivate
+                                account</h3> -->
+                            <div class="mr-3" *ngIf="imageOpen">
+                                <img [src]="srcOfshowInResult" class="img-fluid">
+                            </div>
+                            <div *ngIf="vedioOpen">
+                                <video [src]="srcOfshowInResult" controls></video>
+                            </div>
+                            <div *ngIf="audioOpen">
+                                <audio [src]="srcOfshowInResult" controls></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+                    <button type="button" (click)="closeIVA()"
+                        class="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"><span i18n>Deactivate</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 

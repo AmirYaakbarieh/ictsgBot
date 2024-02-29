@@ -21,6 +21,7 @@ const routes: Routes = [
   { path: 'login', loadChildren: () => import('./components/log-in/log-in.module').then(m => m.LogInModule), data: { preload: false } },
   { path: 'logout', loadChildren: () => import('./components/log-out/log-out.module').then(m => m.LogOutModule), data: { preload: false } },
   { path: 'register', loadChildren: () => import('./components/register/register.module').then(m => m.RegisterModule), data: { preload: false } },
+  { path: 'forms', loadChildren: () => import('./components/widgetsforms/widgetsforms.module').then(m => m.WidgetsformsModule), data: { preload: false } },
   // { path: 'view', loadChildren: () => import('./components/view/view.module').then(m => m.ViewModule), data: { preload: false }, canActivate: [isCreateBotGuard] },
   { path: 'view/:id', loadChildren: () => import('./components/view/view.module').then(m => m.ViewModule), data: { preload: false }, canActivate: [isCreateBotGuard] },
   { path: 'management', loadChildren: () => import('./components/management/management.module').then(m => m.ManagementModule), data: { preload: false }, canActivate: [isCreateBotGuard] },

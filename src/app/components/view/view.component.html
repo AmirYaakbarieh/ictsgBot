@@ -203,7 +203,7 @@
                                                     class="block text-sm font-medium tracking-tight text-indigo-400">Answer
                                                     to this question</label>
                                                 <div class="mt-3">
-                                                    <textarea i18n-placeholder [id]="'answer'" rows="5"
+                                                    <textarea i18n-placeholder [id]="'answer'" rows="5" style="padding-right: 5px;"
                                                         [(ngModel)]="descriptiveFaValue"
                                                         (change)="addResultUser(selectedNodeId,selectedNodeType,descriptiveFaNodeQuestion,descriptiveFaValue)"
                                                         placeholder=" Your Answer ..." formControlName="ans"
@@ -743,7 +743,7 @@
                                             </div>
                                     </div>
                                     <div class="ml-5 flex h-15 ">
-                                        <input id="side-null" name="plan" type="radio" [id]="'radio-' + i"  
+                                        <input  name="plan" type="radio" [id]="'radio-' + i"  
                                             [value]="item" [(ngModel)]="selectedValue"
                                             (change)="onRadioChangeImage(item)"
                                             (change)="addResultUser(selectedNodeId, selectedNodeType,multiImageNodeQuestion,selectedValue)"
@@ -755,43 +755,83 @@
 
 
 
-                        <div *ngIf="multiImageRequired">
+                        <div *ngIf="!multiImageRequired">
                             <div>
-                                <p [hidden]="selectedValue" i18n class="text-red-600 pt-3">This answer is required.</p>
+                                <!-- <p [hidden]="selectedValue" i18n class="text-red-600 pt-3">This answer is required.</p> -->
                             </div>
-                        </div>
 
-                        <div class="mt-8">
-                            <button type="submit" (click)="next()"
-                                class=" m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 pt-3 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
-                                <span i18n>continues</span>
-                                <svg width="40px" height="40px" viewBox="0 0 20 28" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" style="margin-right: 5px;">
-                                   
-                                    <title>arrow-left</title>
-                                    <desc>Created with Sketch.</desc>
-                                    <defs>
-                                
-                                    </defs>
-                                    <g id="Vivid.JS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <g id="Vivid-Icons" transform="translate(-437.000000, -651.000000)">
-                                            <g id="Icons" transform="translate(37.000000, 169.000000)">
-                                                <g id="arrow-left" transform="translate(390.000000, 468.000000)">
-                                                    <g transform="translate(10.000000, 14.000000)" id="Shape">
-                                                        <polygon fill="#FF6E6E" points="28 12 8 12 13 17 10 20 0 10 10 0 13 3 8 8 28 8">
-                                
-                                                        </polygon>
-                                                        <polygon fill="#0C0058" points="20 8 20 12 28 12 28 8">
-                                
-                                                        </polygon>
+                            <div class="mt-8">
+                                <button type="submit" (click)="next()" 
+                                    class=" m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 pt-3 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                    <span i18n>continues</span>
+                                    <svg width="40px" height="40px" viewBox="0 0 20 28" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" style="margin-right: 5px;">
+                            
+                                        <title>arrow-left</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs>
+                            
+                                        </defs>
+                                        <g id="Vivid.JS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Vivid-Icons" transform="translate(-437.000000, -651.000000)">
+                                                <g id="Icons" transform="translate(37.000000, 169.000000)">
+                                                    <g id="arrow-left" transform="translate(390.000000, 468.000000)">
+                                                        <g transform="translate(10.000000, 14.000000)" id="Shape">
+                                                            <polygon fill="#FF6E6E" points="28 12 8 12 13 17 10 20 0 10 10 0 13 3 8 8 28 8">
+                            
+                                                            </polygon>
+                                                            <polygon fill="#0C0058" points="20 8 20 12 28 12 28 8">
+                            
+                                                            </polygon>
+                                                        </g>
                                                     </g>
                                                 </g>
                                             </g>
                                         </g>
-                                    </g>
-                                </svg>
-                            </button>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
+
+                        <div *ngIf="multiImageRequired">
+                            <div>
+                                <p [hidden]="selectedValue" i18n class="text-red-600 pt-3">This answer is required.</p>
+                            </div>
+
+                            <div class="mt-8">
+                                <button type="submit" (click)="next()"  [disabled]="!selectedValue"
+                                    class=" m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 pt-3 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                    <span i18n>continues</span>
+                                    <svg width="40px" height="40px" viewBox="0 0 20 28" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" style="margin-right: 5px;">
+                            
+                                        <title>arrow-left</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs>
+                            
+                                        </defs>
+                                        <g id="Vivid.JS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Vivid-Icons" transform="translate(-437.000000, -651.000000)">
+                                                <g id="Icons" transform="translate(37.000000, 169.000000)">
+                                                    <g id="arrow-left" transform="translate(390.000000, 468.000000)">
+                                                        <g transform="translate(10.000000, 14.000000)" id="Shape">
+                                                            <polygon fill="#FF6E6E" points="28 12 8 12 13 17 10 20 0 10 10 0 13 3 8 8 28 8">
+                            
+                                                            </polygon>
+                                                            <polygon fill="#0C0058" points="20 8 20 12 28 12 28 8">
+                            
+                                                            </polygon>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        
                     </div>
                 </div>
             </div>
@@ -2073,10 +2113,10 @@
                                                                         <img [src]="profileImageUrl" alt="User Profile Image">
                                                                     </div>
                                                                     <div *ngIf="fileType === 'video'">
-                                                                        <video [src]="profileImageUrl" alt="User Profile Video" controls></video>
+                                                                        <video [src]="profilevideoUrl" alt="User Profile Video" controls></video>
                                                                     </div>
                                                                     <div *ngIf="fileType === 'audio'">
-                                                                        <audio [src]="profileImageUrl" alt="User Profile Audio" style="width:180px;" controls ></audio>
+                                                                        <audio [src]="profileAudioUrl" alt="User Profile Audio" style="width:180px;" controls ></audio>
                                                                     </div>
                                                                 </div>
 
@@ -2084,12 +2124,12 @@
                                                             </div>
                                                             <div class="flex text-sm text-gray-600">
 
-                                                                <label for="file-upload"
+                                                                <label [for]="'file-upload-' + uniqueIdentifier"
                                                                     class="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500 b-10">
                                                                     <span class="inline-flex items-center rounded-full border border-transparent bg-indigo-600 px-3 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Upload a file</span>
                                                                     
                                                                 </label>
-                                                                <input id="file-upload" name="file-upload"
+                                                                <input [id]="'file-upload-' + uniqueIdentifier" name="file-upload" 
                                                                     type="file" class="sr-only" #fileInput
                                                                     (change)="onFileSelectedNew(fileInput)" 
                                                                     >
@@ -2109,7 +2149,7 @@
                                                                 <input type="hidden" id="node-input-outputs" /> -->
 
                                                                 
-
+          
                                                                 
                                                             </div>
                                                             
@@ -2126,38 +2166,40 @@
                         </fieldset>
 
 
-
-                        <div class="mt-8">
-                            <button type="submit" (click)="next()"
-                                class=" m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 pt-3 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
-                                <span i18n>continues</span>
-                                <svg width="40px" height="40px" viewBox="0 0 20 28" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" style="margin-right: 5px;">
-                                    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-                                    <title>arrow-left</title>
-                                    <desc>Created with Sketch.</desc>
-                                    <defs>
-                                
-                                    </defs>
-                                    <g id="Vivid.JS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                        <g id="Vivid-Icons" transform="translate(-437.000000, -651.000000)">
-                                            <g id="Icons" transform="translate(37.000000, 169.000000)">
-                                                <g id="arrow-left" transform="translate(390.000000, 468.000000)">
-                                                    <g transform="translate(10.000000, 14.000000)" id="Shape">
-                                                        <polygon fill="#FF6E6E" points="28 12 8 12 13 17 10 20 0 10 10 0 13 3 8 8 28 8">
-                                
-                                                        </polygon>
-                                                        <polygon fill="#0C0058" points="20 8 20 12 28 12 28 8">
-                                
-                                                        </polygon>
+                        <!-- <div [hidden]="!uploadFile"> -->
+                        <div>
+                            <div class="mt-8">
+                                <button type="submit" (click)="next()"
+                                    class=" m-3 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 pt-3 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                    <span i18n>continues</span>
+                                    <svg width="40px" height="40px" viewBox="0 0 20 28" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" style="margin-right: 5px;">
+                                        <title>arrow-left</title>
+                                        <desc>Created with Sketch.</desc>
+                                        <defs>
+                            
+                                        </defs>
+                                        <g id="Vivid.JS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="Vivid-Icons" transform="translate(-437.000000, -651.000000)">
+                                                <g id="Icons" transform="translate(37.000000, 169.000000)">
+                                                    <g id="arrow-left" transform="translate(390.000000, 468.000000)">
+                                                        <g transform="translate(10.000000, 14.000000)" id="Shape">
+                                                            <polygon fill="#FF6E6E" points="28 12 8 12 13 17 10 20 0 10 10 0 13 3 8 8 28 8">
+                            
+                                                            </polygon>
+                                                            <polygon fill="#0C0058" points="20 8 20 12 28 12 28 8">
+                            
+                                                            </polygon>
+                                                        </g>
                                                     </g>
                                                 </g>
                                             </g>
                                         </g>
-                                    </g>
-                                </svg>
-                            </button>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
+                        
                     </div>
 
                 </div>

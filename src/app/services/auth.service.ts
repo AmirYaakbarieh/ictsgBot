@@ -80,9 +80,9 @@ export class AuthService {
 
   validationErrors: string[] = []
 
-  endpoint: string = 'http://192.168.100.13/v1';
+  endpoint: string = 'http://94.101.184.216/v1';
 
-  project: string = '6565ca21cf8c0ff63e82'
+  project: string = '65d048cd51e4953221c7'
 
 
   nameOfUser: any;
@@ -251,7 +251,7 @@ export class AuthService {
       path: '/create',
       data: {
         botId: id,
-        chatJSONFile: chatJSON,
+        chatJSONFile: JSON.stringify(chatJSON),
       }
     };
     this.paramsJSONOfInfo = JSON.parse(JSON.stringify(this.saveChatInfoOfCustomer));
@@ -376,10 +376,15 @@ export class AuthService {
     return this.executeFunction("656335e7c56159d871be", this.paramsJSON, '/getUserInfo', 'POST', false)
       .then((response) => {
         console.log("response: ", response);
-        this.profilePicURLforMenu = response.profilePic.url;
-        console.log(this.profilePicURLforMenu);
-        this.logoPicURLforMenu = response.organizationId.logoPic.url;
-        console.log(this.logoPicURLforMenu);
+        if (response.profilePic != null) {
+          this.profilePicURLforMenu = response.profilePic.url;
+          console.log(this.profilePicURLforMenu);
+        }
+        if (response.organizationId.logoPic != null) {
+          this.logoPicURLforMenu = response.organizationId.logoPic.url;
+          console.log(this.logoPicURLforMenu);
+        }
+
 
         // Pass data to the shared service
         this.sharedService.setProfilePicURL(this.profilePicURLforMenu);
@@ -393,6 +398,34 @@ export class AuthService {
       });
   }
 
+
+  // getUserInfo(userId: string): Promise<any> {
+  //   this.getUserInfoDate = {
+  //     path: '/getUserInfo',
+  //     data: {
+  //       userId: userId
+  //     }
+  //   };
+  //   this.paramsJSON = JSON.parse(JSON.stringify(this.getUserInfoDate));
+  //   return this.executeFunction("656335e7c56159d871be", this.paramsJSON, '/getUserInfo', 'POST', false)
+  //     .then((response) => {
+  //       console.log("response: ", response);
+  //       this.profilePicURLforMenu = response.profilePic.url;
+  //       console.log(this.profilePicURLforMenu);
+  //       this.logoPicURLforMenu = response.organizationId.logoPic.url;
+  //       console.log(this.logoPicURLforMenu);
+
+  //       // Pass data to the shared service
+  //       this.sharedService.setProfilePicURL(this.profilePicURLforMenu);
+  //       this.sharedService.setLogoPicURL(this.logoPicURLforMenu);
+
+  //       return response
+  //     })
+  //     .catch((error) => {
+  //       console.error('error of response:', error);
+  //       return false
+  //     });
+  // }
 
 
 
@@ -448,10 +481,6 @@ export class AuthService {
   }
 
 
-
-
-
-
   // updatePhoneNumber(phone: string, password: string): Observable<any> {
   //   const endpoint = 'your-api-endpoint'; // Replace with your actual API endpoint
 
@@ -470,20 +499,6 @@ export class AuthService {
   //     })
   //   );
   // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   createFile(bucketId: string, file: any): Promise<any> {

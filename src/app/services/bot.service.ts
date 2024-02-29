@@ -22,6 +22,7 @@ export class BotService {
   srcSafe: any;
   codeBlocks: ICodeBlocks[] = [];
   botNameEdit: string;
+  mainResult: any = [];
 
   constructor(private authService: AuthService, private sharedDataService: SharedDataService, private sanitizer: DomSanitizer, private router: Router,) { }
 

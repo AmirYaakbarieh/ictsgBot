@@ -71,6 +71,14 @@ export interface AuthTestParams {
     data: any;
 }
 
+export interface ListOfBot {
+    path: string;
+    data: {
+        botId: string;
+        customerId?: string
+    }
+}
+
 export interface BotNode {
     id: string;
     type: string;

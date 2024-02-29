@@ -23,6 +23,10 @@ import { MatCardModule } from '@angular/material/card';
 import { EditBotComponent } from './components/edit-bot/edit-bot.component';
 import { UsermenuComponent } from './components/usermenu/usermenu.component';
 import { ManagementMenuComponent } from './components/management-menu/management-menu.component';
+import { WidgetComponent } from './components/widget/widget.component';
+
+import { EmbeddableWidgetsModule } from '@acpaas-ui/ngx-embeddable-widgets';
+
 
 
 
@@ -38,6 +42,8 @@ import { ManagementMenuComponent } from './components/management-menu/management
     EditBotComponent,
     UsermenuComponent,
     ManagementMenuComponent,
+    WidgetComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -48,7 +54,7 @@ import { ManagementMenuComponent } from './components/management-menu/management
     MatSliderModule,
     MatProgressBarModule,
     MatCardModule,
-    
+    EmbeddableWidgetsModule,
     
     // ngx-translate and the loader module
     TranslateModule.forRoot({
