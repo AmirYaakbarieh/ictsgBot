@@ -8,6 +8,8 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class WidgetsformsComponent implements OnInit, OnDestroy{
 
+  items: any[] = [];
+
   constructor(private appComponent: AppComponent){}
   
   
@@ -24,9 +26,9 @@ export class WidgetsformsComponent implements OnInit, OnDestroy{
   currentStep: number = 1;
   openOne: Boolean = false;
   showInput = {
-    buildAutomatic: false,
-    // Add other options here with default value false
-
+    buildAutomatic1: false,
+    buildAutomatic2: false,
+    buildAutomatic3: false,
   };
   buildAutomatic: boolean = false
 
@@ -70,19 +72,18 @@ export class WidgetsformsComponent implements OnInit, OnDestroy{
     this.showInput[option] = !this.showInput[option];
   }
 
-  one() {
-    this.showInput.buildAutomatic = false
+  one1() {
+    this.showInput.buildAutomatic1 = false
   }
-  two() {
-    this.showInput.buildAutomatic = false
+  
+  two2() {
+    this.showInput.buildAutomatic2 = false
   }
-  three() {
-    this.showInput.buildAutomatic = false
+  three3() {
+    this.showInput.buildAutomatic3 = false
   }
-  four() {
-    this.showInput.buildAutomatic = false
+   addItem() {
+      this.items.push({}); // اضافه کردن یک آیتم جدید به آرایه
   }
-
-
 
 }

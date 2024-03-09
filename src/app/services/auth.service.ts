@@ -28,6 +28,7 @@ export class AuthService {
   public userId: string = '';
 
   showPhotoInForm: boolean = true;
+  
 
   botInformation: boolean = false;
 
@@ -65,6 +66,7 @@ export class AuthService {
 
   logoPicURLforMenu: string;
 
+  
 
   orgAddress: string
 
@@ -137,6 +139,22 @@ export class AuthService {
   }
 
 
+  saveFile(bucketId: string, file: any): Promise<any> {
+
+    const promise = this.storage.createFile(bucketId, ID.unique(), file[0]);
+    return promise.then(() => {
+      console.log('File uploaded successfully');
+      return promise;
+
+
+    }).catch((error) => {
+      console.log('File uploading is failed:', error);
+      return false;
+    });
+  }
+
+
+ 
   singup(userName: string, useremail: string, userPassword: string, userPhone: number, type: string): Promise<any> {
 
     this.params = {
@@ -335,6 +353,33 @@ export class AuthService {
         // this.profilePicURL = response.profilePic.url;
         this.logoPicURL = response.logoPic;
         console.log(this.logoPicURL)
+        return response
+      })
+      .catch((error) => {
+        console.error('error of response:', error);
+        return false
+      });
+  }
+
+
+  saveBotCover(id: string, usageType: string, botId: string): Promise<any> {
+    this.saveInputFileOfPhotos = {
+      path: '/save',
+      data: {
+        fileId: id,
+        usage: usageType,
+        IDS: { botId: botId,
+              userId: this.userId
+         }
+      }
+    };
+    this.paramsJSON = JSON.parse(JSON.stringify(this.saveInputFileOfPhotos));
+    return this.executeFunction("656c3c9f89a7cfb3c5ba", this.paramsJSON, '/save', 'POST', false)
+      .then((response) => {
+        console.log("response: ", response);
+        // this.profilePicURL = response.profilePic.url;
+       // this.logoPicURL = response.logoPic;
+       // console.log(this.logoPicURL)
         return response
       })
       .catch((error) => {

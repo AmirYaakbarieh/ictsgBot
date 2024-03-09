@@ -171,6 +171,19 @@ export interface listChatsOfBot {
 
 
 
+// promise.then(function (response) {
+//     console.log(response); // Success
+// //****************************//
+// Execute function:
+// functionId: 656c3c9f89a7cfb3c5ba
+// input: {“path”: “/save”, “data”:{ “fileId”, “usage”, “IDS”}}
+// if bot cover: usage = “cover”, IDS = {botId, userId}
+
+// //****************************//
+// }, function (error) {
+//     console.log(error); // Failure
+// });
+
 
 
 

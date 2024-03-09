@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { AuthTestParams, BotData, IUserId } from 'src/models/chatbot-node.models';
@@ -16,11 +16,22 @@ export class UsersComponent implements OnInit{
 
   selectedFile: File | null = null;
 
+  coverPhotoUrl: string | ArrayBuffer | null = null;
+
   userName: string;
 
+  coverFileId: string
 
 
-  constructor(private authService: AuthService, private http: HttpClient, private router: Router,){}
+
+  constructor(private authService: AuthService, private http: HttpClient, private router: Router, private fb: FormBuilder){
+    this.reactiveForm = this.fb.group({
+      personalDetails: this.fb.group({
+        typeBot: ['', Validators.required],
+        description: ['']
+      }),
+    });
+  }
 
 
   
@@ -106,7 +117,7 @@ export class UsersComponent implements OnInit{
       path: '/create',
       data: {
         botName: botName,
-        botFile: "",
+        botFile: "", 
         status: true,
         template: true,
         userId: userId
@@ -118,6 +129,7 @@ export class UsersComponent implements OnInit{
     this.authService.executeFunction('654cce698458b074ddd0', paramsJSON, '/create', 'POST', false)
       .then((response) => {
         console.log("response", response);
+        this.authService.saveBotCover(this.coverFileId, 'cover', response.$id)
         this.router.navigate(['/management'])
 
       })
@@ -160,6 +172,46 @@ export class UsersComponent implements OnInit{
   CancelEdit() {
     this.router.navigate(['/management']);
   }
+
+
+
+  onCoverPhotoSelected(event: any): void {
+    const fileInput = event.target;
+
+    if (fileInput && fileInput.files && fileInput.files.length > 0) {
+      const selectedFile = fileInput.files[0];
+      console.log(selectedFile)
+      // this.selectedFile = fileInput.files[0];
+
+
+     // Read the selected file as a data URL
+    //   const reader = new FileReader();
+    //   reader.onload = (e) => {
+    //     this.coverPhotoUrl = e.target?.result;
+    //   };
+
+    //   reader.readAsDataURL(fileInput.files[0]);
+     }
+    this.authService.createFile("651134e7bb7d7d3c4fe1", fileInput.files[0])
+      .then((response) => {
+        console.log('****************************************************')
+        console.log(response);
+        this.coverFileId = response.$id
+        console.log(this.coverFileId)
+        this.coverPhotoUrl = "http://94.101.184.216/v1/storage/buckets/651134e7bb7d7d3c4fe1/files/" + response.$id +"/view?project=65d048cd51e4953221c7&mode=admin"
+       
+        console.log(this.coverPhotoUrl)
+        // this.authService.saveFile("656c3c9f89a7cfb3c5ba", response.$id)
+        // this.authService.saveFile("651134e7bb7d7d3c4fe1", fileInput.files[0])
+
+        // this.fileId = response.$id;
+        // console.log(this.fileId)
+      })
+
+   // this.authService.saveFile("656c3c9f89a7cfb3c5ba", fileInput.files[0])
+  }
+
+
 
 
 

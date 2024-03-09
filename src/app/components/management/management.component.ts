@@ -106,7 +106,7 @@ export class ManagementComponent implements OnInit, OnDestroy {
   vedioSrcOpen: boolean = false;
   audioSrcOpen: boolean = false;
 
-  showSrcIMA: boolean = false
+  showSrcIMA: boolean = false;
 
 
   imageSrc: string;
@@ -148,6 +148,7 @@ export class ManagementComponent implements OnInit, OnDestroy {
 
   srcValue: any;
 
+  photoIcon: string = './assets/images/6306486.jpg'; 
   // ------------------------------------------
   descriptiveFaLabel: any;
   multiImageLabel: any;
@@ -255,15 +256,22 @@ export class ManagementComponent implements OnInit, OnDestroy {
 
     this.authService.executeFunction('654cce698458b074ddd0', listparamsJSON, '/list', 'POST', false)
       .then((response) => {
-        console.log("response", response)
+        console.log("response", response); 
         for (let i = 0; i < response.documents.length; i++) {
+          var photo 
+          if (response.documents[i].coverPic != null)
+            photo = response.documents[i].coverPic.url
+          else  
+            // photo = `${this.imageFilenames[this.randomIndex]}`
+            photo = this.photoIcon
           this.codeBlocks.push({
             id: response.documents[i].$id,
             botName: response.documents[i].botName,
-            photo: `${this.imageFilenames[this.randomIndex]}`,
+            // photo: `${this.imageFilenames[this.randomIndex]}`,
+            photo: photo,
             open: false,
-
           });
+
         }
         console.log('Bot List:', response);
         console.log('codeblocks List:', this.codeBlocks);
@@ -277,7 +285,7 @@ export class ManagementComponent implements OnInit, OnDestroy {
     this.randomImageSrc = `${this.imageFilenames[this.randomIndex]}`;
 
 
-    this.userID = this.authService.userId;
+    this.userID = this.authService.userId; 
     console.log("userID:" + this.userID);
 
 
@@ -1479,3 +1487,4 @@ export class ManagementComponent implements OnInit, OnDestroy {
   //----------------------------------------------------------
 
 }
+ 
