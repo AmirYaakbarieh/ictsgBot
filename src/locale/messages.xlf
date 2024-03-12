@@ -672,17 +672,6 @@
           <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3005007424603401755" datatype="html">
-        <source>Cover photo</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/edit-bot/edit-bot.component.html</context>
-          <context context-type="linenumber">72</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/users/users.component.html</context>
-          <context context-type="linenumber">66</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="5323608058553036575" datatype="html">
         <source>Upload a photo file</source>
         <context-group purpose="location">
@@ -694,14 +683,14 @@
         <source>data Register new information</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/edit-bot/edit-bot.component.html</context>
-          <context context-type="linenumber">105,106</context>
+          <context context-type="linenumber">137,138</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2159130950882492111" datatype="html">
         <source>Cancel</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/edit-bot/edit-bot.component.html</context>
-          <context context-type="linenumber">109</context>
+          <context context-type="linenumber">141</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/users/users.component.html</context>
@@ -1560,6 +1549,13 @@
           <context context-type="linenumber">4</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="3005007424603401755" datatype="html">
+        <source>Cover photo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/users/users.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="7003826819757856838" datatype="html">
         <source>Upload a file</source>
         <context-group purpose="location">
@@ -1987,34 +1983,6 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/view/view.component.html</context>
           <context context-type="linenumber">2393</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4014983885374248049" datatype="html">
-        <source>What&apos;s your name </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/widgetsforms/widgetsforms.component.html</context>
-          <context context-type="linenumber">70,71</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="5234606106177140470" datatype="html">
-        <source>What&apos;s Company name</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/widgetsforms/widgetsforms.component.html</context>
-          <context context-type="linenumber">80,81</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="7854733150219210569" datatype="html">
-        <source>Email address </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/widgetsforms/widgetsforms.component.html</context>
-          <context context-type="linenumber">89</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="2314075913167237221" datatype="html">
-        <source>City</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/widgetsforms/widgetsforms.component.html</context>
-          <context context-type="linenumber">98</context>
         </context-group>
       </trans-unit>
     </body>

@@ -26,6 +26,9 @@ import { ManagementMenuComponent } from './components/management-menu/management
 import { WidgetComponent } from './components/widget/widget.component';
 
 import { EmbeddableWidgetsModule } from '@acpaas-ui/ngx-embeddable-widgets';
+import { ColorPaletteComponent } from './components/color-palette/color-palette.component';
+import { ColorSliderComponent } from './components/color-slider/color-slider.component';
+import { ColorPickerComponent } from './components/color-picker/color-picker.component';
 
 
 
@@ -43,6 +46,9 @@ import { EmbeddableWidgetsModule } from '@acpaas-ui/ngx-embeddable-widgets';
     UsermenuComponent,
     ManagementMenuComponent,
     WidgetComponent,
+    // ColorPaletteComponent,
+    // ColorSliderComponent,
+    // ColorPickerComponent,
     
   ],
   imports: [

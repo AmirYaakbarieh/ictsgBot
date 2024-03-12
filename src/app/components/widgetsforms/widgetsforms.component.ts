@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AppComponent } from 'src/app/app.component';
 
 @Component({
@@ -8,20 +9,10 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class WidgetsformsComponent implements OnInit, OnDestroy{
 
+  constructor(private appComponent: AppComponent, private router: Router){}
+  
+  
   items: any[] = [];
-
-  constructor(private appComponent: AppComponent){}
-  
-  
-  ngOnInit(): void {
-    this.appComponent.showFooter = false;
-   
-  }
-
-  ngOnDestroy(): void {
-    this.appComponent.showFooter = true;
-  }
-
   numberOfSteps: number = 3;
   currentStep: number = 1;
   openOne: Boolean = false;
@@ -29,7 +20,21 @@ export class WidgetsformsComponent implements OnInit, OnDestroy{
     buildAutomatic1: false,
     buildAutomatic2: false,
     buildAutomatic3: false,
+    buildAutomatic4: false,
   };
+  
+  ngOnInit(): void {
+    this.appComponent.showFooter = false;
+    this.appComponent.showHeader = false;
+   
+   
+  }
+
+  ngOnDestroy(): void {
+    this.appComponent.showFooter = true;
+    this.appComponent.showHeader = true;
+  }
+
   buildAutomatic: boolean = false
 
 
@@ -37,6 +42,9 @@ export class WidgetsformsComponent implements OnInit, OnDestroy{
     if (this.currentStep < 10) {
       this.currentStep++;
     }
+  }
+  Cancel(){
+    this.router.navigate(['/sidebar'])
   }
 
   goBack() {
@@ -72,15 +80,18 @@ export class WidgetsformsComponent implements OnInit, OnDestroy{
     this.showInput[option] = !this.showInput[option];
   }
 
-  one1() {
+  one() {
     this.showInput.buildAutomatic1 = false
   }
   
-  two2() {
+  two() {
     this.showInput.buildAutomatic2 = false
   }
-  three3() {
+  three() {
     this.showInput.buildAutomatic3 = false
+  }
+  four() {
+    this.showInput.buildAutomatic4 = false
   }
    addItem() {
       this.items.push({}); // اضافه کردن یک آیتم جدید به آرایه

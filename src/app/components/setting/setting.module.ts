@@ -7,7 +7,7 @@ import { SettingComponent } from './setting.component';
 
 @NgModule({
   declarations: [
-    SettingComponent
+    SettingComponent,
   ],
   imports: [
     CommonModule,

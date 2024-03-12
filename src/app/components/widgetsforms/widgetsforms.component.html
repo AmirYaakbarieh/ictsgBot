@@ -1,527 +1,703 @@
-<div class="relative z-10" role="dialog" aria-modal="true" >
- <div class="relative z-10" role="dialog" aria-modal="true">
+<div class="relative z-10" role="dialog" aria-modal="true">
+    <div class="relative z-10" role="dialog" aria-modal="true">
 
-    <div class="fixed inset-0 z-10 overflow-y-auto p-4 sm:p-6 md:p-20">
-        <div
-            class="mx-auto max-w-3xl transform divide-y divide-gray-100 overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black ring-opacity-5 transition-all">
-
-
-            <div class="flex divide-x divide-gray-100">
-                <!-- Preview Visible: "sm:h-96" -->
-
-            </div>
-
-            <!-- ---------------------------------------------------- -->
-            <nav aria-label="Progress" dir="ltr">
-                <ol role="list" class="flex items-center justify-center"
-                    style=" margin-top: 2rem; margin-bottom: 2rem;">
-                    <!-- Repeat this block for each step -->
-                    <ng-container *ngFor="let step of [1, 2, 3]; let index = index">
-                        <li class="relative pr-8 sm:pr-3">
-                            <div class="absolute inset-0 flex items-center" aria-hidden="true"
-                                *ngIf="step < numberOfSteps">
-                                <div [ngStyle]="{ 'width.%': ((currentStep >= step) ? 100 : 0) }"
-                                    class="h-0.5 w-full bg-indigo-600"></div>
-                            </div>
-
-                            <a 
-                                class="group relative flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-300 bg-white hover:border-gray-400"
-                                (click)="setStep(step)">
-                                <span *ngIf="currentStep > step"
-                                    class="h-2.5 w-2.5 rounded-full bg-transparent group-hover:bg-gray-300"
-                                    aria-hidden="true"></span>
-                                <span *ngIf="currentStep === step" class="h-2.5 w-2.5 rounded-full bg-indigo-600"
-                                    aria-hidden="true">
-                                    <svg class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor"
-                                        aria-hidden="true">
-                                        <path fill-rule="evenodd"
-                                            d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    <span class="sr-only">Step {{ step }}</span>
-                                </span>
-                                <!-- <span *ngIf="currentStep < step" class="h-2.5 w-2.5 rounded-full bg-transparent group-hover:bg-gray-300" aria-hidden="true"></span> -->
-
-                                <span *ngIf="currentStep !== step"
-                                    class="absolute top-0 left-0 right-0 bottom-0 flex items-center bg-transparent group-hover:bg-gray-000 justify-center text-gray-700"
-                                    aria-hidden="true">{{ step }}</span>
-                            </a>
-                        </li>
-                    </ng-container>
-                </ol>
-            </nav>
-            <!-- ---------------------------------------------------- -->
-
-            <div class="py-7 px-6 text-center text-sm sm:px-14">
+        <div class="fixed inset-0 z-10 overflow-y-auto p-4 sm:p-6 md:p-20">
+            <div
+                class="mx-auto max-w-3xl transform divide-y divide-gray-100 overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black ring-opacity-5 transition-all">
 
 
-                <form>
-                    <div class="space-y-6y-7" *ngIf="currentStep === 1">
-                        <div>
-                            <h2 class="text-base font-semibold leading-7 text-gray-900">Tell us more about you</h2>
-                            <p class="mt-1 text-sm leading-6 text-gray-600">Shape you experience - it will only take one minute</p>
-                    
-                            <div class="mt-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                                <div class="sm:col-span-3">
-                                    <label for="first-name" class="block text-sm font-medium leading-6 text-gray-900">What's Company
-                                        name</label>
-                                    <div class="mt-2">
-                                        <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                                    </div>
-                                </div>
-                    
-                                <div class="sm:col-span-3">
-                                    <label for="last-name" class="block text-sm font-medium leading-6 text-gray-900">What's Company
-                                        website</label>
-                                    <div class="mt-2">
-                                        <input type="text" name="last-name" id="last-name" autocomplete="family-name"
-                                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-                    
-                        <div class="overflow-hidden rounded-lg bg-white shadow ">
-                            <div class="px-4 py-2 sm:p-6">
-                    
-                                <div class="space-y-8 divide-y divide-gray-200 ">
-                                    <div class="space-y-8 divide-y divide-gray-200" style="max-height: 900px;">
-                                        <div class="pt-1">
-                                            <div class="mt-6">
-                    
-                                                <fieldset>
-                                                    <!-- <legend class="sr-only">By Email</legend> -->
-                                                    <div class="text-base font-medium text-gray-900 " aria-hidden="true">I primarily want to
-                                                    </div>
-                                                    <div class="mt-4 space-y-4 ">
-                                                        <div class="grid grid-cols-1 sm:grid-cols-2">
-                                                            <div class="flex items-center">
-                                                                <input type="radio" id="builduAtomatic" name="primarily"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                                                                    (change)="one1()">
-                                                                <label for="builduAtomatic"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Build automatic
-                                                                    workflows with chatbots</label><br>
-                    
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input type="radio" id="Support" name="primarily"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                                                                    (change)="one1()">
-                                                                <label for="Support"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Support my
-                                                                    customers with </label><br>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input type="radio" id="boostSales" name="primarily"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                                                                    (change)="one1()">
-                                                                <label for="boostSales"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Boost sales and
-                                                                    outomate leads </label><br>
-                                                            </div>
-                                                            
-                                                            <div class="flex items-center">
-                                                                <input type="radio" id="improveCustomer" name="primarily"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                                                                    (change)="one1()">
-                                                                <label for="improveCustomer"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Improve customer
-                                                                    support</label><br>
-                                                            </div>
-                                                            <!-- ---------------------------------------- -->
-                                                            
-                                                            <div class="flex items-center">
-                                                                <input type="radio" id="other" name="primarily"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500" (change)="toggleInput('buildAutomatic1')">
-                                                                <label for="other" class="ml-3 block text-sm font-medium text-gray-700">Other</label><br>
-                                                            </div>
-                                                            <!-- ---------------------------------------- -->
-                                                            <div class="flex items-center">
-                                                                <input id="improveCustomer" name="primarily" class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="improveCustomer" class="ml-3 block text-sm font-medium text-gray-700"></label><br>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <div class="mt-2" *ngIf="showInput.buildAutomatic1">
-                                                                    <input type="text" name="first-name" id="first-name"
-                                                                        autocomplete="given-name"
-                                                                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                                                                </div>
-                                                            </div>
-                    
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset class="mt-9">
-                                                    <legend class="contents text-base font-medium text-gray-900">What best describes your
-                                                        job role?</legend>
-                                                    <!-- <p class="text-sm text-gray-500">These are delivered via SMS to your mobile phone.</p> -->
-                                                    <div class="mt-4 space-y-4">
-                    
-                                                        <div class="grid grid-cols-1 sm:grid-cols-2">
-                                                            <div class="flex items-center">
-                                                                <input type="radio" id="customer-success" name="job_role" (change)="two2()"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="customer-success"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Customer Success
-                                                                    Leod</label><br>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input type="radio" id="marketing-leod" name="job_role" (change)="two2()"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="marketing-leod"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Marketing
-                                                                    Leod</label><br>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input type="radio" id="marketing-professional" name="job_role" (change)="two2()"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="marketing-professional"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Marketing
-                                                                    Professional</label><br>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input type="radio" id="customer-Agent" name="job_role" (change)="two2()"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="customer-Agent"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Customer Success
-                                                                    Agent</label><br>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input type="radio" id="Founder-Owner" name="job_role"  (change)="two2()"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="Founder-Owner"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Founder /
-                                                                    Owner</label><br>
-                                                            </div>
-                                                            
-                                                            <div class="flex items-center">
-                                                                <input type="radio" id="other1" name="job_role"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500" (change)="toggleInput('buildAutomatic2')">
-                                                                <label for="other1"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Other</label><br>
-                                                            </div>
-                                                            <!-- ------------------------------------ -->
-                                                            <div class="flex items-center">
-                                                                <input  id="other1" name="job_role"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500" >
-                                                                <label for="other1"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700"></label><br>
-                                                            </div>
-                                                            <!-- ------------------------------------ -->
-                                                            <div class="flex items-center">
-                                                                <div class="mt-2" *ngIf="showInput.buildAutomatic2">
-                                                                    <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                                                                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset class="mt-6">
-                                                    <legend class="contents text-base font-medium text-gray-900"> What is your company's
-                                                        industry?
-                                                    </legend>
-                                                    <!-- <p class="text-sm text-gray-500">These are delivered via SMS to your mobile phone.</p> -->
-                                                    <div class="mt-4 space-y-4">
-                                                        <div class="grid grid-cols-1 sm:grid-cols-2">
-                    
-                                                            <div class="flex items-center">
-                                                                <input id="beauty-wellness" name="companyIndustry" type="radio" (change)="three3()"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="beauty-wellness"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Beauty &
-                                                                    Wellness</label>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input id="push-services" name="companyIndustry" type="radio"  (change)="three3()"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="push-services"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Services</label>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input id="real-estate" name="companyIndustry" type="radio"  (change)="three3()"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="real-estate"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Real Estate</label>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input id="content -blogging" name="companyIndustry" type="radio"  (change)="three3()"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="content -blogging"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Content /
-                                                                    Blogging</label>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input id="online-store" name="companyIndustry" type="radio"   (change)="three3()"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="online-store"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Online
-                                                                    Store</label>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input id="online-store" name="companyIndustry" type="radio"   (change)="three3()"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="online-store"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Online
-                                                                    Store11</label>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input id="push-nother" name="companyIndustry" type="radio" (change)="toggleInput('buildAutomatic3')"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="push-nother"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Other</label>
-                                                            </div>
-                                                            <!-- --------------------------------------------  -->
-                                                            <div class="flex items-center">
-                                                                <input id="online-store" name="companyIndustry"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="online-store" class="ml-3 block text-sm font-medium text-gray-700"></label>
-                                                            </div>
-                                                            <!-- --------------------------------------------  -->
-                                                            <div class="flex items-center">
-                                                                <div class="mt-2" *ngIf="showInput.buildAutomatic3">
-                                                                    <input type="text" name="first-name" id="first-name" autocomplete="given-name"
-                                                                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                                                                </div>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                                <fieldset class="mt-6">
-                                                    <legend class="contents text-base font-medium text-gray-900"> What is your company's
-                                                        industry?
-                                                    </legend>
-                                                    <!-- <p class="text-sm text-gray-500">These are delivered via SMS to your mobile phone.</p> -->
-                                                    <div class="mt-4 space-y-4">
-                                                        <div class="grid grid-cols-1 sm:grid-cols-2">
-                    
-                                                            <div class="flex items-center">
-                                                                <input id="beauty-wellness" name="companyIndustry" type="radio"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="beauty-wellness"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Beauty &
-                                                                    Wellness</label>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input id="push-services" name="companyIndustry" type="radio"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="push-services"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Services</label>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input id="real-estate" name="companyIndustry" type="radio"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="real-estate"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Real Estate</label>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input id="content -blogging" name="companyIndustry" type="radio"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="content -blogging"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Content /
-                                                                    Blogging</label>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input id="online-store" name="companyIndustry" type="radio"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="online-store"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Online
-                                                                    Store</label>
-                                                            </div>
-                                                            <div class="flex items-center">
-                                                                <input id="push-nother" name="companyIndustry" type="radio"
-                                                                    class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                                                <label for="push-nother"
-                                                                    class="ml-3 block text-sm font-medium text-gray-700">Other</label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </fieldset>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                    
-                            </div>
-                        </div>
-                    </div>
+                <div class="flex divide-x divide-gray-100">
+                    <!-- Preview Visible: "sm:h-96" -->
 
-                    <!-- ------------------------------------------------ -->
-
-                    <div class="overflow-hidden rounded-lg bg-white shadow" dir="ltr" *ngIf="currentStep === 2">
-                        <div class="px-4 py-5 sm:p-6">
-                    
-                            <div class="space-y-8 divide-y divide-gray-200">
-                                <div class="space-y-8 divide-y divide-gray-200" style="max-height: 900px;">
-                                    <div class="pt-1">
-                                        <div style="text-align: center; margin-bottom: 40px;">
-                                            <!-- <h3 >Get set up for success</h3> -->
-                                            <p>Adjust appearance to suit your Website</p>
-                                            <h3 class="text-lg font-medium leading-6 text-gray-900"> Configure your chat Widget</h3>
-                                        </div>
-                                    </div>
-                    
-                    
-                                    <!--------------------------------------- ستون اول فرم ---------------------------------->
-                    
-                                    <div class="space-y-6" action="#" method="POST">
-                                        <div>
-                                            <div class="md:grid md:grid-cols-3 md:gap-6">
-                                                <div class="md:col-span-1">
-                                                    <div style="margin-bottom: 40px">
-                    
-                    
-                                                        <div class="mt-1 flex items-center space-x-5">
-                                                            <span class="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100">
-                                                                <svg class="h-full w-full text-gray-300" fill="currentColor"
-                                                                    viewBox="0 0 24 24">
-                                                                    <path
-                                                                        d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-                                                                </svg>
-                                                            </span>
-                                                            <button type="button"
-                                                                class="rounded-md border border-gray-300 bg-white py-2 px-3 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Change</button>
-                                                        </div>
-                                                    </div>
-                                                    <!-- --------------------color picker------------------------------ -->
-                                                   
-                    
-                                                    <div class="md:col-span-1">
-                                                        <div style="margin-bottom: 60px">
-                                                            <label for="about" class="block text-sm font-medium text-gray-700">Url
-                                                                adress</label>
-                                                            <div class="mt-1">
-                                                                <textarea id="about" name="about" rows="3"
-                                                                    class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                                                                    placeholder=" https://www.example.ir "></textarea>
-                                                            </div>
-                                                            <p class="mt-2 text-sm text-gray-500">Brief description for your profile. URLs
-                                                                are hyperlinked.</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!--------------------------------------- ستون دوم فرم ---------------------------------->
-                                                <div class="mt-5 space-y-6 md:col-span-2 md:mt-0"
-                                                    style="background-color: rgb(232, 235, 235);">
-                                                    <div class="grid grid-cols-3 gap-6">
-                    
-                                                    </div>
-                                                    <div>
-                                                        <label class="block text-sm font-medium text-gray-700">Cover photo</label>
-                                                        <div
-                                                            class="mt-1 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
-                                                            <div class="space-y-1 text-center">
-                                                                <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor"
-                                                                    fill="none" viewBox="0 0 48 48" aria-hidden="true">
-                                                                    <path
-                                                                        d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                                                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                                </svg>
-                                                                <div class="flex text-sm text-gray-600">
-                                                                    <label for="file-upload"
-                                                                        class="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:text-indigo-500">
-                                                                        <span>Upload a file</span>
-                                                                        <input id="file-upload" name="file-upload" type="file"
-                                                                            class="sr-only">
-                                                                    </label>
-                                                                    <p class="pl-1">or drag and drop</p>
-                                                                </div>
-                                                                <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ------------------------------------------------ -->
-
-                <div class="overflow-hidden rounded-lg bg-white shadow" *ngIf="currentStep === 3">
-                    <div class="px-4 py-5 sm:p-6">
-                
-                        <div class="space-y-8 divide-y divide-gray-200">
-                            <div class="space-y-8 divide-y divide-gray-200" style="max-height: 900px;">
-                
-                                <div class="pt-1">
-                                    <div style="text-align: center; margin-bottom: 40px;">
-                                        <h3>Get set up for success</h3>
-                                        <p>Shape you experience - 20 seconds to go!</p>
-                                    </div>
-                                </div>
-                
-                                <div class="pt-8">
-                                    <div>
-                                        <h3 class="text-lg font-medium leading-6 text-gray-900"> Witch channels do you plan to use ...on
-                                            for interacting with your customers?</h3>
-                                    </div>
-                                    <div class="mt-6">
-                                        <div>
-                                            <div class="mt-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6"
-                                                *ngFor="let item of items; let i = index">
-                                                <div class="sm:col-span-3">
-                                                    <label for="url-{{i}}"
-                                                        class="block text-sm font-medium leading-6 text-gray-900">Your URL
-                                                        domain</label>
-                                                    <div class="mt-2">
-                                                        <input type="text" name="url-{{i}}" id="url-{{i}}" autocomplete="given-name"
-                                                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                                                    </div>
-                                                </div>
-                
-                                                <div class="col-span-6 sm:col-span-3">
-                                                    <label for="bot-name-{{i}}" class="block text-sm font-medium text-gray-700">Bot's
-                                                        name</label>
-                                                    <select id="bot-name-{{i}}" name="botName-{{i}}" autocomplete="bot-name"
-                                                        class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
-                                                        <option>First Bot</option>
-                                                        <option>Second Bat</option>
-                                                        <option>Third bat</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                
-                                            <button (click)="addItem()"
-                                                class="mt-2 px-4 py-2 bg-blue-500 text-white rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Add
-                                                Item</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
-                    </div>
                 </div>
-                    <!-- ------------------------------------------------ -->
+
+                <!-- ---------------------------------------------------- -->
+                <nav aria-label="Progress" dir="ltr">
+                    <ol role="list" class="flex items-center justify-center"
+                        style=" margin-top: 2rem; margin-bottom: 2rem;">
+                        <!-- Repeat this block for each step -->
+                        <ng-container *ngFor="let step of [1, 2, 3]; let index = index">
+                            <li class="relative pr-8 sm:pr-3">
+                                <div class="absolute inset-0 flex items-center" aria-hidden="true"
+                                    *ngIf="step < numberOfSteps">
+                                    <div [ngStyle]="{ 'width.%': ((currentStep >= step) ? 100 : 0) }"
+                                        class="h-0.5 w-full bg-indigo-600"></div>
+                                </div>
+
+                                <a class="group relative flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-300 bg-white hover:border-gray-400"
+                                    (click)="setStep(step)">
+                                    <span *ngIf="currentStep > step"
+                                        class="h-2.5 w-2.5 rounded-full bg-transparent group-hover:bg-gray-300"
+                                        aria-hidden="true"></span>
+                                    <span *ngIf="currentStep === step" class="h-2.5 w-2.5 rounded-full bg-indigo-600"
+                                        aria-hidden="true">
+                                        <svg class="h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor"
+                                            aria-hidden="true">
+                                            <path fill-rule="evenodd"
+                                                d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        <span class="sr-only">Step {{ step }}</span>
+                                    </span>
+                                    <!-- <span *ngIf="currentStep < step" class="h-2.5 w-2.5 rounded-full bg-transparent group-hover:bg-gray-300" aria-hidden="true"></span> -->
+
+                                    <span *ngIf="currentStep !== step"
+                                        class="absolute top-0 left-0 right-0 bottom-0 flex items-center bg-transparent group-hover:bg-gray-000 justify-center text-gray-700"
+                                        aria-hidden="true">{{ step }}</span>
+                                </a>
+                            </li>
+                        </ng-container>
+                    </ol>
+                </nav>
+                <!-- ---------------------------------------------------- -->
+
+                <div class="py-7 px-6 text-center text-sm sm:px-14">
 
 
-                    <div class="mt-6 flex items-center justify-end gap-x-6">
-                        <div *ngIf="currentStep !== 1 ">
-                            <button type="button"
-                                class="rounded-md border border-gray-300 bg-white button-back py-2 px-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                                (click)="goBack()">Go back</button>
-                        </div>
-                        <div *ngIf="currentStep !== 3">
-                            <button type="submit"
-                                class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                (click)="saveAndMoveToNextStep()">Next</button>
-                        </div>
-                        <div *ngIf="currentStep === 3">
-                            <button type="submit"
-                                class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                                (click)="saveForm()">Save</button>
-                        </div>
-                    </div>
+                    <form>
+                        <div class="space-y-6y-7" *ngIf="currentStep === 1">
+                            <div>
+                                <h2 class="text-base font-semibold leading-7 text-gray-900">Tell us more about you</h2>
+                                <p class="mt-1 text-sm leading-6 text-gray-600">Shape you experience - it will only take
+                                    one minute</p>
 
-                </form>
+                                <div class="mt-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                                    <div class="sm:col-span-3">
+                                        <label for="first-name"
+                                            class="block text-sm font-medium leading-6 text-gray-900">What's Company
+                                            name</label>
+                                        <div class="mt-2">
+                                            <input type="text" name="first-name" id="first-name"
+                                                autocomplete="given-name"
+                                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                        </div>
+                                    </div>
+
+                                    <div class="sm:col-span-3">
+                                        <label for="last-name"
+                                            class="block text-sm font-medium leading-6 text-gray-900">What's Company
+                                            website</label>
+                                        <div class="mt-2">
+                                            <input type="text" name="last-name" id="last-name"
+                                                autocomplete="family-name"
+                                                class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="overflow-hidden rounded-lg bg-white shadow ">
+                                <div class="px-4 py-2 sm:p-6">
+
+                                    <div class="space-y-8 divide-y divide-gray-200 ">
+                                        <div class="space-y-8 divide-y divide-gray-200" style="max-height: 900px;">
+                                            <div class="pt-1">
+                                                <div class="mt-6">
+
+                                                    <fieldset>
+                                                        <!-- <legend class="sr-only">By Email</legend> -->
+                                                        <div class="text-base font-medium text-gray-900 "
+                                                            aria-hidden="true">I primarily want to
+                                                        </div>
+                                                        <div class="mt-4 space-y-4 ">
+                                                            <div class="grid grid-cols-1 sm:grid-cols-2">
+                                                                <div class="flex items-center">
+                                                                    <input type="radio" id="builduAtomatic"
+                                                                        name="primarily"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                                                        (change)="one()">
+                                                                    <label for="builduAtomatic"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Build
+                                                                        automatic
+                                                                        workflows with chatbots</label><br>
+
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <input type="radio" id="Support" name="primarily"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                                                        (change)="one()">
+                                                                    <label for="Support"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Support
+                                                                        my
+                                                                        customers with </label><br>
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <input type="radio" id="boostSales" name="primarily"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                                                        (change)="one()">
+                                                                    <label for="boostSales"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Boost
+                                                                        sales and
+                                                                        outomate leads </label><br>
+                                                                </div>
+
+                                                                <div class="flex items-center">
+                                                                    <input type="radio" id="improveCustomer"
+                                                                        name="primarily"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                                                        (change)="one()">
+                                                                    <label for="improveCustomer"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Improve
+                                                                        customer
+                                                                        support</label><br>
+                                                                </div>
+                                                                <!-- ---------------------------------------- -->
+
+                                                                <div class="flex items-center">
+                                                                    <input type="radio" id="other" name="primarily"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                                                        (change)="toggleInput('buildAutomatic1')">
+                                                                    <label for="other"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Other</label><br>
+                                                                </div>
+                                                                <!-- ---------------------------------------- -->
+                                                                <div class="flex items-center">
+                                                                    <input id="improveCustomer" name="primarily"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="improveCustomer"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700"></label><br>
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <div class="mt-2" *ngIf="showInput.buildAutomatic1">
+                                                                        <input type="text" name="first-name"
+                                                                            id="first-name" autocomplete="given-name"
+                                                                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                    <fieldset class="mt-9">
+                                                        <legend class="contents text-base font-medium text-gray-900">
+                                                            What best describes your
+                                                            job role?</legend>
+                                                        <!-- <p class="text-sm text-gray-500">These are delivered via SMS to your mobile phone.</p> -->
+                                                        <div class="mt-4 space-y-4">
+
+                                                            <div class="grid grid-cols-1 sm:grid-cols-2">
+                                                                <div class="flex items-center">
+                                                                    <input type="radio" id="customer-success"
+                                                                        name="job_role" (change)="two()"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="customer-success"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Customer
+                                                                        Success
+                                                                        Leod</label><br>
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <input type="radio" id="marketing-leod"
+                                                                        name="job_role" (change)="two()"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="marketing-leod"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Marketing
+                                                                        Leod</label><br>
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <input type="radio" id="marketing-professional"
+                                                                        name="job_role" (change)="two()"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="marketing-professional"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Marketing
+                                                                        Professional</label><br>
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <input type="radio" id="customer-Agent"
+                                                                        name="job_role" (change)="two()"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="customer-Agent"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Customer
+                                                                        Success
+                                                                        Agent</label><br>
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <input type="radio" id="Founder-Owner"
+                                                                        name="job_role" (change)="two()"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="Founder-Owner"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Founder
+                                                                        /
+                                                                        Owner</label><br>
+                                                                </div>
+
+                                                                <div class="flex items-center">
+                                                                    <input type="radio" id="other1" name="job_role"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                                                                        (change)="toggleInput('buildAutomatic2')">
+                                                                    <label for="other1"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Other</label><br>
+                                                                </div>
+                                                                <!-- ------------------------------------ -->
+                                                                <div class="flex items-center">
+                                                                    <input id="other1" name="job_role"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="other1"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700"></label><br>
+                                                                </div>
+                                                                <!-- ------------------------------------ -->
+                                                                <div class="flex items-center">
+                                                                    <div class="mt-2" *ngIf="showInput.buildAutomatic2">
+                                                                        <input type="text" name="first-name"
+                                                                            id="first-name" autocomplete="given-name"
+                                                                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                    <fieldset class="mt-6">
+                                                        <legend class="contents text-base font-medium text-gray-900">
+                                                            What is your company's
+                                                            industry?
+                                                        </legend>
+                                                        <!-- <p class="text-sm text-gray-500">These are delivered via SMS to your mobile phone.</p> -->
+                                                        <div class="mt-4 space-y-4">
+                                                            <div class="grid grid-cols-1 sm:grid-cols-2">
+
+                                                                <div class="flex items-center">
+                                                                    <input id="beauty-wellness" name="companyIndustry"
+                                                                        type="radio" (change)="three()"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="beauty-wellness"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Beauty
+                                                                        &
+                                                                        Wellness</label>
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <input id="push-services" name="companyIndustry"
+                                                                        type="radio" (change)="three()"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="push-services"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Services</label>
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <input id="real-estate" name="companyIndustry"
+                                                                        type="radio" (change)="three()"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="real-estate"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Real
+                                                                        Estate</label>
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <input id="content -blogging" name="companyIndustry"
+                                                                        type="radio" (change)="three()"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="content -blogging"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Content
+                                                                        /
+                                                                        Blogging</label>
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <input id="online-store" name="companyIndustry"
+                                                                        type="radio" (change)="three()"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="online-store"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Online
+                                                                        Store</label>
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <input id="online-store" name="companyIndustry"
+                                                                        type="radio" (change)="three()"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="online-store"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Online
+                                                                        Store11</label>
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <input id="push-nother" name="companyIndustry"
+                                                                        type="radio"
+                                                                        (change)="toggleInput('buildAutomatic3')"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="push-nother"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Other</label>
+                                                                </div>
+                                                                <!-- --------------------------------------------  -->
+                                                                <div class="flex items-center">
+                                                                    <input id="online-store" name="companyIndustry"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="online-store"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700"></label>
+                                                                </div>
+                                                                <!-- --------------------------------------------  -->
+                                                                <div class="flex items-center">
+                                                                    <div class="mt-2" *ngIf="showInput.buildAutomatic3">
+                                                                        <input type="text" name="first-name"
+                                                                            id="first-name" autocomplete="given-name"
+                                                                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                    <fieldset class="mt-6">
+                                                        <legend class="contents text-base font-medium text-gray-900">
+                                                            What is your company's
+                                                            industry?
+                                                        </legend>
+                                                        <!-- <p class="text-sm text-gray-500">These are delivered via SMS to your mobile phone.</p> -->
+                                                        <div class="mt-4 space-y-4">
+                                                            <div class="grid grid-cols-1 sm:grid-cols-2">
+
+                                                                <div class="flex items-center">
+                                                                    <input id="beauty-wellness" name="companyIndustry"
+                                                                        type="radio"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="beauty-wellness"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Beauty
+                                                                        &
+                                                                        Wellness</label>
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <input id="push-services" name="companyIndustry"
+                                                                        type="radio" (change)="four()"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="push-services"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Services</label>
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <input id="real-estate" name="companyIndustry"
+                                                                        type="radio" (change)="four()"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="real-estate"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Real
+                                                                        Estate</label>
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <input id="content -blogging" name="companyIndustry"
+                                                                        type="radio" (change)="four()"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="content -blogging"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Content
+                                                                        /
+                                                                        Blogging</label>
+                                                                </div>
+                                                                <div class="flex items-center">
+                                                                    <input id="online-store" name="companyIndustry"
+                                                                        type="radio" (change)="four()"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="online-store"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Online
+                                                                        Store</label>
+                                                                </div>
+
+                                                                <div class="flex items-center">
+                                                                    <input id="push-nother" name="companyIndustry"
+                                                                        type="radio"
+                                                                        (change)="toggleInput('buildAutomatic4')"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="push-nother"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700">Other</label>
+                                                                </div>
+                                                                <!-- --------------------------------------------  -->
+                                                                <div class="flex items-center">
+                                                                    <input id="online-store" name="companyIndustry"
+                                                                        class="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                                                                    <label for="online-store"
+                                                                        class="ml-3 block text-sm font-medium text-gray-700"></label>
+                                                                </div>
+                                                                <!-- --------------------------------------------  -->
+                                                                <div class="flex items-center">
+                                                                    <div class="mt-2" *ngIf="showInput.buildAutomatic4">
+                                                                        <input type="text" name="first-name"
+                                                                            id="first-name" autocomplete="given-name"
+                                                                            class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ------------------------------------------------ -->
+
+                        <div class="overflow-hidden rounded-lg bg-white shadow" dir="ltr" *ngIf="currentStep === 2">
+                            <div class="px-4 py-5 sm:p-6">
+
+                                <!-- -----------------------------------------------------  -->
+
+                                <div class="space-y-12">
+
+                                    <!-- ----------------------------------------  -->
+
+                                    <div class="border-b border-gray-900/10 pb-12">
+                                        <h2 class="text-base font-semibold leading-7 text-gray-900">Configure your chat
+                                            Widget</h2>
+                                        <p class="mt-1 text-sm leading-6 text-gray-600">Adjust appearance to suit your
+                                            Website</p>
+
+
+                                        <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                                           
+
+
+                                            <div class="col-span-full">
+                                                <div class="mt-2">
+                                                    <div></div>
+                                                    
+                                                    <div type="text"
+                                                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" >
+                                                        <app-color-picker></app-color-picker>
+                                                    </div>
+                                                    <div >
+                                                        <!-- --------------------------------------------  -->
+                                                        <div class="bg-white ">
+                                                            <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+                                                        
+                                                                <div class="relative isolate overflow-hidden bg-gray-900 px-1 py-2  shadow-2xl sm:rounded-3xl sm:px-16">
+                                                        
+                                                                    <div class="relative">
+                                                                        <div
+                                                                            class="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
+                                                                            <img class="h-full w-full object-cover" src="/assets/images/10.jpg" alt="">
+                                                                            <button>Do Not shot Photo</button>
+                                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 926 676" aria-hidden="true"
+                                                                                class="absolute left-24 -bottom-24 w-[57.875rem] transform-gpu blur-[118px]">
+                                                                                <path fill="url(#60c3c621-93e0-4a09-a0e6-4c228a0116d8)" fill-opacity=".4"
+                                                                                    d="m254.325 516.708-90.89 158.331L0 436.427l254.325 80.281 163.691-285.15c1.048 131.759 36.144 345.144 168.149 144.613C751.171 125.508 707.17-93.823 826.603 41.15c95.546 107.978 104.766 294.048 97.432 373.585L685.481 297.694l16.974 360.474-448.13-141.46Z" />
+                                                                                <defs>
+                                                                                    <linearGradient id="60c3c621-93e0-4a09-a0e6-4c228a0116d8" x1="926.392" x2="-109.635"
+                                                                                        y1=".176" y2="321.024" gradientUnits="userSpaceOnUse">
+                                                                                        <stop stop-color="#776FFF"></stop>
+                                                                                        <stop offset="1" stop-color="#FF4694"></stop>
+                                                                                    </linearGradient>
+                                                                                </defs>
+                                                                            </svg>
+                                                                        </div>
+                                                                        <div class="relative mx-auto max-w-7xl py-24 sm:py-32 lg:py-30 lg:px-8">
+                                                                            <div class=" pr-6 pl-6 md:ml-auto md:w-2/3 md:pl-16 lg:w-1/2 lg:pl-30 lg:pr-0 xl:pl-32">
+                                                                                <h2 i18n class="mt-2 text-2xl font-bold tracking-tight text-indigo-400">Start Node</h2>
+                                                        
+                                                                              
+                                                                                <div class="mt-8">
+                                                                                    <button type="submit"
+                                                                                        class=" m-3 mr-15  inline-flex justify-center rounded-md border border-transparent bg-indigo-600 pt-3 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 float-left">
+                                                                                        <span i18n>continues</span>
+                                                        
+                                                                                        <svg width="30px" height="35px" viewBox="0 0 20 28" version="1.1"
+                                                                                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                                            style="margin-right: 1px;">
+                                                                                            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                                                                                            <title>arrow-left</title>
+                                                                                            <desc>Created with Sketch.</desc>
+                                                                                            <defs>
+                                                        
+                                                                                            </defs>
+                                                                                            <g id="Vivid.JS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                                                <g id="Vivid-Icons" transform="translate(-437.000000, -651.000000)">
+                                                                                                    <g id="Icons" transform="translate(37.000000, 169.000000)">
+                                                                                                        <g id="arrow-left" transform="translate(390.000000, 468.000000)">
+                                                                                                            <g transform="translate(10.000000, 14.000000)" id="Shape">
+                                                                                                                <polygon fill="#FF6E6E"
+                                                                                                                    points="28 12 8 12 13 17 10 20 0 10 10 0 13 3 8 8 28 8">
+                                                        
+                                                                                                                </polygon>
+                                                                                                                <polygon fill="#0C0058" points="20 8 20 12 28 12 28 8">
+                                                        
+                                                                                                                </polygon>
+                                                                                                            </g>
+                                                                                                        </g>
+                                                                                                    </g>
+                                                                                                </g>
+                                                                                            </g>
+                                                                                        </svg>
+                                                                                    </button>
+                                                                                    <!-- <button (click)="doNotShowPhoto()">Do Not shot Photo</button> -->
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                        
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"
+                                                                        class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2" aria-hidden="true">
+                                                                        <circle cx="512" cy="512" r="512" fill="url(#827591b1-ce8c-4110-b064-7cb85a0b1217)"
+                                                                            fill-opacity="0.7" />
+                                                                        <defs>
+                                                                            <radialGradient id="827591b1-ce8c-4110-b064-7cb85a0b1217" cx="0" cy="0" r="1"
+                                                                                gradientUnits="userSpaceOnUse" gradientTransform="translate(512 512) rotate(90) scale(512)">
+                                                                                <stop stop-color="#7775D6"></stop>
+                                                                                <stop offset="1" stop-color="#E935C1" stop-opacity="0"></stop>
+                                                                            </radialGradient>
+                                                                        </defs>
+                                                                    </svg>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- --------------------------------------------  -->
+                                                    </div>
+                                                
+                                                  
+                                                </div>
+
+                                            </div>
+
+                                            
+
+
+                                        </div>
+                                    </div>
+                                    <!-- ----------------------------------------  -->
+
+                                    
+
+                                </div>
+                                <!-- -----------------------------------------------------  -->
+
+                                <div class="space-y-8 divide-y divide-gray-200">
+                                    <div class="space-y-8 divide-y divide-gray-200" style="max-height: 900px;">
+                                        
+
+
+                                        <!--------------------------------------- ستون اول فرم ---------------------------------->
+
+                                        <div class="space-y-6" action="#" method="POST">
+                                            <div>
+                                                <div class="md:grid md:grid-cols-3 md:gap-6">
+                                                    <div class="md:col-span-1">
+                                                        <div style="margin-bottom: 40px">
+
+
+                                                            <div class="mt-1 flex items-center space-x-5">
+                                                                <span
+                                                                    class="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100">
+                                                                    <svg class="h-full w-full text-gray-300"
+                                                                        fill="currentColor" viewBox="0 0 24 24">
+                                                                        <path
+                                                                            d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                                                                    </svg>
+                                                                </span>
+                                                                <button type="button"
+                                                                    class="rounded-md border border-gray-300 bg-white py-2 px-3 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Change</button>
+                                                            </div>
+                                                        </div>
+                                                        <!-- --------------------color picker------------------------------ -->
+
+
+
+                                                        <div class="md:col-span-1 ">
+                                                            <div style="margin-bottom: 60px">
+                                                                <label for="about"
+                                                                    class="block text-sm font-medium text-gray-700">Url
+                                                                    adress</label>
+                                                                <div class="mt-1">
+                                                                    <textarea id="about" name="about" rows="3"
+                                                                        class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                                                                        placeholder=" https://www.example.ir "></textarea>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--------------------------------------- ستون دوم فرم ---------------------------------->
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <!-- ------------------------------------------------ -->
+
+                        <div class="overflow-hidden rounded-lg bg-white shadow" *ngIf="currentStep === 3">
+                            <div class="px-4 py-5 sm:p-6">
+
+                                <div class="space-y-8 divide-y divide-gray-200">
+                                    <div class="space-y-8 divide-y divide-gray-200" style="max-height: 900px;">
+
+                                        <div class="pt-1">
+                                            <div style="text-align: center; margin-bottom: 40px;">
+                                                <h3>Get set up for success</h3>
+                                                <p>Shape you experience - 20 seconds to go!</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="pt-8">
+                                            <div>
+                                                <h3 class="text-lg font-medium leading-6 text-gray-900"> Witch channels
+                                                    do you plan to use ...on
+                                                    for interacting with your customers?</h3>
+                                            </div>
+                                            <div class="mt-6">
+                                                <div>
+                                                    <div class="mt-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6"
+                                                        *ngFor="let item of items; let i = index">
+                                                        <div class="sm:col-span-3">
+                                                            <label for="url-{{i}}"
+                                                                class="block text-sm font-medium leading-6 text-gray-900">Your
+                                                                URL
+                                                                domain</label>
+                                                            <div class="mt-2">
+                                                                <input type="text" name="url-{{i}}" id="url-{{i}}"
+                                                                    autocomplete="given-name"
+                                                                    class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-span-6 sm:col-span-3">
+                                                            <label for="bot-name-{{i}}"
+                                                                class="block text-sm font-medium text-gray-700">Bot's
+                                                                name</label>
+                                                            <select id="bot-name-{{i}}" name="botName-{{i}}"
+                                                                autocomplete="bot-name"
+                                                                class="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+                                                                <option>First Bot</option>
+                                                                <option>Second Bat</option>
+                                                                <option>Third bat</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <button (click)="addItem()"
+                                                        class="mt-2 px-4 py-2 bg-blue-500 text-white rounded-md shadow-sm hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Add
+                                                        Item</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        <!-- ------------------------------------------------ -->
+
+
+                        <div class="mt-6 flex items-center justify-end gap-x-6">
+                            <div *ngIf="currentStep == 1 ">
+                                <button type="button"
+                                    class="rounded-md border border-gray-300 bg-white button-back py-2 px-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                                    (click)="Cancel()">Cancel</button>
+                            </div>
+                            <div *ngIf="currentStep !== 1 ">
+                                <button type="button"
+                                    class="rounded-md border border-gray-300 bg-white button-back py-2 px-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                                    (click)="goBack()">Go back</button>
+                            </div>
+                            <div *ngIf="currentStep !== 3">
+                                <button type="submit"
+                                    class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    (click)="saveAndMoveToNextStep()">Next</button>
+                            </div>
+                            <div *ngIf="currentStep === 3">
+                                <button type="submit"
+                                    class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                    (click)="saveForm()">Save</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
